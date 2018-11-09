@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/base/common.css" />
+  <link rel="stylesheet" href="../css/src/position_layout_01.css" />
+  <title>basic world</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1>position 레이아웃 이해하기</h1>
+
+    <div id="position_01">
+      <h2 class="hidden">banner</h2>
+
+      <!-- indicator -->
+      <div class="indicator">
+        이곳에 인디케이터를 배치
+      </div>
+
+      <!-- 이전, 다음내용 확인 버튼 -->
+      <div class="btn">
+        <a class="next_btn" href="#">다음버튼 &gt; </a>
+        <a class="pre_btn" href="#">이전버튼  &lt; </a>
+      </div>
+
+      <div class="ad_banner">
+        <div class="ad_01"><a href="#">광고를 보여주기_01</a></div>
+        <div class="ad_02"><a href="#">광고를 보여주기_02</a></div>
+        <div class="ad_03"><a href="#">광고를 보여주기_03</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- script(jQuery) -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+</body>
+</html>
