@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Document</title>
+	<!-- css -->
+	<style></style>
+</head>
+<body>
+	<!-- layout -->
+
+	<!-- javascript -->
+	<script>
+		/**기본 주석은 css형태와 같다.
+		  *줄바꿈해서도 문제 없이 작성할 수 있다.
+		  */
+		// 한줄주석
+
+		var ar = [1,10,9,5,'문자','사과','배'];  //배열 형식의 주석
+		var ob = {
+			  'number first':1234567,      // 숫자의 경우는 따옴표가 없다.
+			  string:'간단한 문자', // 문자의 경우는 따옴표를 표기.
+			  사과:'apple',        // 한글의 속성명도 사용가능(property)
+			  배:'pear'            // 마지막에는 콤마를 사용하지 않는다.
+		};                       // 변수 ob의 객체가 끝났으므로 ;을 표기
+
+		//	console.log(ar[5]);
+		//	console.log(ob['number first']);
+		//	console.log(ob.배);
+
+		var ar2 = [1, 6, 9, 'text', 'to', [4, 5, 10], ['a', 6, 3] ];
+		// console.log(ar2);
+		// console.log(ar2[1]);
+		// console.log(ar2[5]);
+		// console.log(ar2[5][1]);
+		var ob = {
+		  string:[4, 5, 10], 
+		  a:{
+		  	b:'box'
+		  }              
+		}; 
+		// console.log(ob.string[1]);
+		console.log(ob.a.b);
+
+	</script>
+</body>
+</html>

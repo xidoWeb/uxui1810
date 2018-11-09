@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- position_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <!-- meta:compat -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Document</title> 
+  <style>
+    /* reset.css */
+    html,body{margin: 0; padding: 0; width: 100%; height: 100%;}
+    h1,h2,h3,h4,h5,h6,div,p,pre,ul,ol,li,dl,dt,dd,img{margin: 0; padding: 0; border: 0; outline: 0;}
+    ul,ol,li{list-style:none;}
+    a{text-decoration:none; color:#333;}
+    a:hover, a:focus{color:#f06;}
+    a:focus{outline:3px solid #fa0; outline-offset:3px;}
+    header,nav,section,article,aside,footer,main,figure,figcaption{display: block;}
+
+    /* common.css */
+    .hidden{display: block; width: 0; height: 0; overflow: hidden; position:absolute; z-index: -100;}
+    .clearfix:after, .clearfix::after {content:" "; display: block; width: 0; height: 0; clear: both;}
+
+    /* design.css */
+    h1{padding:0.5rem; margin-bottom: 1rem; 
+      text-align: center; background-color: #0ac; color:#fff; }
+    .position{margin: 0 auto; padding:25px 50px; 
+        box-sizing:border-box; width:700px; height:150px; 
+        background-color: #cc0;}
+    .position>ul{width:100%; height:100%; background-color:#fff;}
+    .position>ul>li{float:left; width:100px; height:100px;
+      border:1px solid #f07; box-sizing: border-box;
+      text-align: center; color:#fff; font-size: 1.3rem;
+      line-height: 100px;}
+
+    .position .base{border-color:#Ffa; background-color: #a4f;}
+    .position .static{border-color:#2fb; background-color: #b46;}
+    .position .fixed{border-color:#3fF; background-color: #c40;}
+    .position .absolute{border-color:#4fd; background-color: #d4a;}
+    .position .relative{border-color:#ffe; background-color: #e46;}
+    /* -------------------------------------------------------------- */
+    /* static, fixed, absolute, relative */
+    /* top, left, right, bottom */
+    /* z-index */
+    body{height:3000px;}
+    .position>ul{position: relative;}
+    .static{position:static; top:0; right:400px; z-index:1000;}/* 아무런 변화가 없음 */
+    .fixed{position:fixed; top:500px; right:45%;
+      z-index:100;}/* 브라우저 화면내에서 어디든지~~~*/
+    .absolute{position: absolute; top:30px; right:200px;
+      z-index:101}/* fixed와 유사한 기능 하지만, 전부 같지는 않다 */
+    .relative{position: relative; top:50px; left:30px;}
+  </style>
+</head>
+<body>
+  <h1>포지션의 기초내용 이해하기</h1>
+  <div class="position">
+    <ul>
+      <li class="base">base</li>
+      <li class="static">static</li>
+      <li class="fixed"><a href="http://naver.com">fixed</a></li>
+      <li class="absolute">absolute</li>
+      <li class="relative">relative</li>
+      <li class="base">base</li>
+    </ul>
+  </div>
+<!-- script -->
+  <script></script>
+</body> 
+</html>

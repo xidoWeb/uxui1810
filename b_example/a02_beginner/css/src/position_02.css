@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/* position_02.css */
+ /* design.css */
+   #wrap{width: 100%; height: 500%; 
+    background-image:linear-gradient(#acc, #07a);}
+   #headBox{position: fixed; top: 0; left: 0; z-index: 500; 
+    width: 100%; height: 150px; background-color: #fa0;}
+    #sideBox{position: fixed; top:200px; left:50px;
+      width: 150px; height: 400px; background-color: #fff;
+        border:2px solid #333; border-radius:15px;}

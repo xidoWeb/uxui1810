@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>layout 간단하게 만들어보기</title>
+	<style>
+		/* reset.css:모든 웹페이지에서 보여주는 기능을 통일처리... */
+		html,body{margin: 0;}
+		h1,h2,h3,h4,h5,h6,p,div,ul,ol,li,dt,dd{margin: 0; padding: 0;}
+		ul,ol,li{list-style:none;}
+		
+   /* layout */
+   	#wrap {width:960px; height:auto; margin:0 auto;}
+		#wrap > div{width:100%; border-bottom:1px solid #333;}
+			#headBox{height:150px; background-color:#dfdfdf;
+				padding:50px; padding-bottom:0; box-sizing:border-box;}
+				h1{width:100px; height:80px; background-color:#afa; float: left;
+				/*	margin-top:50px; margin-left:50px;*/}
+				#gnb{width:600px; height:50px; background-color: #777; float: right;
+				/*	margin-right:50px; margin-top:70px;*/ margin-top: 20px;}
+
+				#gnb > h2{width:0; height:0; font-size:0;}
+				#gnb>ul{width:100%; height:100%; background-color:#ff0;}
+				#gnb>ul>li{border-right:2px solid #fff; width:100px; height:100%; float:left;}
+				#gnb>ul>li>a{background-color:#fff;}
+
+			#adBox{height:500px; background-color:#acf;}
+			#adBox>h2{width:100%; height:auto; background-color: #aa0;}
+
+			#conBox{height:800px; background-color:#caa;}
+			#footBox{height:300px; background-color:#555;}		
+	</style>
+</head>
+<body>
+	<!-- layout -->
+	<div id="wrap">
+		<div id="headBox">
+			<h1>제목</h1>
+			<div id="gnb">
+				<h2>내비게이션</h2>
+				<ul>
+					<li><a href="#">link_01</a></li>
+					<li><a href="#">link_02</a></li>
+					<li><a href="#">link_03</a></li>
+					<li><a href="#">link_04</a></li>
+					<li><a href="#">link_05</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="adBox">
+			<h2>광고 배너의 영역을 확인</h2>
+		</div>
+		<div id="conBox"></div>
+		<div id="footBox"></div>
+	</div>
+	<!-- script -->
+	<script></script>
+</body>
+</html>

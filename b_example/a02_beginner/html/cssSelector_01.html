@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>css선택자</title>
+	<style type="text/css">
+	/* css문서의 주석표기 */
+	/* 블럭요소는 사이즈를 가질수 있고, 
+	  인라인요소는 사이즈를 가질수 없다. */
+	  html,body{margin:0;}
+		#wrap {width:800px; height:auto; background-color:#fca;}
+			h1 {width:300px; height:150px; 
+				color:#acf; background-color:#f40;
+				margin:0;}
+			p {width:700px; height:100px;
+				background-color:#ccc;
+				margin:0;}
+			span {width:500px; height:400px;
+				background-color:#f06; color:#fff;}
+
+			.box1 {width:1000px; height:300px; background-color:#fa0;}
+			.box2 {width:500px; height:inherit; background-color:#f0a;}
+			.box1 {width:600px;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<!-- html문서의 주석표기 -->
+		<h1>css 선택자 이해하기</h1>
+		<p>내용을 <span>작성해서</span> 결과물을 추가로 확인해 보겠습니다.</p>
+		<span>밖에 있는 span</span>
+
+		<div class="box1">
+			<div class="box2"></div>
+		</div>
+	</div>
+</body>
+</html>

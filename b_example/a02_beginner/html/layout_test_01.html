@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Document</title>
+  <style>
+    /* reset.css */
+    html,body,h1,h2,h3,h4,h5,h6,p,div,ul,ol,li,dt,dd{margin: 0; padding: 0;}
+    ul,ol,li{list-style:none;}
+
+    /* design.css */
+    body{background-color:#fff;}
+    #box{width:600px; height:auto; margin:20px auto 0;}
+    #box>div{width: 100%;}
+
+    a:hover{color:#fff; font-weight:bold;}
+    a:focus{color:#fff; 
+    /* outline-width:10px; outline-style:solid; outline-color:#fa0;*/
+      outline:10px solid #fa0; outline-offset:30px;}
+
+    /* #header ---------------------------------------- */
+    #header{height: 100px; background-color:#f0a;}
+
+    /* #section ---------------------------------------- */
+    #section{height: 300px;}
+      /*.sec_wrap{width:70%; height: 100%; background-color:#6dd; float:left;}*/
+        #article{width:70%; height:50%; background-color:#777; float:left;}
+        #contatiner{width:70%; height:50%; background-color:#aaf; float:left;}
+      #aside{width:30%; height:100%; margin-top:-50%; background-color:#5a5; float: right;}
+
+    /* #footer ---------------------------------------- */
+    #footer{height: 100px; background-color:#acf;}
+
+  </style>
+</head>
+<body>
+  <!-- layout -->
+  <div id="box">
+    <div id="header">
+      <a href="#">header</a>
+    </div>
+    <!--// #header  -->
+
+    <div id="section">
+      <!-- <div class="sec_wrap"> -->
+        <div id="article">
+          <a href="#">article</a>
+        </div>
+        <div id="contatiner">
+          <a href="#">contatiner</a>
+        </div>
+      <!-- </div> -->
+      <div id="aside">
+          <a href="#">aside</a>
+      </div>
+    </div>
+    <!--// #section  -->
+
+    <div id="footer">
+      <a href="#">footer</a>
+    </div>
+    <!--// #footer  -->
+
+  </div>
+  <!--// #box  -->
+
+
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Document</title>
+	<style>
+	/* reset.css */
+	html,body{margin: 0; width:100%; height:100%;}
+	h1,h2,h3,h4,h5,h6,p,div,ul,ol,li,dt,dd,dl{margin:0; padding:0;}
+	ul,ol,li{list-style:none;}
+	a{color:#333; text-decoration:none;}
+	a:hover, a:focus{color:#fa0; text-decoration:underline;
+		outline:3px solid #fa0;}
+
+	header,nav,aside,section,article,footer,main,figure{display:block;}
+
+	/* common.css */
+	.hidden{width: 0; height: 0; overflow: hidden;}
+	.clearfix{clear:both;}
+	.full{width: 100%; height: 100%;}
+
+	/* design.css */
+	#wrap {margin: 0 auto; border:5px solid #f06;
+		    width: 960px; height:auto;}
+	    
+	/* #headBox	------	    */
+	#headBox{padding-top: 10px; box-sizing:border-box;
+		width:100%; height:auto; background-color:#0af;}
+	h1{margin-bottom: 20px; margin-left: 20px; margin-top:10px;
+		width:330px; height:70px; background-color:#f06;
+		color:#fff;}
+	#gnb{width:100%; height: 50px; background-color: #079;}
+	#gnb>ul{width: 100%; height: 100%;}
+	#gnb>ul>li{float: left; width:25%; height: 100%; background-color: #fff;
+		border-right:1px solid #333; box-sizing:border-box;}
+
+	/* #contentBox------	  */
+	#contentBox{width:100%; height:auto;}
+		#contentSub{float:left;
+			width:360px; height:auto; background-color:#fa0;}
+		#contentSub>h3{width: 100%; height: 70px; background-color: #f06;
+				color:#fff; text-align:center;}
+
+		#contentSub>dl{width: 100%; height: auto; background-color: #ddd;}
+		#contentSub>dl>dt{width: 100%; height: 25px; background-color: #acf;}
+		#contentSub>dl>dd{margin-bottom:10px; margin-left: 20%;
+			width: 80%; height:auto; background-color: #f6f;}
+		#contentSub ul{width: 100%; height: auto;}
+		#contentSub ul>li{width: 100%; height: 20px; margin-bottom: 5px;}
+
+
+
+		#contentNarr{float:left;
+			width:600px; height:auto; background-color:#afa;}
+			.narr{width: 100%; height: 145px; 
+				border-bottom:5px solid #333; box-sizing:border-box;}
+			.narr_01{background-color: #a1f;}
+			.narr_02{background-color: #b5a;}
+			.narr_03{background-color: #c97;}
+			.narr_04{background-color: #df5;}
+
+		
+	/* #footBox	------      */
+	#footBox{padding:20px; box-sizing: border-box;
+		width:100%; height:120px; background-color:#06a;}
+	#footBox>h2{float: left;
+		width:100px; height:80px; background-color: #f06; font-size:1rem;
+		color:#fff;}
+	#footBox>address{float: right; margin-top: 10px;
+		width:600px; height:50px; background-color:#ffa;
+		font-style:normal;}
+	#footBox>address>p{width: 100%; height: auto;}
+	#footBox>address>p>strong{font-weight:normal;}
+
+  
+  /**웹에서 사용하는 단위
+    1px => 웹상의 가장 작은 점의 크기
+    일반상으로는: 16px == 12pt == 100% == 1em == 1rem  -> 최초의 설정에서 서체크기
+		반응형으로는: 브라우저 가로기준크기를 vw, 브라우저 세로기준크기 vh (100분율)
+  */
+	</style>
+</head>
+<body>
+	<!-- layout -->
+	<div id="wrap">
+		<header id="headBox">
+			<h1>사이트이름</h1>
+			<nav id="gnb">
+				<h2 class="hidden">전체 메뉴</h2>
+				<ul>
+					<li>list_01</li>
+					<li>list_02</li>
+					<li>list_03</li>
+					<li>list_04</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // #headBox -->
+
+		<section id="contentBox">
+			<h2 class="hidden">본문 내용</h2>
+			<aside id="contentSub">
+				<h3>aside영역의<br /> 제목</h3>
+				<dl>
+					<dt>리스트 제목_01</dt>
+					<dd>
+						<ul>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+						</ul>
+					</dd>
+
+					<dt>리스트 제목_02</dt>
+					<dd>
+						<ul>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+						</ul>
+					</dd>
+
+					<dt>리스트 제목_03</dt>
+					<dd>
+						<ul>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+						</ul>
+					</dd>
+
+					<dt>리스트 제목_04</dt>
+					<dd>
+						<ul>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+							<li>상품 목록~~</li>
+						</ul>
+					</dd>
+
+					<dt>리스트 제목_05</dt>
+					<dd>????</dd>
+				</dl>
+			</aside>
+
+			<article id="contentNarr">
+				<h3 class="hidden">본문의 내용에따른 제목</h3>
+				<article class="narr narr_01">
+					<h4 class="hidden">하위 내용을 정리하는 제목_1</h4>
+				</article>
+				<article class="narr narr_02">
+					<h4 class="hidden">하위 내용을 정리하는 제목_2</h4>
+				</article>
+				<article class="narr narr_03">
+					<h4 class="hidden">하위 내용을 정리하는 제목_3</h4>
+				</article>
+				<article class="narr narr_04">
+					<h4 class="hidden">하위 내용을 정리하는 제목_4</h4>
+				</article>
+			</article>
+			<div class="clearfix"></div>
+		</section>
+		<!-- // #contentBox -->
+
+		<footer id="footBox">
+			<h2>infomation 제목</h2>
+			<address>
+				<p><strong>회사 주소</strong> 주소명을 정확하게 쓰겠죠!!!</p>
+				<p><strong>회사 연락처</strong> 000. 0000. 0000</p>
+			</address>
+		</footer>
+		<!-- // #footBox -->
+
+	</div>
+
+	<!-- script -->
+	<script></script>
+</body>
+</html>
