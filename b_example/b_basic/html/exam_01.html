@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/base/common.css" />
+  <title>Document</title>
+  <style>
+    h1{padding: 2rem; background-color: #acc;}
+    hr{margin: 0; border-top:0;}
+    h2{border-bottom:2px solid #333; margin-bottom: 1rem;}
+
+    /* ex1 -------------------------------- */
+    #wrap_01{width:600px; padding: 10px; background-color: #ccc;margin: auto;}
+    #wrap_01>.hdbox{width:100%; height:100px; background-color:#fac;}
+    #wrap_01>.conbox{width:100%; height:200px; background-color:#cca;}
+    #wrap_01>.footbox{width:100%; height:100px;background-color:#caf;}
+
+    /* ex2 -------------------------------- */
+    #wrap_02{padding: 10px; margin: auto; width: 600px; height: auto;
+      background-color: #ccc;}
+    #wrap_02:after, #wrap_02::after{
+      content:" "; display: block;width: 0; height: 0; clear: both;}
+    #wrap_02>.hdbox{float:left; width:20%; height: 600px; background-color:#fac;}
+    #wrap_02>.conbox{float:left; width:60%; height: 600px; background-color:#7cf;}
+    #wrap_02>.footbox{float:left; width:20%; height: 600px; background-color:#caf;}
+
+    /* ex_03 */
+  #wrap_03{padding: 10px; margin: auto; margin-bottom: 7rem; width: 600px; height:auto; background-color: #ccc; }
+  #wrap_03:after, #wrap_03::after{
+    content:" "; display: block; width: 0; height: 0; clear: both;}
+    /*#wrap_03 > .hdbox{float:left; 
+      width: 80%; height: 300px; background-color: #fac;}
+    #wrap_03 > .conbox{float:left; 
+      width: 80%; height: 300px; background-color: #7af;}
+    #wrap_03 > .footbox{float:right; margin-top:-300px;
+      width: 20%; height: 600px; background-color: #caf}*/
+      .minbox{float:left; width: 80%; height:auto;}
+      .minbox>.hdbox{width:100%; height:300px; background-color:#fac;}
+      .minbox>.conbox{width:100%; height:300px; background-color:#7af;}
+       #wrap_03>.footbox{float:right; width: 20%; height: 600px; background-color: #caf}
+      
+  </style>
+</head>
+<body>
+  <h1>exam_01</h1>
+  <hr />
+  <!-- ex1 -->
+  <h2>test_01</h2>
+  <div id="wrap_01">
+    <header class="hdbox"></header>
+    <article class="conbox"></article>
+    <footer class="footbox"></footer>
+  </div>
+  <!-- ex2 -->
+  <h2>test_02</h2>
+  <div id="wrap_02">
+    <header class="hdbox"></header>
+    <article class="conbox"></article>
+    <footer class="footbox"></footer>
+  </div>
+  <!-- ex3 -->
+  <h2>test_03</h2>
+  <div id="wrap_03">
+    <!-- <header class="hdbox"></header>
+    <article class="conbox"></article>
+    <footer class="footbox"></footer> -->
+    <div class="minbox">
+      <header class="hdbox"></header>
+      <article class="conbox"></article>
+    </div>
+    <footer class="footbox"></footer>
+  </div>
+</body>
+</html>
