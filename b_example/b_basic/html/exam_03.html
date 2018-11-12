@@ -31,6 +31,18 @@
     .di_box:hover>p{background-color: #ccc; color:#555;
                     top: auto; right: auto;
                     bottom: 0; left: 0;}
+
+    .link_box{position:relative; margin:auto; margin-top:5rem; 
+      width: 900px; height: 300px; background-color: #ccc;}
+    .link_box>a{display: block; width: 400px; height: 200px;
+      background-color: #773; color:#fff;
+      position: absolute; bottom:0; right: 0;}
+    .link_box>a>span{display: block; width: 100px; height: 50px;background-color: #7ac;
+      position: absolute; right: 0; bottom: 0;}
+    .link_box>a:hover{background-color: #543;}
+    .link_box>a:hover>span,
+    .link_box>a:focus>span{right:auto; left:0; height:150px;}
+
   </style>
 </head>
 <body>
@@ -38,6 +50,11 @@
 
   <div class="di_box">
     <p>text</p>
+  </div>
+
+  <!-- .link_box>a[#]>span{link내용} -->
+  <div class="link_box">
+    <a href="#"><span>link내용</span></a>
   </div>
 </body>
 </html>
