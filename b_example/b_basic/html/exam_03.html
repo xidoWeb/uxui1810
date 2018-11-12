@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/base/common.css" />
+  <title>Document</title>
+  <style>
+    h1{padding: 1rem; color:#333; 
+      background-color: #0ac;}
+    a{color:inherit;}
+
+    h1:hover{color:#fff;}
+    h1:hover > a{color:#afa; text-decoration: underline;}
+
+    h1>a:hover{color:#fa0;}
+    h1>a:focus{color:#f0a; font-size: 2.5rem;}
+
+    .di_box{position: relative;
+       margin: auto; margin-top: 2rem;
+      width: 400px; height: 200px;
+      background-color: #fac; }
+    .di_box>p{width: 100px; height: 100px;
+        background-color: #779;font-size: 2rem;
+        color:#fff; font-weight: bold;
+        text-align: center; line-height: 100px;
+
+        position: absolute; right: 0; top: 0;}
+
+    .di_box:hover{background-color: #779;}
+    .di_box:hover>p{background-color: #ccc; color:#555;
+                    top: auto; right: auto;
+                    bottom: 0; left: 0;}
+  </style>
+</head>
+<body>
+  <h1><a href="#">psudo-code</a> and position</h1>
+
+  <div class="di_box">
+    <p>text</p>
+  </div>
+</body>
+</html>
