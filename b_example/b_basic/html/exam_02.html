@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/base/common.css" />
+  <title>Document</title>
+  <style>
+    h1{padding: 2rem; background-color: #acc;}
+    hr{margin: 0; border-top:0;}
+    h2{border-bottom:2px solid #333; margin-bottom: 1rem;}
+
+/* ex_01 */
+  .wrap_01{position: relative;
+    margin: auto; width: 800px;height: 600px;background-color: #F0A;
+    color:#fff;margin-bottom: 5rem;}
+  .wrap_01>.modal{
+    position: absolute;
+    top:50%; margin-top: -75px;
+    left: 50%; margin-left:-250px;
+    box-sizing: border-box;
+    padding: 1rem; 
+/*    border-radius:1.5rem;
+    box-shadow:0.5rem 0.5rem 0.5rem rgba(0,0,0,0.5);
+    transition:all 1000ms linear;*/
+    width: 500px; height: 150px; background-color: #0af;}
+  .wrap_01>.modal:hover{height: 500px; 
+    background-color: #fa0; cursor:pointer;}
+/* ex_02 ----------------------*/
+.wrap_02{position: relative; 
+  width: 800px; height: 600px; background-color: #f0a; 
+  margin: auto; margin-bottom: 5rem;}
+.side_indicator{ position: absolute; top:50%; margin-top: -175px; right: 30px;
+  width: 50px; height:450px; background-color: #0af;}
+.side_indicator>ul{width: 100%; height:100%;  padding: 10px; box-sizing: border-box;}
+.indicator{width:100%; height: 30px; background-color: #fff;
+  margin-bottom:45px; border-radius:100%; overflow: hidden;}
+.indicator>a{display: block; width: 100%; height: 100%;background-color: #fa0; }
+.indicator.last{margin-bottom: 0;}
+/*.side_indicator li:last-child{margin-bottom: 0;}*/
+  </style>
+</head>
+<body>
+  <h1>exam_02</h1>
+  <hr />
+  <!-- ex_01 -->
+  <h2>position_01</h2>
+  <div class="wrap_01">
+    <div class="modal">modal</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem in debitis quae neque, quisquam facilis quasi eligendi autem ad non placeat aut harum inventore error totam necessitatibus accusamus itaque, voluptatum, aperiam doloremque eos! Illum, quas numquam inventore qui distinctio cum asperiores vel nisi, molestias id laboriosam aliquid rerum ab fugiat esse totam nesciunt! Magnam necessitatibus iste rerum, vitae, tenetur voluptatibus repellat nostrum neque incidunt natus quod. Expedita accusamus harum, totam aperiam sapiente. Voluptatum molestias necessitatibus unde quas aperiam, molestiae aut ad sunt natus maxime! Dolorem laudantium fugit doloribus, reprehenderit. Nesciunt voluptatum culpa, expedita tempora, harum quaerat! Sint cupiditate, dicta eligendi vel expedita atque reprehenderit, unde at doloribus animi eum, debitis voluptatem, quisquam! Aut id in eligendi, expedita, explicabo voluptatum quam voluptas, iure unde saepe labore deserunt magni nostrum aliquam aspernatur laudantium distinctio iste cum sunt doloremque, cumque. Corporis rem vero voluptatibus dolorum, libero natus dolores harum consectetur quisquam sequi optio repellendus adipisci numquam eveniet, minus, dolor consequuntur. Voluptatem iusto atque, fugit quidem nostrum explicabo consequuntur, vel at omnis molestias officiis aspernatur eligendi culpa repellat commodi incidunt, quae voluptates maiores illum magnam iste adipisci doloremque, sed consequatur? Pariatur accusantium, velit, expedita labore nisi eveniet natus soluta assumenda aut iusto mollitia sint illum libero molestiae odit quos unde earum quasi animi nam dolorem, nostrum temporibus. Cum voluptas necessitatibus totam facere expedita minus in, corporis consectetur incidunt soluta. Perspiciatis alias aliquid minima, minus tempora quia neque, cumque, dolorum tempore deserunt vero natus itaque in quibusdam quo hic harum ab odit. Quibusdam doloribus, consectetur, accusamus quam inventore dicta. Recusandae ex et consequatur eveniet ducimus quis ullam possimus ipsum assumenda dolore blanditiis ab, repellat voluptas, atque repudiandae. Voluptate eveniet aliquam cum expedita, libero inventore error maiores at aut deleniti qui incidunt, assumenda necessitatibus, molestias fugiat cumque, excepturi. Doloremque deserunt, vitae asperiores tenetur incidunt beatae ipsa.</p>
+  </div>
+  <!-- ex_02 -->
+  <h2>position_02</h2>
+  <div class="wrap_02">
+    <div class="side_indicator">
+      <ul>
+        <li class="indicator"><a href="#"><span class="hidden">indi_01</span></a></li>
+        <li class="indicator"><a href="#"><span class="hidden">indi_01</span></a></li>
+        <li class="indicator"><a href="#"><span class="hidden">indi_01</span></a></li>
+        <li class="indicator"><a href="#"><span class="hidden">indi_01</span></a></li>
+        <li class="indicator last"><a href="#"><span class="hidden">indi_01</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 
+    * div는 기능이 없다.(블럭요소의 무기능) 여러개의 블럭요소를 묶어줄때 
+    * span은 기능이 없다.(인라인요소의 무기능) 인라인요소를 묶어주거나, 텍스트를 일부 묶어서 처리할때
+    -->
+    <p>전화번호<span class="hidden"> 앞자리 네자리를 입력하세요.</span></p>
+</body>
+</html>
