@@ -1,0 +1,26 @@
+/* rwd_01.css */
+
+#wrap{width: 100%; height: 2000px;
+  background-color: #fa0;}
+
+/* mobile -------------------- */
+@media screen and (max-width:480px) {
+
+  #wrap{width: 80%; background-color: #2e3192; color:#fff;}
+
+}/* mobile end */
+
+
+/* tablet -------------------- */
+@media screen and (min-width:481px) and (max-width:1024px) {
+
+  #wrap{height:500px; background-color: #c30; color:#fc0;}  
+
+}/* tablet end */
+
+/* pc ----------------------- */
+@media screen and (min-width:1025px) {
+  
+  #wrap{background-color: #070;}
+
+}/* pc end */
