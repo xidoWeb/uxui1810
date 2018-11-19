@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* font_01.css */
+/* 
+*서체를 설정하는 기능 
+* font-family :첫서체, 두번째 서체 , 세번째 서체...;
+
+*/
+
+
+h1{font-family:"myriad pro",arial,"나눔고딕",nanumGothic,"돋움",dotum, sans-serif;}
+h2{background-color: #fac; margin-bottom: 1rem;}
+p{font-family:arial;}
+ol,li{list-style:decimal; padding-left: 1.3rem;}
+
+.bold{font-weight:bold;}
+.weight_normal{font-weight:normal;}
