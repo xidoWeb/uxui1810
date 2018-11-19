@@ -45,9 +45,75 @@
     <li><span class="bold">글씨를 강제로 굵게</span>하거나, 
        <strong class="weight_normal">굵은글씨를 일반형태로 바꾸는 기능</strong></li>
 
+    <li><span class="italic">글씨를 강제로 기울게</span>하거나, 
+      <em class="italic_normal">기운글씨를 일반형태로 바꾸는 기능</em></li>
+
+    <li><span class="underline">글씨를 강제로 밑줄</span>로 하거나,
+       <ins class="under_normal">밑줄의 글씨를 일반형태</ins>로 바꾸는 기능</li>
+
+    <li><span class="delete">글씨를 취소선</span>으로 만들거나,
+        <del class="del_normal">취소선의 글씨</del>를 일반형태로 만드는 기능</li>
   </ol>
+  
+  <hr /> 
+  <h2>font 크기를 조정</h2>
+  <h3>기본 내용</h3>
+  <p>서체의 크기는 일반형태로 pt단위를 사용한다. <br />
+     하지만, 반응형이나 동적형태, 
+     최신 브라우저의 상황이 변하고 있기에. <br />
+     pt단위를 웹서체의 크기로 사용하지는 않고 있다.<br />
+     즉, 현재는 em, rem, %... 의 단위로 사용하고 있다.
+   </p>
+   <section class="mini_web">
+     <h1>h1은 큰 글씨,굵은글씨로 인식을 하기 마련!~ 하.지.만</h1>
+     <h2>h2는 두번째로 중요한 글씨로, h1보다 작은크기의 큰글씨로 인식이되고 있다. 하.지.만</h2>
+     <h3>h3는 세번째로 중요한 글씨이며, 마찬가지 굵고 큰 글씨로 인식한다. 하.지.만!</h3>
+     <h4>굵은글씨 마찬가지... 크기도 한번 ~~</h4>
+   </section>
+
+   <p>위 내용을 통해 크기는 상황과, 디자인의 역할에 따라 달라질 수 있다!!!</p>
 
 
+
+<!-- =============================================== -->
+   <h3>단위에 따른 크기변화</h3>
+
+   <h4>pt단위로 체크</h4>
+   <p class="pt_check size_box">큰영역으로 텍스트 36pt 크기<br />
+     <span class="pt_01">절반크기로 체크 18pt 크기<br />
+       <span class="pt_02">다시 절반크기로 체크 9pt 크기<br />
+         <span class="pt_03">두배 크기로 체크 18pt 크기<br />
+           <span class="pt_04">다시 절반으로 줄이기 9pt 크기
+           </span><!-- .pt_04 -->
+         </span><!-- .pt_03 -->
+       </span><!-- .pt_02 -->
+     </span><!-- .pt_01 -->
+   </p>
+<!-- ============================================== -->
+   <h4>&percnt; 단위로 체크</h4>
+   <p class="per_check size_box">큰영역으로 텍스트 36pt 크기<br />
+     <span class="per_01">절반크기로 체크 18pt 크기<br />
+       <span class="per_02">다시 절반크기로 체크 9pt 크기<br />
+         <span class="per_03">두배 크기로 체크 18pt 크기<br />
+           <span class="per_04">다시 절반으로 줄이기 9pt 크기
+           </span><!-- .per_04 -->
+         </span><!-- .per_03 -->
+       </span><!-- .per_02 -->
+     </span><!-- .per_01 -->
+   </p>
+<!-- ============================================== -->
+  <h4>em 단위로 체크</h4>
+   <p class="em_check size_box">큰영역으로 텍스트 36pt 크기<br />
+     <span class="em_01">절반크기로 체크 18pt 크기<br />
+       <span class="em_02">다시 절반크기로 체크 9pt 크기<br />
+         <span class="em_03">두배 크기로 체크 18pt 크기<br />
+           <span class="em_04">다시 절반으로 줄이기 9pt 크기
+           </span><!-- .em_04 -->
+         </span><!-- .em_03 -->
+       </span><!-- .em_02 -->
+     </span><!-- .em_01 -->
+   </p>
+<!-- ============================================== -->
  </div> 
 </body>
 </html>
