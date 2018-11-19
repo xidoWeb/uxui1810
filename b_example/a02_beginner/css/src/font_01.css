@@ -6,6 +6,12 @@
 * font-family :첫서체, 두번째 서체 , 세번째 서체...;
 
 */
+/*
+  * 최초의 서체크기를 설정하는 방법
+  * :앞에는 아무것도 존재하지 않는다.
+
+  :root{ font-size:10px;}
+*/
 
 
 h1{font-family:"myriad pro",arial,"나눔고딕",nanumGothic,"돋움",dotum, sans-serif;}
@@ -49,7 +55,8 @@ h4{padding: 0.3em; background-color: #acf;}
 .pt_03{font-size:18pt;}
 .pt_04{font-size:9pt;}
 
-/* %단위는 최초의 설정에서만 12pt의 값의 기준으로 설정되고, 이후는 자신의 부모를 기준 크기로 설정 */
+/* %단위는 최초의 설정에서만 12pt의 값의 기준으로 설정(12pt == 100%)되고, 
+이후는 자신의 부모를 기준 크기로 설정 */
 
 .per_check{font-size:300%;}
 .per_01{font-size:50%;}
@@ -57,8 +64,57 @@ h4{padding: 0.3em; background-color: #acf;}
 .per_03{font-size:200%;}
 .per_04{font-size:50%;}
 
-/* em단위는  */
+/* em단위는  12pt == 1em 
+하지만... 상대크기
+(최초이후에는 자신의 부모를 기준)*/
+.em_check{font-size:3em;}
+.em_01{font-size:0.5em;}
+.em_02{font-size:0.5em;}
+.em_03{font-size:2em;}
+.em_04{font-size:0.5em;}
 
+/* rem단위는 12pt == 1rem , 
+em과 마찬가지 상대크기
+(최초의 설정한 크기를 기준) */
+.rem_check{font-size: 3rem;}
+.rem_01{font-size:1.5rem;}
+.rem_02{font-size:0.75rem;}
+.rem_03{font-size:1.5rem;}
+.rem_04{font-size:0.75rem;}
 
 
 /* ======================================= */
+/* 덤, 서체의 크기가 아닌 상자의 크기로 em과 rem차이점 이해 */
+
+/* --- */
+.px_box{margin: auto; margin-bottom: 3rem;
+  width: 160px; height: 160px; font-size: 0.5rem;
+  background-color: #fa0; border:1px solid #333;}
+.px_01{width:80px; height: 80px; background-color: #c90;}
+.px_02{width:40px; height:40px; background-color: #950;}
+.px_03{width: 80px; height: 80px; background-color: #fff;
+      opacity:0.5;}
+.px_04{width: 40px; height: 40px; background-color: #f6f;}
+
+/* em단위...사실상 엄청나게 어려운 환산 */
+.em_box{margin: auto; margin-bottom: 3rem;
+  width: 10em; height: 10em; font-size:0.5rem;
+  background-color:#aaf; border:1px solid #333;}
+ .em_box_01{width:5em; height:5em; background-color:#99a;} 
+ .em_box_02{width:2.5em; height:2.5em; background-color:#559;} 
+ .em_box_03{width:5em; height:5em; background-color:#fff;
+  opacity: 0.5;} 
+ .em_box_04{width:2.5em; height:2.5em; background-color:#faf;} 
+
+/* em의 다양한 문제점으로인해 변화된 rem단위 */
+.rem_box{margin: auto; margin-bottom: 3rem;
+  width: 10rem; height: 10rem; font-size:0.5em;
+  background-color: #afa; border:1px solid #333;}
+.rem_box_01{width:5rem; height: 5rem; background-color: #a9a;}
+.rem_box_02{width:2.5rem; height:2.5rem; background-color:#959;}
+.rem_box_03{width:5rem; height:5rem; background-color:#fff;
+  opacity: 0.5;}
+.rem_box_04{width:2.5rem; height:2.5rem; background-color:#505;
+  color:#fff;}
+
+  
