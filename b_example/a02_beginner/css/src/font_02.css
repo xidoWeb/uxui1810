@@ -1,0 +1,46 @@
+@charset "UTF-*";
+
+/* font_02.css */
+
+#wrap{
+  padding: 0.5rem; margin: auto;
+  width: 900px; height: auto;
+  border:1px solid #333; }
+
+h1{padding: 1rem; text-align: center;
+  background-color: #aca;}
+h2{/* border-top:1px solid #acc; 
+  border-bottom:1px solid #acc; */
+  border:1px solid #577;
+  border-left:none; border-right:none;
+  height: 70px; line-height: 70px;
+  text-indent:2rem;
+}
+
+.line_height{
+  width: 100%; height: auto; 
+  background-color: #fc0;
+  line-height:1.5;}
+
+
+.vertical_align{
+  width: 100%; height: 500px;
+  display: inline-block;
+  vertical-align: middle;
+  /* top, bottom, baseline, middle */
+  background-color: #aff;}
+
+table{width: 500px; height: 300px; border:1px solid #555;}
+tr,td{width: 100%; height: 100%; vertical-align:middle;}
+/* vertical-align은 특정 조건에서만 동작하는 세로에서의 정렬기능 */
+
+.letter_spacing{letter-spacing:2rem;}
+.word_spacing{word-spacing:3rem;}
+
+.indent{width:600px; height:300px; background-color: #ddd;
+      border:1px solid #555; text-indent:5rem; padding-left:3rem;
+      box-sizing: border-box;}
+
+.lower{text-decoration: none; font-weight: bold;
+    text-transform:lowercase;}
+.upper{color:#79f; text-transform:uppercase;}
