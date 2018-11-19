@@ -1,6 +1,7 @@
-@charset "UTF-*";
+@charset "UTF-8";
 
 /* font_02.css */
+:root{font-size:22px}
 
 #wrap{
   padding: 0.5rem; margin: auto;
@@ -8,7 +9,7 @@
   border:1px solid #333; }
 
 h1{padding: 1rem; text-align: center;
-  background-color: #aca;}
+  background-color: #aca; font-weight:normal;}
 h2{/* border-top:1px solid #acc; 
   border-bottom:1px solid #acc; */
   border:1px solid #577;
@@ -16,6 +17,8 @@ h2{/* border-top:1px solid #acc;
   height: 70px; line-height: 70px;
   text-indent:2rem;
 }
+
+p{font-weight:800;}
 
 .line_height{
   width: 100%; height: auto; 
@@ -44,3 +47,26 @@ tr,td{width: 100%; height: 100%; vertical-align:middle;}
 .lower{text-decoration: none; font-weight: bold;
     text-transform:lowercase;}
 .upper{color:#79f; text-transform:uppercase;}
+.cap{text-transform:capitalize;}
+
+.ellip{margin-bottom: 1rem;
+  width: 150px; height: 50px; 
+  background-color: #753; color:#7ff;
+  overflow: hidden;
+  white-space:nowrap;
+  /*text-overflow:hidden;*/
+  text-overflow:ellipsis;}
+
+.webfont{font-size: 2rem; color:#950;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight:700;}
+
+p::-webkit-selection{color:red;}
+p::-moz-selection{color:red;}
+p::-ms-selection{color:red;}
+p::-o-selection{color:red;}
+p::selection{color:red;}
+
+/* 벤더 프리픽스:
+    최신 기능으로 브라우저에서 기능자체는 지원하지만, 공식으로 사용할 수 없는 테스트버전일경우에, 강제로 테스트버전을 사용할 수 있도록 처리하는 방법
+*/
