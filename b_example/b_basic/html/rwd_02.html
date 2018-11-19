@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- rwd_02.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/base/common.css" />
+  <link rel="stylesheet" href="../css/src/rwd_02.css" />
+
+  <title>rwd_02</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1>brand</h1>
+      <div id="gnb"></div>
+    </header>
+    <section id="infoBox">adBox</section>
+    <article id="contentBox">
+      <ul>
+        <li>1번째 상자</li>
+        <li>2번째 상자</li>
+        <li>3번째 상자</li>
+        <li>4번째 상자</li>
+      </ul>
+    </article>
+    <article id="newsBox">
+      <div class="best_news">
+        best_news
+      </div>
+      <div class="issue_news">
+        issue_news
+      </div>
+    </article>
+    <footer id="footBox">
+      <h2>info</h2>
+    </footer>
+  </div>
+  
+  <!-- script(jQuery) -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  <script>
+    (function($) {
+      //  jQuery start ------------------------------
+      // 잠깐의 jQuery 테스트...
+      // body영역을 클릭시 배경색상이 변경되도록 처리!
+           /*
+            var body = $('body');
+            body.on('click', function() {
+              $(this).css({
+                backgroundColor: '#f7a'
+              });
+            });
+           */
+      //  jQuery end ------------------------------
+    })(jQuery);
+  </script>
+</body>
+</html>
+
+<!--  -->

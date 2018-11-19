@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+ /*rwd_02.css */
+
+#wrap{margin: auto; 
+  width:100%; max-width:960px; 
+  height:auto; min-height:400px;
+  transition:all 300ms linear;}
+
+#headBox    {width: 100%; height: 150px; background-color: #fa0;}
+h1{width: 100px; height:100%; background-color: #9f7;
+  transition: all 300ms ease-in; float: left;}
+
+#gnb{width: 45px;width: 45px; width: 2.8125rem; 
+     height:45px; height:2.8125rem; 
+     background-color: #fff;
+     float: right;}
+
+#infoBox    {width: 100%; background-color: #f9f;}
+#contentBox {width: 100%; height: 400px; background-color: #acc;}
+#contentBox>ul{width: 100%; height: 100%;}
+#contentBox>ul>li{width: 25%; height: 100%; float: left;
+  border:1px solid #333; 
+  border:0.0625rem solid #333; 
+  box-sizing:border-box;}
+/*.green{background-color: #5a4;}
+.blue{background-color: #77f;}*/
+
+#contentBox>ul>li:nth-child(2n){background-color: #afa;}
+#contentBox>ul>li:nth-child(2n+1){background-color: #aaf;}
+
+/* :nth-child() 무조건 연속되어진 형태를 설정 가능하다 
+  <p class="par"></p>
+  <p class="par"></p>
+  <p class="par"></p>
+  <p class="par"></p>
+  <p class="par"></p>
+  <p class="par"></p>
+  <p class="par"></p>
+  <p class="par"></p>
+
+  .par:nth-child(1){}
+  .par:first-child{}
+
+  .par:nth-child(3){}
+  .par:nth-child(5){}
+  .par:last-child{}
+
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+
+  li:nth-child(3){}
+
+
+
+  <p></p>
+  <p></p>
+  <div></div>
+  <p></p>
+  <p></p>
+
+  * nth-of-type의 경우는 동일 레벨에서 동일한 타입(태그요소)만 선택
+
+  p:nth-of-type(3){}
+  p:first-of-type{}
+  p:last-of-type{}
+*/
+#newsBox    {width: 100%; height: 300px; background-color: #f70;}
+.best_news{width: 100%; height:100px; background-color: #dd0;}
+.issue_news{width: 100%; height:200px; background-color: #f50;}
+
+#footBox    {width: 100%; height: 100px; background-color: #730;}
+#footBox > h2{width: 100px; height: 100%; background-color: #acf;
+  float: left;}
+
+
+/* mob start =================== */
+@media screen and (max-width:480px){
+  #wrap {background-color: #ccc;}
+  #headBox {height: 100px; position: relative;}
+  h1{width: 100%;}
+  #gnb{position: absolute; right: 20px; top:50%; 
+      margin-top:-1.40625rem;}
+
+  #infoBox   {height: 400px;}
+
+  #contentBox>ul>li{width: 50%; height: 50%;}
+  #contentBox>ul>li:nth-child(3){background-color: #afa;}
+  #contentBox>ul>li:nth-child(4){background-color: #aaf;}
+
+  #footBox > h2{width:50%; margin:auto; float:none;}
+}/* mob end*/
+
+
+/* tablet start =================== */
+@media screen and (min-width:481px) and (max-width:768px){
+  #wrap {background-color: #fac;}
+  #infoBox {height: 300px;}
+}/* tablet end */
+
+
+/* pc start =================== */
+@media screen and (min-width:769px) {
+  #wrap{background-color: #acf;}
+  #infoBox {height: 450px;}
+  #contentBox {height: 600px;}
+  #newsBox {display: none;}
+
+}/* pc end */
