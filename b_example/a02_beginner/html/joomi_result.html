@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <title>Document</title>
+  <style>
+  .box{ 
+    width: 430px;padding: 16px;border:1px solid #333;
+    /*width: 464px; padding:16px; box-sizing: border-box;
+    border:1px solid #fa0;*/
+
+    background-color: #acc; height: auto;}
+
+  .box:after{content:" "; display: block; 
+            width: 0; height: 0; clear: both;}
+
+
+    li{width: 100px; height: 100px; border:1px solid #333; box-sizing: border-box;
+     margin-right:10px; margin-bottom:80px; float: left;
+     background-color: #fff;}
+     li:nth-child(4n){margin-right: 0;}
+     li:nth-last-child(1),
+     li:nth-last-child(2),
+     li:nth-last-child(3),
+     li:nth-last-child(4){margin-bottom: 0;}
+
+     li:last-child{margin-right: 0;}
+  
+  p{width: 100%; background-color: #fa0;}
+
+
+  </style>
+</head>
+<body>
+  <ul class="box">
+    <li>list_1</li>
+    <li>list_2</li>
+    <li>list_3</li>
+    <li>list_4</li>
+    <li>list_5</li>
+    <li>list_6</li>
+    <li>list_7</li>
+    <li>list_8</li>
+    <li>list_9</li>
+    <li>list_10</li>
+    <li>list_11</li>
+    <li>list_12</li>
+    <li>list_13</li>
+    <li>list_14</li>
+    <li>list_15</li>
+    <li>list_16</li>
+    <li>list_17</li>
+    <li>list_18</li>
+    <li>list_19</li>
+    <li>list_20</li>
+  </ul>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi dolorem nisi impedit soluta cupiditate ad eveniet non quod, quas repellendus vitae, error nesciunt. Odio, repudiandae! Soluta natus iure alias illo.</p>
+</body>
+</html>
