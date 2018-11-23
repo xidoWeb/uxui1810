@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- rwd_03_homework.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/base/common.css" />
+  <link rel="stylesheet" href="../css/src/rwd_03_homework.css" />
+
+  <!-- 조건부 주석 - cc:ie6 --> 
+  <!--[if lte ie 9]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/css3pie/PIE_IE9.js"></script>
+    <script src="../ie/ie9.min.js"></script>
+    <script src="../ie/respond/dest/respond.min.js"></script>
+
+    <link rel="stylesheet" href="../css/src/rwd_03_homework_forIE.css">
+  <![endif]-->
+
+  <!-- 
+    html5shiv: html5추가코드 첨부
+    css3pie: css3의 추가기능을 IE하위에서도 동작
+        - border-radius, box-shadow, background-image:linear-gradient() 등 기능에사용시
+        - behavior: url(PIE.htc); 를 말미에 붙여주어야 동작함
+
+    ie9.js : html5/css3의 기능의 일부 버그를 해결한코드
+    respond.js : ie9이하의 브라우저에서 반응형이 되게
+  -->
+  <!-- link:touch -->
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <!-- link:favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+
+  <title>responsive web homework</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap"></div>
+
+  <!-- script(jQuery) -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  <script>
+    (function($) {})(jQuery);
+  </script>
+</body>
+</html>

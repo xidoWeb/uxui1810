@@ -56,5 +56,17 @@
     <li>list_20</li>
   </ul>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi dolorem nisi impedit soluta cupiditate ad eveniet non quod, quas repellendus vitae, error nesciunt. Odio, repudiandae! Soluta natus iure alias illo.</p>
+  <script src="http://code.jquery.min.js"></script>
+  <script>
+    (function($) {
+      var li = $('.box').fine('li');
+      var p = $('p');
+      var top = p.offset().top;
+      li.on('click',function() {
+        console.log(top);
+      });
+
+    })(jQuery);
+  </script>
 </body>
 </html>
