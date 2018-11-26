@@ -1,0 +1,12 @@
+/*rwd_03_tablet.css */
+
+
+/* tablet 768 =========================================== */
+@media screen and (min-width:481px) and (max-width:768px) {
+  /* device 기준크기 : 768px */
+  #wrap {background-color: #acf;}
+  #addBanner {height:58.59375vw; /* 450/768*100 */ min-height:25rem; max-height:28.125rem;}
+  #infoBox{height:27.34375vw; /* 210/768*100 */ min-height:9.375rem; max-height:13.125rem;}
+  #contentBox{height:70.3125; /* 540/768*100 */ min-height:28.125rem; max-height:33.75rem;}
+
+}/* // end tablet 768 */

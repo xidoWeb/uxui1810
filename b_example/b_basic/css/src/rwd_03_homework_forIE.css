@@ -1,5 +1,64 @@
 /*rwd_03_homework_forIE.css*/
 
-#wrap{margin: auto; 
-  width:960px; height:4000px; 
-  background-color: #fac;}
+@charset "UTF-8";
+
+/* rwd_03_homework.css */
+
+/* commonArea ========================================= */
+#wrap{width:100%; height:auto; min-height:10rem; background-color: #fa0;}
+/* #headBox --------------- */
+#headBox{position:fixed; top:0; left:0; z-index:500;
+  width: 100%; height: 60px; background-color: #333;}
+
+/* #addBanner ---------------- */
+#addBanner{margin-top:60px; width: 100%; background-color: #ba7;}
+
+/* #infoBox ---------------- */
+#infoBox{width: 100%; background-color: #577;}
+
+/* #contentBox ---------------- */
+#contentBox{width: 100%; background-color: #97e;}
+
+/* #footBox ---------------- */
+#footBox{width: 100%; height: 120px; background-color: #777;}
+
+
+
+/* // end comminArea */ 
+
+/* mobole 480 ========================================= */
+@media screen and (max-width:480px) {
+  /* device 기준크기 : 480px */
+  #wrap {background-color: #afa;}
+  #headBox {height:12.5vw;/* 60/480*100 */ min-height:40px;} 
+  #addBanner{margin-top:12.5vw; /* 60/480*100 */ 
+    height:150vw; /* 720/480*100 */ min-height:480px;}
+  #infoBox{height:150vw; /* 720/480*100 */ min-height:480px;}
+  #contentBox{height:150vw; /* 720/480*100 */ min-height:480px;}
+  #footBox {height:12.5vw;/* 60/480*100 */ min-height:40px;} 
+
+}/* // end mobole 480 */
+
+/* tablet 768 =========================================== */
+@media screen and (min-width:481px) and (max-width:768px) {
+  /* device 기준크기 : 768px */
+  #wrap {background-color: #acf;}
+  #addBanner {height:58.59375vw; /* 450/768*100 */ min-height:400px; max-height:450px;}
+  #infoBox{height:27.34375vw; /* 210/768*100 */ min-height:150px; max-height:210px;}
+  #contentBox{height:70.3125; /* 540/768*100 */ min-height:450px; max-height:540px;}
+
+}/* // end tablet 768 */
+
+/* laptop 1366 ========================================= */
+@media screen and (min-width:769px) and (max-width:1366px) {
+  /* devict 기준크기: 1366 */
+  #wrap{background-color: #f50;}
+  #addBanner {height:32.942899vw; /* 450/1366*100 */ min-height:450px; max-height:600px;}
+  #infoBox{height: 210px;}
+   #contentBox{height:540px;}
+
+}/* // end laptop 1366 */
+
+
+
+/* =========================================== */

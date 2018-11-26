@@ -1,0 +1,11 @@
+/* rwd_03_labtop.css */
+
+/* laptop 1366 ========================================= */
+@media screen and (min-width:769px) and (max-width:1366px) {
+  /* devict 기준크기: 1366 */
+  #wrap{background-color: #f50;}
+  #addBanner {height:32.942899vw; /* 450/1366*100 */ min-height:28.125rem; max-height:37.5rem;}
+  #infoBox{height: 13.125rem;}
+   #contentBox{height:33.75rem;}
+
+}/* // end laptop 1366 */

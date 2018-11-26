@@ -1,0 +1,14 @@
+/*rwd_03_mobile.css */
+
+/* mobole 480 ========================================= */
+@media screen and (max-width:480px) {
+  /* device 기준크기 : 480px */
+  #wrap {background-color: #afa;}
+  #headBox {height:12.5vw;/* 60/480*100 */ min-height:2.5rem;} 
+  #addBanner{margin-top:12.5vw; /* 60/480*100 */ 
+    height:150vw; /* 720/480*100 */ min-height:30rem;}
+  #infoBox{height:150vw; /* 720/480*100 */ min-height:30rem;}
+  #contentBox{height:150vw; /* 720/480*100 */ min-height:30rem;}
+  #footBox {height:12.5vw;/* 60/480*100 */ min-height:2.5rem;} 
+
+}/* // end mobole 480 */
