@@ -9,6 +9,8 @@
 /* #headBox --------------- */
 #headBox{position:fixed; top:0; left:0; z-index:500;
   width: 100%; height: 60px; background-color: #333;}
+h1{float:left; width:100px; height:30px; background-color:#afa; }
+#navBox{float:right; width:60px; height:25px; background-color:#afa; }
 
 /* #addBanner ---------------- */
 #addBanner{margin-top:60px; width: 100%; background-color: #ba7;}
