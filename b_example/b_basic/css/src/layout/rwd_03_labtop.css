@@ -4,8 +4,29 @@
 @media screen and (min-width:769px) and (max-width:1366px) {
   /* devict 기준크기: 1366 */
   #wrap{background-color: #f50;}
+
+  #navBox{width:31.25rem;}
+  .sign_up {width:6rem;}
+  .menu {width:25rem;}
+
+  .menu>button{display: none;}
+  .gnb{display: block; width: 100%; height: 100%; 
+    background-color: #aff;} 
+  .gnb>ul{width: 100%; height: 100%;}
+  .gnb>ul>li{float: left; padding:0 0.5rem;
+    border-right:1px solid #fff; box-sizing: border-box; 
+    width: 25%; height: 100%;}
+  .gnb>ul>li:last-child{border:0;}
+  .gnb a{display: block; width: 100%; height: 100%; 
+    background-color: #faf;}
+  .gnb a:hover{background-color: #a6f;}
+
+
+
   #addBanner {height:32.942899vw; /* 450/1366*100 */ min-height:28.125rem; max-height:37.5rem;}
   #infoBox{height: 13.125rem;}
-   #contentBox{height:33.75rem;}
+  #contentBox{height:33.75rem;}
+  #footBox h2{float:left; position:static;
+    width:15.625rem; height:2.8125rem; background-color:#afa;}
 
 }/* // end laptop 1366 */

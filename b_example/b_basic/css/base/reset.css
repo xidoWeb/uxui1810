@@ -2,11 +2,17 @@
 @charset "UTF-8";
 
 html,body{margin: 0; padding: 0; width: 100%; height: 100%;}
-h1,h2,h3,h4,h5,h6,div,p,pre,img,ul,ol,li,dl,dt,dd{margin: 0; padding: 0; border: 0; outline:0;}
+
+h1,h2,h3,h4,h5,h6,div,p,pre,img,ul,ol,li,dl,dt,dd,button{
+  margin: 0; padding: 0; border: 0; outline:0;}
+
 ul,ol,li{list-style: none;}
+
 a{color:#555; text-decoration: none;}
-a:hover{color:#fa0;}
-a:focus{position:relative; z-index: 800;
+button{border-radius:0; cursor:pointer;}
+a:hover, button:hover{color:#fa0;}
+a:focus, button:focus{position:relative; z-index: 800;
   color:#fa0; outline:0.2rem solid #fa0; outline-offset:0.3rem;}
+
 header,nav,aside,article,section,footer,main,figure,figcaption{
   display: block; margin: 0; padding: 0; border:0; outline: 0;}

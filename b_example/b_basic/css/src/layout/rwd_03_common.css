@@ -3,18 +3,25 @@
 /* commonArea ========================================= */
 #wrap{width:100%; height:auto; min-height:10rem; background-color: #fa0;}
 /* #headBox --------------- */
-#headBox{padding:0.3125rem 0.75rem; box-sizing: border-box;
-  position:fixed; top:0; left:0; z-index:500;
+#headBox{position:fixed; top:0; left:0; z-index:500;
   width: 100%; height: 3.75rem; background-color: #333;}
-.container{margin: auto; width: 100%; max-width:60rem; height: 100%; 
+.container{padding:0.3125rem 0.75rem;  box-sizing: border-box;
+          margin: auto; width: 100%; max-width:60rem; height: 100%; 
           background-color:rgba(255,255,255,0.2);}
 
 h1{float:left; width:6.25rem; height:1.875rem; background-color:#afa; font-size:1rem;}
 #navBox{float:right; width:3.75rem; height:1.5625rem; background-color:#afa; }
+.sign_up{width: 24px; height:100%; float: left;}
+.sign_up>a{display: block; width: 100%; height: 100%; background-color: #531;}
+
+.menu{width: 30px; height: 100%; float: right;}
+.menu>button{width:100%; height:100%; }
+.gnb{display: none;}
 
 
 /* #addBanner ---------------- */
 #addBanner{margin-top:3.75rem; width: 100%; background-color: #ba7;}
+h2{width: 0; height: 0; position: relative; z-index: -1000; }
 
 /* #infoBox ---------------- */
 #infoBox{width: 100%; background-color: #577;}
