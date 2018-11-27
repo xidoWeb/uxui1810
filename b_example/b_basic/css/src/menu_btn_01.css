@@ -1,0 +1,20 @@
+/* menu_btn_01.css */
+
+#wrap{margin: auto; padding-bottom: 2rem; width: 960px; height: auto; background-color: #ccc;}
+h1{margin-bottom:2rem; padding:1.5rem; background-color:#59a; color:#fff; }
+
+.menu_btn_01{margin: auto; width: 60%; height: auto; 
+  border:2px solid #333; border-left:0; border-right:0;}
+
+.menu_btn_01>dt{padding:0.5rem; box-sizing:border-box;
+  width: 100%; height: auto; background-color: #a59; 
+  font-size:1.4rem; font-weight:bold; color:#fff;}
+
+.menu_btn_01 button{padding: 0.5rem; font-weight: bold;
+    background-color: #fff; border-radius:0.3rem; border:2px solid #fff;}
+
+.menu_btn_01 button.show {padding:0.5rem 1.5rem;
+  background-color: #750; color:#fff;}
+
+.menu_btn_01>dd{padding: 1rem; box-sizing:border-box;
+  width: 100%; height: auto; background-color: #ccf;}
