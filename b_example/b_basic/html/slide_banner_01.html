@@ -25,8 +25,31 @@
      <h1>slideBanner</h1>
      <section id="viewBox">
        <h2 class="hidden">광고 뷰영역</h2>
-       <!-- 3개의 광고영역 -->
-       
+       <!-- 3개의 광고영역 제작순서: 
+          - 0: 재생/정지 버튼
+          - 1: 인디케이터 
+          - 2: 좌우 버튼
+          - 3: 광고영역
+        -->
+        <div class="view_indicator"></div>
+
+        <div class="view_btn hidden_wrap">
+          <button type="button" class="next_btn">
+            <span>다음광고보기</span>
+          </button>
+          <button type="button" class="prev_btn">
+            <span>이전광고보기</span>
+          </button>
+        </div>
+
+        <div class="view_banner">
+          <h3 class="hidden">광고내용</h3>
+          <div class="view_banner_outer">
+            <div class="view_banner_01">view_banner_01</div>
+            <div class="view_banner_02">view_banner_02</div>
+            <div class="view_banner_03">view_banner_03</div>
+          </div>
+        </div>
 
      </section>
 
