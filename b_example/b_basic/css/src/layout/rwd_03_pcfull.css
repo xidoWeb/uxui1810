@@ -1,1 +1,37 @@
 /* rwd_03_pcfull.css */
+
+@media screen and (min-width:1367px) {
+ /*------------------------------------------*/
+  html,body{height: 100%; background-color: #fff;}
+  #wrap{height: 100%;}
+
+  /* #headBox */
+  #headBox { background-color:transparent; }
+  #headBox>.container{ max-width: 100%; 
+    background-color:transparent;}
+  #headBox h1{width:12.5rem; height: 100%; max-height:3.125rem;}
+
+  /* #addBanner */
+  #addBanner{margin-top: 0; height: 100%;}
+  /* #infoBox*/
+  #infoBox{position: relative;  margin: auto; width: 60rem; 
+          height: auto; min-height:10rem; background-color:rgba(255,255,255,0.7);}
+  #infoBox:before,
+  #infoBox::before{content:" "; display: block; width: 100vw; height: 100%;
+      background-color: #f09; z-index: -10;
+      position: absolute; top: 0; left:50%; margin-left: -50vw;}
+
+  /*#infoBox:after{content:" "; display: block; clear: both;}*/
+  
+  #infoBox > p{border:1px solid #333; box-sizing:border-box; width: 12.5rem; height: 12.5rem; margin: 1rem; float: left; }
+
+  /*#contentBox */
+  #contentBox > .container{max-width: 100%; padding:0 2rem}
+
+  .con_in{float:left; padding: 3rem; box-sizing:border-box; 
+         width:33.333333%; height:auto; min-height:30rem;}
+  .cont_01{background-color: #af3;}
+  .cont_02{background-color: #ba4;}
+  .cont_03{background-color: #c65;}
+ /*------------------------------------------*/
+}/* pcfull end 

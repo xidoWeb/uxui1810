@@ -26,6 +26,12 @@
   #addBanner {height:32.942899vw; /* 450/1366*100 */ min-height:28.125rem; max-height:37.5rem;}
   #infoBox{height: 13.125rem;}
   #contentBox{height:33.75rem;}
+  .con_in{float:left; width:33.333333%; height:auto; min-height:30rem;}
+  .cont_01{background-color: #af3;}
+  .cont_02{background-color: #ba4;}
+  .cont_03{background-color: #c65;}
+
+
   #footBox h2{float:left; position:static;
     width:15.625rem; height:2.8125rem; background-color:#afa;}
 
