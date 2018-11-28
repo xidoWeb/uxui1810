@@ -10,13 +10,14 @@ h1{padding: 1rem; border-bottom:1px solid #333; background-color: #7af; margin-b
 #viewBox{position: relative; margin: auto; width: 60rem; height: 450px; border:2px solid #777; background-color: #fff;}
 
   .view_indicator{position: absolute; bottom: 1rem; left: 50%; margin-left: -6.25rem; 
-    width: 12.5rem; height: 1.875rem; background-color: #acc;}
+      width: 12.5rem; height: 1.875rem; background-color: #acc;}
   
-
+/* -------------------------------------------------------------- */
+  .hidden_wrap a>span,
   .hidden_wrap button>span{display: block; width: 0; height: 0; overflow: hidden;}
-  
+
   .view_btn{position: absolute; top: 50%; margin-top: -2.5rem; width: 100%; height:0; background-color: #f6f;}
-  .view_btn>button{width: 2rem; height: 5rem;}
+  .view_btn>button{width: 2rem; height: 5rem; font-size:3rem; font-weight: bold; color:#f06;}
     .next_btn{float: right;}
     .prev_btn{float: left;}
 
