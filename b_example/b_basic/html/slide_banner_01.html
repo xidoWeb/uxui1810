@@ -53,9 +53,24 @@
         <div class="view_banner">
           <h3 class="hidden">광고내용</h3>
           <div class="view_banner_outer">
-            <div class="view_banner_01" id="view_01">view_banner_01</div>
-            <div class="view_banner_02" id="view_02">view_banner_02</div>
-            <div class="view_banner_03" id="view_03">view_banner_03</div>
+            <div class="view_banner_01" id="view_01">
+              <!-- 방법 1외부의 파일을 불러와서 삽입 : iframe -->
+              <iframe src="http://www.gmarket.co.kr/"></iframe>
+            </div>
+            <div class="view_banner_02" id="view_0s2">
+              <iframe src="https://www.youtube.com/embed/-RhlX71_O2A"></iframe>
+            </div>
+            <div class="view_banner_03" id="view_03">
+              <video poster="../img/dog.jpg" controls="controls" autoplay="autoplay" muted="muted">
+                <source src="../media/web_video_test.webm" type="video/webM" />
+                <source src="../media/web_video_test.ogg" type="video/ogg" />
+                <source src="../media/web_video_test.mp4" type="video/mp4" />
+                <p>사용하고계신 브라우저에서는 동영상이 재생되지 않습니다. <br /> 
+                   최신 브라우저를 설치하고 사용해주세요.<br />
+                   <a href="http://google.com/chorme">권장 브라우저 설치하기</a>
+                </p>
+              </video>
+            </div>
           </div>
         </div>
 

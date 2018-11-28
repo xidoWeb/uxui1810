@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <p>비디오 및 오디오의 재생 및 정지, 기타 컨트롤 기능은  
+     controls기능으로 사용하기보다는, 
+   별도의 js를 활용하여 사용하자!!!!!
+ </p>
+  <div id="media_01">
+    <div class="play"><button class="button">play</button></div>
+    <div class="pause"><button class="button">pause</button></div>
+    <video poster="../img/dog.jpg" controls="controls" autoplay="autoplay" muted="muted"
+           preload="auto" volume="0.5">
+      <source  src="../media/../media/web_video_test.webm" type="video/webm" />
+      <source  src="../media/../media/web_video_test.ogg" type="video/ogg" />
+      <source  src="../media/../media/web_video_test.ogv" type="video/ogv" />
+      <source  src="../media/../media/web_video_test.mp4" type="video/mp4" />
+      <p>브라우저 사용할수 없어용. 그니께 다른거 쓰셔요</p>
+    </video>
+  </div>
+
+  <div id="media_02">
+    <div class="play"><button class="button">play</button></div>
+    <div class="pause"><button class="button">pause</button></div>
+    <audio controls="controls">
+      <source  src="../media/a.ogg" type="audio/ogg" />
+      <source  src="../media/a.mp3" type="audio/mp3" />
+      <p>브라우저 사용할수 없어용. 그니께 다른거 쓰셔요</p>
+    </audio>
+  </div>
+</body>
+</html>

@@ -48,5 +48,10 @@ h1{padding: 1rem; border-bottom:1px solid #333; background-color: #7af; margin-b
   .view_banner_outer{width:300%; height:100%; background-color: #da8;}
   .view_banner_outer>div{float: left; width:33.333333%; height: 100%;}
     .view_banner_01{background-color:#a4f;}
+    iframe{border: 0; width: 100%; height: 100%; background-color: #fff;}
+
     .view_banner_02{background-color:#5af;}
     .view_banner_03{background-color:#5fa;}
+    video{width:100%; height:100%;}
+
+    
