@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+/* common.css */
+.hidden{display: block; width: 0; height: 0; overflow: hidden; position:absolute; z-index: -100;}
+.clearfix:after, .clearfix::after {content:" "; display: block; width: 0; height: 0; clear: both;}
