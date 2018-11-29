@@ -1,6 +1,6 @@
 /* slide_banner_02.css */
 
-#wrap{margin: auto; width: 60rem; height: auto; min-height: -30rem; background-color: #fac;}
+#wrap{margin: auto; width: 60rem; height: auto; min-height:30rem; background-color: #fac;}
 
 /* #headBox ----------------- */
 #headBox{width: 100%; height: 3rem; background-color: #04a; 
@@ -15,14 +15,15 @@ h1>a{font-size:inherit; color:inherit;}
         background-color: #ccc; }
 
 /* .view_indicator*/
-.view_indicator{position: absolute; z-index: 100;  width: 15rem; height: 1.5rem; background-color: #fa0; left: 50%; bottom: 1rem; margin-left: -7.5rem;}
+.view_indicator{position: absolute; z-index: 100; left: 50%; bottom: 1rem; margin-left: -7.5rem;
+              width: 15rem; height: 1.5rem; }
 /* --> */
 .view_indicator>ul{width: 100%; height: 100%;}
 .view_indicator>ul>li{float: left; margin-right: 1.5rem; width: 1.5em; height: 1.5em;}
 .view_indicator>ul>li:last-child{margin-right: 0;}
 .view_indicator>ul>li>a{border-radius:50%; background-color: #fff;}
 .view_indicator>ul>li>a:hover,
-.view_indicator>ul>li>a:focus{background-color: #333;}
+.view_indicator>ul>li>a:focus{background-color: #aaa;}
 .view_indicator>ul>li.action>a{background-color: #491;}
 
 /* .view_btn */
@@ -38,13 +39,16 @@ h1>a{font-size:inherit; color:inherit;}
 /* .view_banner */
 .view_banner{width: 100%; height: 100%;}
 .view_banner_outer{width: 500%; height: 100%; background-color: #afaf77;}
-.view_banner_outer>div{width: 20%; height: 100%; float: left;
-    box-sizing: border-box; padding: 2rem; }
-.banner_01{background-color: #f1a;}
-.banner_02{background-color: #2fb;}
-.banner_03{background-color: #3cf;}
-.banner_04{background-color: #4fd;}
-.banner_05{background-color: #f5e;}
+.view_banner_outer>div{position: relative; z-index: 50; width: 20%; height: 100%; float: left;
+    box-sizing: border-box; padding: 2rem;
+    background-position: top; background-repeat: no-repeat; background-size:cover;}
+.view_banner_outer>div:before{content:" "; display: block; width: 100%; height: 100%; 
+    background-color:rgba(0,0,0,0.7); position: absolute; z-index: -1; top: 0;left: 0;}
+.banner_01{background-color: #f1a; background-image: url("../../../img/slide_banner/bg_01.jpg");}
+.banner_02{background-color: #2fb; background-image: url("../../../img/slide_banner/bg_02.jpg");}
+.banner_03{background-color: #3cf; background-image: url("../../../img/slide_banner/bg_03.jpg");}
+.banner_04{background-color: #4fd; background-image: url("../../../img/slide_banner/bg_04.jpg");}
+.banner_05{background-color: #f5e; background-image: url("../../../img/slide_banner/bg_05.jpg");}
 
 .view_banner_outer h4{padding: 1rem; width: 80%; color:#fff; 
                      background-color: rgba(50,50,50,0.7); font-size: 2.3rem;}
