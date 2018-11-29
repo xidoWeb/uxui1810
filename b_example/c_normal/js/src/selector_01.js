@@ -153,7 +153,11 @@ for(; i < listLilen; i += 1){
  // $('li').parent('ul').parent('#list').parent('#wrap').css({height:'100rem', backgroundColor:'#f6a'}); 
  $('li').parentsUntil('#wrap').css({height:'100rem', backgroundColor:'#f6a'});
 
- $('li').eq(2).siblings().css({marginLeft:'1rem'});
+ $('li').eq(2).siblings().css({marginLeft:'3rem'});
+ $('li').eq(2).prev().css({textIndent:'-5rem'});
+ $('li').eq(2).next().css({textIndent:'-5rem'});
+ $('li').eq(2).nextAll().css({color:'#ff6'});
+ $('li').eq(2).prevAll().css({color:'#0a7'});
 
 
 })(jQuery);
