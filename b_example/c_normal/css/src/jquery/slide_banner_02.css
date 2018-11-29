@@ -14,12 +14,28 @@ h1>a{font-size:inherit; color:inherit;}
 #viewBox{position: relative; margin: auto; width: 100%; max-width:60rem; height: 25rem; 
         background-color: #ccc; }
 
+/* .view_indicator*/
 .view_indicator{position: absolute; z-index: 100;  width: 15rem; height: 1.5rem; background-color: #fa0; left: 50%; bottom: 1rem; margin-left: -7.5rem;}
+/* --> */
+.view_indicator>ul{width: 100%; height: 100%;}
+.view_indicator>ul>li{float: left; margin-right: 1.5rem; width: 1.5em; height: 1.5em;}
+.view_indicator>ul>li:last-child{margin-right: 0;}
+.view_indicator>ul>li>a{border-radius:50%; background-color: #fff;}
+.view_indicator>ul>li>a:hover,
+.view_indicator>ul>li>a:focus{background-color: #333;}
+.view_indicator>ul>li.action>a{background-color: #491;}
 
+/* .view_btn */
 .view_btn{position: absolute; z-index: 100; width: 100%; height: 0; top: 50%; left: 0;}
-.view_btn>.btn{margin-top: -3rem; width: 2rem; height: 6rem; background-color: #f06; float: right;}
+.view_btn>.btn{margin-top: -3rem; width: 2rem; height: 6rem; float: right;
+      color:#fff; font-size: 2rem; text-shadow:0.2rem 0.2rem 0.2rem #333;
+      transition:all 300ms ease;}
 .view_btn>.btn:nth-of-type(2){float: left;}
+.view_btn>.btn:hover,
+.view_btn>.btn:focus{color:#333; text-shadow:0.2rem 0.2rem 0.2rem #fff;
+                    transform:scale(1.5);}
 
+/* .view_banner */
 .view_banner{width: 100%; height: 100%;}
 .view_banner_outer{width: 500%; height: 100%; background-color: #afaf77;}
 .view_banner_outer>div{width: 20%; height: 100%; float: left;
@@ -30,12 +46,12 @@ h1>a{font-size:inherit; color:inherit;}
 .banner_04{background-color: #4fd;}
 .banner_05{background-color: #f5e;}
 
-.view_banner_outer h4{padding: 1rem; width: 40%; color:#fff; 
-                     background-color: rgba(50,50,50,0.7); font-size: 1.3rem;}
-.view_banner_outer p{margin-top: 0.5rem; color:#fff; 
-                    font-size: 1.2rem; font-weight: bold; text-indent: 1rem;
-                    border-bottom:1px solid #fff; padding-bottom: 3rem;}
-.view_banner_outer .link{padding: 1rem; background-image:linear-gradient(45deg, #333, #777);
-                         width: 10rem; height: 3rem; border-radius:0.5rem;}
-.view_banner_outer .link>a{display: block; width: 100%; height: 100%; 
-                      line-height:3rem; text-align: center; font-size: 1.3rem; color:#fff;}
+.view_banner_outer h4{padding: 1rem; width: 80%; color:#fff; 
+                     background-color: rgba(50,50,50,0.7); font-size: 2.3rem;}
+.view_banner_outer p{margin-top: 1.5rem; color:#fff; width: 80%;
+                    font-size: 1.2rem; text-indent: 1rem;
+                    border-bottom:1px solid #fff; padding-bottom: 1rem; margin-bottom: 1.5rem;}
+.view_banner_outer .link{margin: auto;  width: 10rem; height: 3rem; }
+.view_banner_outer .link>a{display: block; padding:0.2rem 1rem; width: 100%; height: 100%;
+                      border-radius:0.5rem; background-image:linear-gradient(45deg, #333, #555);
+                      line-height:3rem; text-align: center; font-size: 1.3rem; color:#fff; font-weight: bold; }
