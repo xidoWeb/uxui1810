@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- exam_test_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+  <link rel="stylesheet" href="../../css/base/reset.css" />
+  <link rel="stylesheet" href="../../css/base/common.css" />
+  <!--[if IE]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/css3pie/PIE_IE9.js"></script>
+    <script src="../ie/ie9.min.js"></script>
+    <script src="../ie/respond/dest/respond.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../favicon.png" />
+  <title>title name</title>
+  <style>
+    #wrap{margin: auto; width:800px; height: auto; min-height: 50rem; }
+    #miniProduct{border:5px solid #fa0; position:relative; width:500px; height:300px;}
+    #miniProduct a{display:block; width:100%; height:100%;}
+    .indicator{position:absolute; bottom:-2rem; width:100px; height:1rem;}
+    .indicator>ul{width:100%; height:100%;}
+    .indicator li{width:1rem; height:1rem; float:left; margin-right:1rem;}
+    .indicator li>a{border-radius:50%; background-color:#aaa;}
+    .indicator li.action >a{background-color:#333;}
+    
+    .product{width:100%; height:100%; overflow: hidden;}
+    .product>ul{width:300%; height:100%;}
+    .product li{width:33.333333%; width:-webkit-calc(100% / 3);  width:-moz-calc(100% / 3);  width:-ms-calc(100% / 3);  width:-o-calc(100% / 3);  width:calc(100% / 3); 
+          height:100%; float:left;}
+    .product li:nth-child(1){background-color:#157;}
+    .product li:nth-child(2){background-color:#f57;}
+    .product li:nth-child(3){background-color:#1f7;}
+  </style>
+</head>
+<body>
+  <!-- layout -->
+   <div id="wrap">
+     <div id="miniProduct">
+        <div class="indicator hidden_wrap">
+         <ul>
+          <li><a href="#"><span>제품 01</span></a></li>
+          <li><a href="#"><span>제품 02</span></a></li>
+          <li><a href="#"><span>제품 03</span></a></li>
+         </ul>
+        </div>
+        <div class="product hidden_wrap">
+         <ul>
+          <li><a href="#"><span>상품설명 01</span></a></li>
+          <li><a href="#"><span>상품설명 02</span></a></li>
+          <li><a href="#"><span>상품설명 03</span></a></li>
+         </ul>
+        </div>
+      </div>
+   </div>
+
+  <!-- script(jQuery) -->
+  <script src="../../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../../js/base/jquery-ui.min.js"></script>
+  <script>
+    (function($) {
+      // li:nth-child(1){color:#fff}  == $('li').eq(0).css({color:'#fff'});     -> eq는 순서를 지정해서 처리하게하는것
+      // $('li').on('click',function(){  $(this).index(); });    -> index는 선택한 아이가 몇번째인지 찾아서 나에게 알려주는 것
+
+        var indi   = $('.indicator li');
+        var indiLink = indi.children('a');
+        var banner = $('.product>ul');
+        // indi.eq(0).addClass('action');
+
+        indiLink.on('click', function(e){
+          e.preventDefault( );
+          var i = $(this).parent('li').index();
+          var per = -i * 100;
+          banner.css({marginLeft: per + '%'});
+
+          indi.removeClass('action');
+          indi.eq( i ).addClass('action');
+        });
+    })(jQuery);
+  </script>
+</body>
+</html>
