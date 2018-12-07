@@ -61,6 +61,152 @@ h3{width: 100%; height: auto; padding: 0.5rem; box-sizing:border-box; background
   width: 0; height: 0; overflow: hidden; }
 
 .icon_04{
-      width:2rem; height: 2rem; border-radius:0.2rem;
+      width:3rem; height:4rem; border-radius:0.2rem;
       background-image: url("../../img/icon/mouse_icons.png");
-      background-repeat:no-repeat; background-position: 0 0;}
+      background-repeat:no-repeat; 
+      background-position:-465px -452px;}
+
+
+.exam{width: 100%; height:auto; background-color: #ddd;}
+.exam>ul{width: 100%; height: auto; }
+.exam>ul:after, .exam>ul::after{content:" "; display: block; clear: both;}
+.exam>ul>li{margin: 1rem; float: left; border:1px solid #333; 
+        width: 110px; height: 120px; border-radius:0.5rem;}
+.exam a{display: block; width: 100%; height: 100%;
+    background-image: url("../../img/icon/smashicons.png"); background-repeat:no-repeat;}
+.exam a>span{display: block; width: 0; height: 0; position: relative; z-index: -1;
+        overflow: hidden;}
+
+.exam>ul>li:nth-child(1)>a{background-position: 0 -244px;}
+.exam>ul>li:nth-child(1)>a:hover{background-position: -232px 0;}
+
+.exam>ul>li>a:focus{background-position: -120px -120px;}
+.exam>ul>li>a:active{background-position: 0 0;}
+
+
+#bgArea{padding: 1rem; margin:3rem auto; 
+        width: 80%; height: auto; background-color: #cda;}
+
+.bg_area{margin: 1rem auto;
+  padding: 2rem; border:1rem dotted #64a;
+  width: 80%; height: 10rem; background-color: #fff;
+  color:#fff; text-align: center; font-size: 2rem;
+  font-weight: bold;
+  text-shadow:0.3rem 0.3rem 0.1rem #000;
+  background-color: #06a;}
+
+.bg_area:hover{background-size:120%;}
+
+/*.area_01{}  - 기본은 border-box 까지 */
+.area_02{background-clip:border-box;}
+.area_03{background-clip:padding-box;}
+.area_04{background-clip:content-box;}
+
+
+/* ============================= */
+.bg_img{background-image: url("../../img/bg/city_02.jpg");
+  background-repeat:no-repeat; background-position: center;
+  background-size:cover; transition:all 200ms linear;
+  border-color:#fa0; background-color: #acf;}
+
+/*.img_01{} - 기본은 padding-box */
+.img_02{background-origin:border-box;}
+.img_03{background-origin:padding-box;}
+.img_04{background-origin:content-box;}
+
+
+/*
+ * 배경 색상을 정해진 요소에 채울경우 색상의 범위를 지정할수 있다.
+   background-clip : border-box | padding-box | content-box  ;
+
+ * 배경 이미지를 정해진 요소의 크기만큼 채울경우 그 범위를 지정할 수 있다.
+   background-origin : border-box | padding-box | content-box  ;
+
+ * border-box의 의미는: 외곽선의 영역 까지(padding, content포함)
+ * padding-box의 의미는: padding의 영역 까지(border제외, content포함)
+ * content-box의 의미는: 실제 border, padding이 아닌 내용의 영역을 의미
+
+ - background-clip, background-origin은 모두 css 새로운 속성 prefix
+*/
+
+.box{margin: 3rem auto; 
+  width: 500px; height: 500px;
+  border:2rem dashed #333;
+  padding:4rem;/* background-color: #acf;*/
+  background-image: url("../../img/bg/city_01.jpg");
+  background-position: center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  }
+
+.what{width: 100%; height: 100%; 
+    border:2px dotted #fff; 
+    box-sizing: border-box;}
+
+
+/*.box{
+  background-clip:content-box;
+  background-origin:content-box;
+    }
+*/
+
+
+
+#bgArea_02{margin-bottom:20rem;
+  width: 100%; height: auto; border: 2px solid  #fa0;}
+
+#bgArea_02>div{width: 100%; min-width: 60rem;  height: 20rem;
+    background-repeat:no-repeat; background-position:50%;
+    background-size:cover;}
+#bgArea_02>.fixed{background-image: url("../../img/bg/city_02.jpg");
+   background-attachment:fixed;}
+#bgArea_02>.scroll{background-image: url("../../img/bg/car_02.jpg");
+   background-attachment:scroll;}
+
+/*
+ * 브라우저 내에서 이미지를 position:fixed; 처리한것처럼 배경이미지를 사용하게 만들수 있는 기능
+  background-attachment:fixed | scroll;
+
+  하지만, 간단하게 이미지를 고정시키는 기능으로는 사용할 수 있으나!!!!!
+  parallax기능을 이용하는 경우에는 대체로 scroll기능으로 사용한다!!
+*/
+
+#gradient{margin: auto;  width: 80%; height: auto; }
+#gradient>div{padding: 1rem; box-sizing:border-box;
+  width:100%; height:25rem; border:1px solid  #333; margin-bottom:2rem;}
+
+.linear_01{
+  background-color: #fa0;
+  background-image: url("../../img/gr_01.jpg");
+  background-repeat:repeat-x; background-position:0 0;
+  background-size:auto 100%;
+/*  background-image:-webkit-linear-gradient(#fa0, #f0a);
+  background-image:-moz-linear-gradient(#fa0, #f0a);
+  background-image:-ms-linear-gradient(#fa0, #f0a);
+  background-image:-o-linear-gradient(#fa0, #f0a);*/
+  background-image:linear-gradient(#fa0, #f0a);
+}
+
+
+.linear_02{
+  background-image:linear-gradient(90deg, #fa0 30%, #f0a 60%, #acf);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
