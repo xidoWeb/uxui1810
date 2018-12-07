@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- background_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/base/common.css" />
+  <link rel="stylesheet" href="../css/src/background_01.css" />
+
+  <!-- 조건부 주석 - cc:ie6 --> 
+  <!--[if lte ie 9]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/css3pie/PIE_IE9.js"></script>
+    <script src="../ie/ie9.min.js"></script>
+    <script src="../ie/respond/dest/respond.min.js"></script>
+
+    <link rel="stylesheet" href="../css/src/background_01_forIE.css">
+  <![endif]-->
+
+  <link rel="apple-touch-icon" href="../favicon.png">  
+  <!-- link:favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+
+  <title>background image</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1>background image 내용 이해하기</h1>
+    </header>
+    <article id="bgBox_01">
+      <h2>icon이미지 불러오기</h2>
+      <h3>단순히 이미지 불러오기</h3>
+      <div class="icon icon_01"></div>
+      <h3>이미지 불러와서 내용 크기 배치하기</h3>
+      <div class="icon icon_02"></div>
+      <h3>이미지로 내용 대체하기(IR기법:image replace)</h3>
+      <div class="icon icon_03">
+        <span>필요한 글자를 입력해서 내용이 보이게</span>
+      </div>
+      <h3>여러개의 아이콘이담긴 하나의 이미지를 부분으로 보이게해서 사용하기<br />
+        (IS기법: image splite)</h3>
+      <div class="icon icon_04"></div>
+    </article>
+  </div>
+
+  <!-- script(jQuery) -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  <script src="../js/src/background_01.js"></script>
+</body>
+</html>

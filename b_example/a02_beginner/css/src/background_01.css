@@ -1,0 +1,66 @@
+/* background_01.css */
+
+#wrap{padding-bottom: 10rem; width: 100%; height: auto; min-height:10rem; 
+  background-color: #ddd;}
+#headBox{width: 100%; height: auto;}
+h1{padding:1rem 0; width: 100%; height: auto; background-color: #a8f; text-indent:2rem;}
+
+#bgBox_01{margin-top: 2rem; padding: 0 1rem; width: 100%; height: auto; min-height:1rem;
+  background-color: #fff;}
+
+h2{border-bottom: 0.1rem solid #a8f; margin-bottom: 1rem;}
+h3{width: 100%; height: auto; padding: 0.5rem; box-sizing:border-box; background-color: #acf;}
+
+.icon{margin:1rem auto; width: 80%; height: 30rem; border:1px solid #333;
+    border-radius:2rem 0.5rem 0 0.7rem;
+    /*box-shadow:0.5rem 0.5rem 0.5rem #acf, 
+               -0.1rem -0.1rem 0.2rem #f06,
+               -0.2rem 1rem 0.2rem rgba(255,255, 0, 0.5);*/}
+
+.icon_01{background-image: url("../../img/icon/icon_03.png");
+       background-repeat: no-repeat; background-position:20% -100%;
+    /*transition:all 300ms linear;*/}
+.icon_01:hover{animation:exloding 1000ms infinite ease forwards;}
+
+@keyframes exloding {
+  0%{background-position:20% -100%;}
+  100%{background-position:20% 200%;}
+}
+
+/* backgorund-position: x축,  y축;  - 기본은 0 0
+   X와 Y축은 의미상의 용어로 사용이 가능하다(top, left, right, bottom)
+   이때, top이나 left 처럼 한쪽으로 위치를 잡고 다른 위치하나는 중심에 위치한다면,
+   center라는 용어는 생략해도 된다.
+   단, 둘모두 center라면 하나만 입력한다.
+
+  *: background-position의 기능에서 용어를 이용한 위치는 그리 권장하지 않는다.
+  그래서: %의 수치나 정확한 수치를 입력하여 배치할 것을 권장.
+*/
+
+
+.icon_02{background-image: url("../../img/icon/icon_01.png");
+      background-repeat:no-repeat; background-position: 50% 50%;
+      background-size:70% auto; transition:all 300ms linear;}
+/* 
+  내용이미지의 크기를 지정하는 기능 
+  background-size: cover | contain | 가로크기 세로크기
+      conver - 꽉차게
+      contain - 모든 이미지를 다 보이게
+      가로크기와 세로크기를 입력이가능, 둘중 하나는 입력하지 않으면 auto (비율유지)
+      단, 세로값을 입력하고 가로크기는 자동으로 변형되게하려면 auto 세로크기;
+
+      --- 
+      현재: background-size는 권고안으로 등록이 되지 않은 상태 (prefix)
+*/
+.icon_02:hover{background-size:120% auto;}
+
+.icon_03{background-image: url("../../img/icon/icon_020.jpg");
+      background-repeat:no-repeat; background-position: center;
+      background-size:cover; background-color: #acf;}
+.icon_03>span{display: block; position:relative; z-index:-1;
+  width: 0; height: 0; overflow: hidden; }
+
+.icon_04{
+      width:2rem; height: 2rem; border-radius:0.2rem;
+      background-image: url("../../img/icon/mouse_icons.png");
+      background-repeat:no-repeat; background-position: 0 0;}
