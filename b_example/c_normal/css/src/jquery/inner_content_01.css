@@ -1,0 +1,9 @@
+/* inner_content_01.css */
+
+#wrap{width: 100%; height: auto;}
+#headBox{width: 100%; height: 150px; background-color: #7af;}
+#viewBox{width: 100%; height: 500px; background-color: #999;}
+#conBox{margin: auto; width: 60rem; height: 900px; 
+       background-color: #57a;}
+#footBox{margin: auto; border-top:1px solid #333;
+    width: 60rem; height: 200px; background-color: #ddd;}
