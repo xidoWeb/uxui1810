@@ -177,7 +177,7 @@ h3{width: 100%; height: auto; padding: 0.5rem; box-sizing:border-box; background
 
 .linear_01{
   background-color: #fa0;
-  background-image: url("../../img/gr_01.jpg");
+  background-image: url("../../img/gr_01.jpg");ql
   background-repeat:repeat-x; background-position:0 0;
   background-size:auto 100%;
 /*  background-image:-webkit-linear-gradient(#fa0, #f0a);
@@ -186,16 +186,31 @@ h3{width: 100%; height: auto; padding: 0.5rem; box-sizing:border-box; background
   background-image:-o-linear-gradient(#fa0, #f0a);*/
   background-image:linear-gradient(#fa0, #f0a);
 }
+.linear_02{ background-image:linear-gradient(90deg, #fa0 30%, #f0a 60%, #acf); }
+.linear_03{ background-image:linear-gradient(135deg, #fa0, #fff 30%, #fa0 30%, #f06); }
+.linear_03:hover{ background-image:linear-gradient(100deg, #fa0, #fff 30%, #fa0 30%, #f06); }
 
+.linear_04{position: relative; background-image:linear-gradient(0deg, #acf,  #fac);}
+.linear_04:before{content:" "; display: block; position: absolute; top: 0; left: 0; 
+                 width: 100%; height: 100%; background-image:linear-gradient(0deg, #f06, transparent);
+                 transition:all 300ms linear; opacity: 0.7;}
+.linear_04:hover:before{opacity: 0;}
 
-.linear_02{
-  background-image:linear-gradient(90deg, #fa0 30%, #f0a 60%, #acf);
-}
+.radial_01{background-image:radial-gradient(#fff 20%, #fca 70%, #37a);}
 
+/*
+  background-image:url();
+  background-position: 0 0;
+  background-repeat: ;
 
+  background-color: #fff;
+  background-clip:;
+  background-origin: ;
+  background-size: ;
+  background-attachment: ;
 
-
-
+  background-image:linear-gradient(각도, 색A 위치, 색B 위치);
+*/
 
 
 
