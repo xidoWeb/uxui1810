@@ -2,8 +2,22 @@
 
 #wrap{width: 100%; height: auto;}
 #headBox{width: 100%; height: 150px; background-color: #7af;}
-#viewBox{width: 100%; height: 500px; background-color: #999;}
+#viewBox{width: 100%; height:auto; min-height: 40rem; background-color: #999;}
+.import_01{margin: auto;width: 90%; height: 40rem; background-color: #fff;}
+.import_01>iframe{ width: 100%; height: 100%; background-color: #fa0;}
 #conBox{margin: auto; width: 60rem; height: 900px; 
        background-color: #57a;}
+
+.shop{margin: auto; width: 90%; height: auto;}
+.product{box-sizing: border-box; padding: 0.5rem; margin: 1rem; float: left; width:15rem; height:20rem; 
+  border:1px solid #333; background-color: #fff;}
+.product>dt{width: 100%; height: 1.5rem; box-sizing:border-box; border-bottom:1px solid #0af; 
+          margin-bottom:0.3rem; text-align: center; line-height: 1.5rem; font-weight: bold;}
+.product>dd{width: 100%; height: calc(100% - 1.5rem);}
+.product .shop_img{margin-bottom:1.5rem; width: 100%; height:10rem; background-color: #fa0; }
+.product p{width: 100%; height: auto; margin-bottom: 1rem; text-align: center;}
+.product p>a{display: block; margin: auto; width: 50%; height: auto; padding: 0.7rem; 
+          background-color: #05a; color:#fff; border-radius:0.3rem;}
+
 #footBox{margin: auto; border-top:1px solid #333;
     width: 60rem; height: 200px; background-color: #ddd;}

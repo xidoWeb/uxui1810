@@ -58,111 +58,202 @@
   // gnb.append('<h2>navigation</h2>');
   // gnb.prepend('<h2>navigation</h2>');
 
-  // headBox.find('.head_wrap').append('<div id="member"></div>');
-  // var member = $('#member');
-  // 컴퓨터는 지시한 대로만 수행: 인격이 없기에 입력한대로만 수행한다.
-  // member.append('<a href="#">로그인하기</a>');
-  // member.append('<p>어서오세요 ...님</p>');
-  // member.prepend('무엇이?');
- 
- gnb.append('<ul></ul>');
- var gnbUl = gnb.children('ul');
- // li를 5개 만드시오.
- // 방법 1- 직접 작성하기
-   // gnbUl.append('<li><a href="http://google.com">list_01</a></li>');
-   // gnbUl.append('<li><a href="http://naver.com">list_02</a></li>');
-   // gnbUl.append('<li><a href="http://daum.net">list_03</a></li>');
-   // gnbUl.append('<li><a href="http://w3schools.com">list_04</a></li>');
-   // gnbUl.append('<li><a href="http://caniuse.com">list_05</a></li>');
+    // headBox.find('.head_wrap').append('<div id="member"></div>');
+    // var member = $('#member');
+    // 컴퓨터는 지시한 대로만 수행: 인격이 없기에 입력한대로만 수행한다.
+    // member.append('<a href="#">로그인하기</a>');
+    // member.append('<p>어서오세요 ...님</p>');
+    // member.prepend('무엇이?');
+   
+   gnb.append('<ul></ul>');
+   var gnbUl = gnb.children('ul');
+   // li를 5개 만드시오.
+   // 방법 1- 직접 작성하기
+     // gnbUl.append('<li><a href="http://google.com">list_01</a></li>');
+     // gnbUl.append('<li><a href="http://naver.com">list_02</a></li>');
+     // gnbUl.append('<li><a href="http://daum.net">list_03</a></li>');
+     // gnbUl.append('<li><a href="http://w3schools.com">list_04</a></li>');
+     // gnbUl.append('<li><a href="http://caniuse.com">list_05</a></li>');
 
- // 방법 2- 반복문사용하기
-  // var i = 0; var j;
-  // for(; i<5; i+=1){
-  //   j= i + 1; // 숫자를 0부터가 아닌 1부터 작성하도록 처리
-  //   gnbUl.append('<li><a href="#">list_0'+ j +'</a></li>');
-  // }
+   // 방법 2- 반복문사용하기
+    // var i = 0; var j;
+    // for(; i<5; i+=1){
+    //   j= i + 1; // 숫자를 0부터가 아닌 1부터 작성하도록 처리
+    //   gnbUl.append('<li><a href="#">list_0'+ j +'</a></li>');
+    // }
 
- // 덧1 - 링크주소 별도로 만들어 담기(배열사용)
-  var i = 0; var j;
-  var addr = [ 'http://google.com',
-               'http://naver.com',
-               'http://daum.net',
-               'http://w3schools.com',
-               'http://caniuse.com',
-               'http://kakao.com'
-              ];
+   // 덧1 - 링크주소 별도로 만들어 담기(배열사용)
+    var i = 0; var j;
+    var addr = [ 'http://google.com',
+                 'http://naver.com',
+                 'http://daum.net',
+                 'http://w3schools.com',
+                 'http://caniuse.com',
+                 'http://kakao.com'
+                ];
 
-  // for(; i < addr.length; i+=1){
-  //   j= i + 1;
-  //   gnbUl.append('<li><a href="' + addr[i] + '">list_0'+ j +'</a></li>');
-  // }
+    // for(; i < addr.length; i+=1){
+    //   j= i + 1;
+    //   gnbUl.append('<li><a href="' + addr[i] + '">list_0'+ j +'</a></li>');
+    // }
 
-  for(i = addr.length; i > 0 ; i-=1){
-    j= i - 1;
-    gnbUl.prepend('<li><a href="' + addr[j] + '">list_0'+ i +'</a></li>');
-  }
+    for(i = addr.length; i > 0 ; i-=1){
+      j= i - 1;
+      gnbUl.prepend('<li><a href="' + addr[j] + '">list_0'+ i +'</a></li>');
+    }
 
-  var head = $('head');
-  head.append('<style></style>');
-  var style = head.children('style');
+    var head = $('head');
+    head.append('<style></style>');
+    var style = head.children('style');
 
-  style.append('\
+    style.append('\
       #gnb{width:100%; height:auto; padding:0.5rem 1rem; box-sizing:border-box;}\
       #gnb>ul{width:100%; height:auto;}\
-      #gnb>ul:after{content:" "; display:block; clear:both;}\
-      #gnb li{width:100px; height:auto; float:left; margin-right:1rem; background-color:#fff; text-align:center;}\
+      #gnb>ul:after{content:" "; display:block; clear:both;}]\
+      #gnb li{width:100px; height:auto; float:left; margin-right:1rem; background-\color:#fff; text-align:center;}\
       ');
-// ======================================
+  // ======================================
 
-var foot = $('#footBox');
-/* //** appendTo , prependTo 기능이해하기
-  var to1 = '<p>내용에 이전에 삽입하고 있음</p>';
-  // 방에 아버지께서 들어가신다.
-  // foot.prepend(to1);
+  var foot = $('#footBox');
+  /* //** appendTo , prependTo 기능이해하기
+    var to1 = '<p>내용에 이전에 삽입하고 있음</p>';
+    // 방에 아버지께서 들어가신다.
+    // foot.prepend(to1);
 
-  // 아버지께서 방에 들어가신다.
-  $(to1).prependTo(foot);
+    // 아버지께서 방에 들어가신다.
+    $(to1).prependTo(foot);
 
-  var to2 = '<p>내용에 뒤에 삽입하여 처리 </p>';
-  // foot.append(to2);
-  $(to2).appendTo(foot);
+    var to2 = '<p>내용에 뒤에 삽입하여 처리 </p>';
+    // foot.append(to2);
+    $(to2).appendTo(foot);
+  */
+   foot.css({height:'auto'});
+   foot.append('<ul></ul>');
+  var footUl = foot.children('ul');
+  footUl.css({margin:'1rem auto', width:'70%', height:'30rem', backgroundColor:'#faf', boxSizing:'border-box', padding:'1rem'});
+
+  //  --------------------------------------
+  // footUl.append('<li>list_01</li>');
+  // footUl.append('<li>list_02</li>');
+  // footUl.append('<li>list_03</li>');
+  // footUl.append('<li>list_04</li>');
+  // footUl.append('<li>list_05</li>');
+
+  // footUl.prepend('<li>list_01</li>');
+  // footUl.prepend('<li>list_02</li>');
+  // footUl.prepend('<li>list_03</li>');
+
+
+  var addr2 = ['a', 'b', 'c', 'd'];
+  // console.log( addr2[3] );
+  // console.log( addr2.length );
+  var addLen = addr2.length;
+
+
+  // for(var k = 0; k<addLen; k+=1){
+  //  // console.log(k);
+  //  // console.log( addr2[k] );
+  //  footUl.append('<li><a href="' + addr2[k] + '">list_'+ (k+1) +'</a></li>');
+  // }
+
+  for(var k = addLen; k > 0; k-=1){
+   // console.log(k);
+   // console.log( addr2[k-1] );
+   footUl.prepend('<li><a href="'+ addr2[k-1] + '"> list_'+ k +'</a></li>');
+  }
+
+
+  foot.find('li').css({width:'100%', height:'2rem', marginBottom:'0.5rem', fontSize:'1.3rem', fontWeight:'bold', textAlign:'center', backgroundColor:'#fff'});
+
+
+var conBox = $('#conBox');
+conBox.children('h2').empty();
+// conBox.remove();
+
+// conBox.append('<div class="content1"><h2>content1</h2></div>');
+// conBox.append('<div class="content2"><h2>content2</h2></div>');
+// conBox.append('<div class="content3"><h2>content3</h2></div>');
+  
+var footBox = $('#footBox');
+var footLi = footBox.find('li');
+
+// jquery에서는 a를 li의 모든 요소에서 찾아낸다.
+// js에서는 li의 순서를 명확하게 인지한 후에 찾아야내야 한다.
+// 단, li의 순서에 맞는 자식 a에게 기능을 부여하려면 li에서 정확하게 순서를 지칭해야한다.
+
+
+/* //* js에서 a를 찾아내는 방법 이해하기....
+  var fb = document.getElementById('footBox'); 
+  var fbUl = fb.children[1];
+  var fbLi = fbUl.children;
+  for(var l=0; l<fbLi.length; l+=1){ console.log(fbLi[l].children); }
 */
- foot.css({height:'auto'});
- foot.append('<ul></ul>');
-var footUl = foot.children('ul');
-footUl.css({margin:'1rem auto', width:'70%', height:'30rem', backgroundColor:'#faf', boxSizing:'border-box', padding:'1rem'});
 
-//  --------------------------------------
-// footUl.append('<li>list_01</li>');
-// footUl.append('<li>list_02</li>');
-// footUl.append('<li>list_03</li>');
-// footUl.append('<li>list_04</li>');
-// footUl.append('<li>list_05</li>');
+// var footA = footLi.eq(0).children('a');
+// // console.log( footA );
+// var faa = footA.attr('href');
+// // console.log( faa );
 
-// footUl.prepend('<li>list_01</li>');
-// footUl.prepend('<li>list_02</li>');
-// footUl.prepend('<li>list_03</li>');
+// var headId = $('header').attr('id');
+// // console.log( headId );
+// var whatClass = $('#headBox').children().attr('class');
+// console.log( whatClass );
 
 
-var addr2 = ['a', 'b', 'c', 'd'];
-// console.log( addr2[3] );
-// console.log( addr2.length );
-var addLen = addr2.length;
+var lsBox = $('#listBox').children('ul');
+// console.log(lsBox);
+var lsLista = lsBox.children('li').eq(3).find('a');
+// 선택시 []로 순서를 선택하는 것은 값자체를 파악!
+// 선택시 eq()로 순서를 선택하는 것은 이후의 어떠한 메소드 기능을 수행
+
+// console.log( lsLista.attr('href') );
+
+// a요쇼의 속성 target은 클릭시 이동처리하는 방법: _self(기본) | _blank(새창에서 띄우기) | _top(iframe상에서 이동을 막기위해 처리) | _parent(iframe상에서 이동을 막기위한 처리) 
+
+var re_lsLista = lsLista.attr({ 'href'   : 'http://naver.com', 
+                                'target' : '_blank',
+                                'class'  : 'more' });
+// console.log( re_lsLista );
+
+//  attr('href','#afc')
+//  attr({'href':'#afc'})
+
+/* 아래 방식은 둘 모두 같은것이다.
+$('a').css('color', '#fa0');
+$('a').css('fontSize', '1.3rem');
+$('a').css('margin','0.5rem');
+
+$('a').css({'color':'#fa0', 'fontSize':'1.3rem','margin':'0.5rem'});
+*/
+lsLista.removeAttr('class');
+// console.log( lsLista.attr('class') );
 
 
-// for(var k = 0; k<addLen; k+=1){
-//  // console.log(k);
-//  // console.log( addr2[k] );
-//  footUl.append('<li><a href="' + addr2[k] + '">list_'+ (k+1) +'</a></li>');
-// }
+// val()
+var inputId = $('#input_1').val();
+// console.log( inputId );
 
-for(var k = addLen; k > 0; k-=1){
- // console.log(k);
- // console.log( addr2[k-1] );
- footUl.prepend('<li><a href="'+ addr2[k-1] + '"> list_'+ k +'</a></li>');
-}
+var input2 = $('#input_2').on('keyup', function(){
+  var myText = $(this).val();
+  console.log( myText );
+});
 
 
-foot.find('li').css({width:'100%', height:'2rem', marginBottom:'0.5rem', fontSize:'1.3rem', fontWeight:'bold', textAlign:'center', backgroundColor:'#fff'});
+
+/*
+// clone()
+*/
+
+ var shop = $('.shop');
+ var color = ['#ff0', '#cca', '#acf', '#f06', '#f7f', '#afa'];
+
+ for(var i=0; i < color.length; i+=1){
+   var product = $('.product').eq(0).clone(true);
+   shop.append(product);
+   $('.product').eq(i).find('.shop_img').css({backgroundColor: color[i]});
+ }
+ var len = $('.product').length;
+ // console.log(len);
+ // $('.product').eq(-1).remove();
 
 })(jQuery);
