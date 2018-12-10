@@ -244,16 +244,36 @@ var input2 = $('#input_2').on('keyup', function(){
 // clone()
 */
 
- var shop = $('.shop');
+ var shop  = $('.shop');
  var color = ['#ff0', '#cca', '#acf', '#f06', '#f7f', '#afa'];
 
+ var text  = ['제품1 에대한 각각 설명하기!!!', 
+              '제품2 에대한 각각 설명하기!!!',
+              '제품3 에대한 각각 설명하기!!!',
+              '제품4 에대한 각각 설명하기!!!',
+              '제품5 에대한 각각 설명하기!!!',
+              '제품6 에대한 각각 설명하기!!!'
+              ];
+
+ var link  = ['http://naver.com', 
+              'http://daum.net', 
+              'http://google.com', 
+              'http://behance.net', 
+              'http://pinterest.com',
+              'http://dribbble.com'];
+
+ var product;
  for(var i=0; i < color.length; i+=1){
-   var product = $('.product').eq(0).clone(true);
+   product = $('.product').eq(0).clone(true);
    shop.append(product);
    $('.product').eq(i).find('.shop_img').css({backgroundColor: color[i]});
+   // $('.product').eq(i).find('p').eq(0).text(text[i]);
+   $('.product').eq(i).find('.shop_img').next().text(text[i]);
+   $('.product').eq(i).find('a').attr('href', link[i]);
  }
+
  var len = $('.product').length;
  // console.log(len);
- // $('.product').eq(-1).remove();
+ $('.product').eq(-1).remove();
 
 })(jQuery);
