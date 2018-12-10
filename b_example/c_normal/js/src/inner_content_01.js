@@ -3,6 +3,7 @@
 (function($) {
   // console.log('start!!');
   /* ========================
+  
   01. text()       : 작성한 내용을 확인/작성 하는 메소드
   02. html()       : html태그를 확인/제작 하는 메소드
   03. wrap()       : 선택한 요소의 부모요소를 제작 하는 메소드
@@ -45,8 +46,27 @@
   viewBox.after('<div class="view view-after"></div>');
   $('.view').css({width:'100%', height:'1rem', backgroundColor:'#f0a'});
 
-  console.log( viewBox.prev() );
-  console.log( viewBox.next() );
+  // console.log( viewBox.prev() );
+  // console.log( viewBox.next() );
+
+  var headBox = $('#headBox');
+  // headBox.children('h1').after('<nav id="gnb"></nav>');
+  headBox.find('.head_wrap').append('<nav id="gnb"></nav>');
+  var gnb = $('#gnb');
+  // html()은 기존의 내용을 모두 삭제하고 새로 쓴다.
+  gnb.html('<h2>navigation</h2>');
+  // gnb.append('<h2>navigation</h2>');
+  // gnb.prepend('<h2>navigation</h2>');
+
+  // headBox.find('.head_wrap').append('<div id="member"></div>');
+  // var member = $('#member');
+  // 컴퓨터는 지시한 대로만 수행: 인격이 없기에 입력한대로만 수행한다.
+  // member.append('<a href="#">로그인하기</a>');
+  // member.append('<p>어서오세요 ...님</p>');
+  // member.prepend('무엇이?');
+ 
+ gnb.append('<ul></ul>');
+ 
 
 
 })(jQuery);
