@@ -92,9 +92,14 @@
                'http://kakao.com'
               ];
 
-  for(; i < addr.length; i+=1){
-    j= i + 1;
-    gnbUl.append('<li><a href="' + addr[i] + '">list_0'+ j +'</a></li>');
+  // for(; i < addr.length; i+=1){
+  //   j= i + 1;
+  //   gnbUl.append('<li><a href="' + addr[i] + '">list_0'+ j +'</a></li>');
+  // }
+
+  for(i = addr.length; i > 0 ; i-=1){
+    j= i - 1;
+    gnbUl.prepend('<li><a href="' + addr[j] + '">list_0'+ i +'</a></li>');
   }
 
   var head = $('head');
@@ -107,6 +112,57 @@
       #gnb>ul:after{content:" "; display:block; clear:both;}\
       #gnb li{width:100px; height:auto; float:left; margin-right:1rem; background-color:#fff; text-align:center;}\
       ');
+// ======================================
 
-  
+var foot = $('#footBox');
+/* //** appendTo , prependTo 기능이해하기
+  var to1 = '<p>내용에 이전에 삽입하고 있음</p>';
+  // 방에 아버지께서 들어가신다.
+  // foot.prepend(to1);
+
+  // 아버지께서 방에 들어가신다.
+  $(to1).prependTo(foot);
+
+  var to2 = '<p>내용에 뒤에 삽입하여 처리 </p>';
+  // foot.append(to2);
+  $(to2).appendTo(foot);
+*/
+ foot.css({height:'auto'});
+ foot.append('<ul></ul>');
+var footUl = foot.children('ul');
+footUl.css({margin:'1rem auto', width:'70%', height:'30rem', backgroundColor:'#faf', boxSizing:'border-box', padding:'1rem'});
+
+//  --------------------------------------
+// footUl.append('<li>list_01</li>');
+// footUl.append('<li>list_02</li>');
+// footUl.append('<li>list_03</li>');
+// footUl.append('<li>list_04</li>');
+// footUl.append('<li>list_05</li>');
+
+// footUl.prepend('<li>list_01</li>');
+// footUl.prepend('<li>list_02</li>');
+// footUl.prepend('<li>list_03</li>');
+
+
+var addr2 = ['a', 'b', 'c', 'd'];
+// console.log( addr2[3] );
+// console.log( addr2.length );
+var addLen = addr2.length;
+
+
+// for(var k = 0; k<addLen; k+=1){
+//  // console.log(k);
+//  // console.log( addr2[k] );
+//  footUl.append('<li><a href="' + addr2[k] + '">list_'+ (k+1) +'</a></li>');
+// }
+
+for(var k = addLen; k > 0; k-=1){
+ // console.log(k);
+ // console.log( addr2[k-1] );
+ footUl.prepend('<li><a href="'+ addr2[k-1] + '"> list_'+ k +'</a></li>');
+}
+
+
+foot.find('li').css({width:'100%', height:'2rem', marginBottom:'0.5rem', fontSize:'1.3rem', fontWeight:'bold', textAlign:'center', backgroundColor:'#fff'});
+
 })(jQuery);
