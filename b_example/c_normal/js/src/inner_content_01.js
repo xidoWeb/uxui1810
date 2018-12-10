@@ -16,8 +16,8 @@
   08. clone()      : 내용/태그 ... 복제하는 메소드
   09. remove()     : 선택 요소를 삭제하는 메소드
   10. empty()      : 선택요소의 내부를 비우는 메소드
-  11. removeAttr() : 선택요소의 속성을 삭제하는 메소드
-  12. attr()       : 선택요소의 속성을 파악/수정/삽입 하는 메소드
+  11. removeAttr('속성명') : 선택요소의 속성을 삭제하는 메소드
+  12. attr('속성명' (,'속성값') )       : 선택요소의 속성을 파악/수정/삽입 하는 메소드
   13. val()        : form 요소의 값을 파악/삽입 하는 메소드
    =========================*/
 
@@ -245,31 +245,41 @@ var input2 = $('#input_2').on('keyup', function(){
 */
 
  var shop  = $('.shop');
- var color = ['#ff0', '#cca', '#acf', '#f06', '#f7f', '#afa'];
+ /*
+   var color = ['#ff0', '#cca', '#acf', '#f06', '#f7f', '#afa'];
 
- var text  = ['제품1 에대한 각각 설명하기!!!', 
-              '제품2 에대한 각각 설명하기!!!',
-              '제품3 에대한 각각 설명하기!!!',
-              '제품4 에대한 각각 설명하기!!!',
-              '제품5 에대한 각각 설명하기!!!',
-              '제품6 에대한 각각 설명하기!!!'
-              ];
+   var text  = ['제품1 에대한 각각 설명하기!!!', 
+                '제품2 에대한 각각 설명하기!!!',
+                '제품3 에대한 각각 설명하기!!!',
+                '제품4 에대한 각각 설명하기!!!',
+                '제품5 에대한 각각 설명하기!!!',
+                '제품6 에대한 각각 설명하기!!!'
+                ];
 
- var link  = ['http://naver.com', 
-              'http://daum.net', 
-              'http://google.com', 
-              'http://behance.net', 
-              'http://pinterest.com',
-              'http://dribbble.com'];
+   var link  = ['http://naver.com', 
+                'http://daum.net', 
+                'http://google.com', 
+                'http://behance.net', 
+                'http://pinterest.com',
+                'http://dribbble.com'];
+*/
+ var productList = [
+      {color:'#ff0', text:'제품_1 에대한 각각 설명하기!!!', link:'http://naver.com'     },
+      {color:'#cca', text:'제품_2 에대한 각각 설명하기!!!', link:'http://daum.net'      },
+      {color:'#acf', text:'제품_3 에대한 각각 설명하기!!!', link:'http://google.com'    },
+      {color:'#f06', text:'제품_4 에대한 각각 설명하기!!!', link:'http://behance.net'   },
+      {color:'#f7f', text:'제품_5 에대한 각각 설명하기!!!', link:'http://pinterest.com' },
+      {color:'#afa', text:'제품_6 에대한 각각 설명하기!!!', link:'http://dribbble.com'  }
+     ];         
 
- var product;
- for(var i=0; i < color.length; i+=1){
+ var product, prEq;
+ for(var i=0; i < productList.length; i+=1){
    product = $('.product').eq(0).clone(true);
    shop.append(product);
-   $('.product').eq(i).find('.shop_img').css({backgroundColor: color[i]});
-   // $('.product').eq(i).find('p').eq(0).text(text[i]);
-   $('.product').eq(i).find('.shop_img').next().text(text[i]);
-   $('.product').eq(i).find('a').attr('href', link[i]);
+   prEq = $('.product').eq(i);
+   prEq.find('.shop_img').css({ backgroundColor: productList[i].color });
+   prEq.find('p').eq(0).text( productList[i].text );
+   prEq.find('a').attr('href', productList[i].link );
  }
 
  var len = $('.product').length;
