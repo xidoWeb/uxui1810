@@ -66,7 +66,47 @@
   // member.prepend('무엇이?');
  
  gnb.append('<ul></ul>');
- 
+ var gnbUl = gnb.children('ul');
+ // li를 5개 만드시오.
+ // 방법 1- 직접 작성하기
+   // gnbUl.append('<li><a href="http://google.com">list_01</a></li>');
+   // gnbUl.append('<li><a href="http://naver.com">list_02</a></li>');
+   // gnbUl.append('<li><a href="http://daum.net">list_03</a></li>');
+   // gnbUl.append('<li><a href="http://w3schools.com">list_04</a></li>');
+   // gnbUl.append('<li><a href="http://caniuse.com">list_05</a></li>');
 
+ // 방법 2- 반복문사용하기
+  // var i = 0; var j;
+  // for(; i<5; i+=1){
+  //   j= i + 1; // 숫자를 0부터가 아닌 1부터 작성하도록 처리
+  //   gnbUl.append('<li><a href="#">list_0'+ j +'</a></li>');
+  // }
 
+ // 덧1 - 링크주소 별도로 만들어 담기(배열사용)
+  var i = 0; var j;
+  var addr = [ 'http://google.com',
+               'http://naver.com',
+               'http://daum.net',
+               'http://w3schools.com',
+               'http://caniuse.com',
+               'http://kakao.com'
+              ];
+
+  for(; i < addr.length; i+=1){
+    j= i + 1;
+    gnbUl.append('<li><a href="' + addr[i] + '">list_0'+ j +'</a></li>');
+  }
+
+  var head = $('head');
+  head.append('<style></style>');
+  var style = head.children('style');
+
+  style.append('\
+      #gnb{width:100%; height:auto; padding:0.5rem 1rem; box-sizing:border-box;}\
+      #gnb>ul{width:100%; height:auto;}\
+      #gnb>ul:after{content:" "; display:block; clear:both;}\
+      #gnb li{width:100px; height:auto; float:left; margin-right:1rem; background-color:#fff; text-align:center;}\
+      ');
+
+  
 })(jQuery);
