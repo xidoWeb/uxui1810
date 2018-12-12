@@ -1,4 +1,4 @@
-# .gitignore
+﻿# .gitignore
 
 # .gitignore란 git에서 발생(생성)되는 파일중에서 git으로 전송(push) 하지 않고,
 # 선택/사용하고있는 로컬 컴퓨터에만 존재하게 하려고 할때 사용하는 명령어 모음
@@ -23,3 +23,4 @@
 
 # 예외 처리
 # !**/design/*.psd
+!**/work/**/*.psd
