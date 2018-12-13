@@ -21,7 +21,7 @@
 	fontSize(point) : 12pt/bold
 	단, 일부 디자인내용을 따를 수 있다.
   - 서체의 크기는 최소 6pt이하로 제작할 수는 없다. 
-  
+
 	---- naming guide ----
 	id: carmelCase
 	class: snake_case
@@ -62,4 +62,27 @@
 
 */
 
-#wrap{margin: auto; width: 980px; height: 850px; background-color:#ccc; }
+:root{
+ font-size:16px;
+
+ --mainColor   : #fff30d;
+ --subColor1   : #777777;
+ --subColor2   : #888888;
+ --subColor3   : #575757;
+ --white       : #ffffff;
+ --textColor1  : #171717;
+ --textColor2  : var(--white);
+ --background1 : #adadad;
+}
+
+
+#wrap{margin: auto; width:61.25rem; height:53.125rem;}
+
+#homeBox{width: 100%; height:1.875rem; background-color:var(--subColor2);}
+
+
+.box_wrap{width: 100%; height: auto; min-height:50rem; background-color:var(--background1);}
+h1{font-size: 3rem;}
+
+#footBox{border-top:0.0625rem solid #171717; width: 100%; height:6.875rem; 
+				background-color:var(--textColor2);}
