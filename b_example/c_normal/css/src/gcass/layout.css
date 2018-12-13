@@ -1,0 +1,32 @@
+/* gcass/layout.css */
+
+@charset "UTF-8";
+
+/*
+	---- color  ----
+	mainColor:
+	subColor:
+	textColor:
+
+	---- font ----
+	fontSize(h1):
+	fontSize(h2):
+	fontSize(h3):
+	fontSize(p):
+	fontSize(strong):
+
+	---- naming guide ----
+	id: carmelCase
+	class: snake_case
+	level 1: id 로사용, '영역이름' + 'Box'를 사용
+  level 2: class로 사용, '기능이름' + '_area'를 사용
+	level 3: class로 사용, level2의 이름 + '_상세기능이름'을 사용
+	level 4: '상단 상세기능이름' + '_' + '번호2자리' 사용
+
+	단,
+	1. 꼭 필요한 경우의 상황에서는 id를 이용하여 이름을 부여할 수 있다.
+	2. level 1의 영역을 fullpage 기능으로 사용할경우, 일부 영역을 감싸서 960영역설정시에는 '영역이름'+'_outer'이름으로 사용할 수 있다.
+
+*/
+
+#wrap{margin: auto; width: 980px; height: 850px; background-color:#ccc; }
