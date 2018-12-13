@@ -125,13 +125,23 @@ h1 {margin-bottom:1.875rem; width: 100%; height: 6.5625rem; background-color:#ac
         position: absolute; z-index:-1; top: 0; right: 50%; margin-right:-50vw;
 				width: 50vw; height: 100%; background-color:inherit;}
 
-#viewBox .com {margin: auto; margin-top: 5rem; width: 21.25rem; height: 34.375rem; background-color:#acf;}
+#viewBox:after,
+#viewBox::after{content:" "; display: block; 
+      position: absolute; top: 0; left: 0; z-index:-1;
+			width:100vw; height: 50px; background-color:#acf;}
 
+#viewBox .com{margin: auto; margin-top: 5rem; width: 21.25rem; height: 34.375rem; background-color:#acf; transition:transform 500ms linear;}
+#viewBox:hover .com{transform:translateX(5rem);}
+/*
+		transition:;         - 애니메이션 기능을 수행하는 속성명
+		transform:;          - 회전, 이동, 크기변환등의 형태를 변환시키는 속성명
+		translate(x축, y축)  - transfom기능 중 이동처리하게 만드는 속성 값
+*/
 
 /* #footBox ================================*/
 #footBox{position: relative; z-index: 100; 
 		padding:0.625rem 2.5rem 1.75rem; box-sizing: border-box;
-	  width: 100%; height:6.875rem; background-color:#ffff55;}
+	  width: 100%; height:6.875rem;}
 
 #footBox:after,
 #footBox::after{content:" "; display: block; width: 100vw; height: 0;
@@ -146,32 +156,33 @@ h1 {margin-bottom:1.875rem; width: 100%; height: 6.5625rem; background-color:#ac
          width: 100%; height: 1.25rem;}
 
 .sns{width: 100%; height: 1.5625rem;}
-.sns li{float:left; padding:0.0625rem 0.125rem 0; box-sizing:border-box; width: 33.333333%; height:1.5rem; }
+.sns li{float:left; padding:0.0625rem 0.125rem 0; box-sizing:border-box; width: 33.333333%; height:1.5rem;}
 .sns li>a{background-color:#fff;}
 
 /* .addr_area ------------------- */
-.addr_area {float:left; width:22.5rem; height:auto; background-color:#acf;}
+.addr_area {float:left; width:22.5rem; height:auto;}
 .addr_area>p{font-size:0.9rem; letter-spacing:-0.025rem; color:#171717; }
 .addr_area>p>strong{font-size: 0;}
 .dash:before{content:"."; color:#575757; font-size:0.5rem;}
 
 /* .more_area ------------------- */
 .more_area {float:right; margin-top:-4.75rem;
-	   width:18.75rem; height:auto; background-color:#acf;}
+	   width:18.75rem; height:auto;}
 
-.more_area dl {width: 100%; height: auto;}
+.more_area dl {width: 100%; height: auto; margin-bottom:0.5rem;}
 .more_area dl>dt{float:left; 
 	/* padding-top:2rem; box-sizing: border-box; */
 	line-height:4.125rem;
 	width:5.9375rem; height: 4.125rem; background-color:#575757;
 	font-size:1rem; text-align: center; color:#fff; }
 
-.more_area dl>dd{float:left; padding: 1rem; box-sizing: border-box;
+.more_area dl>dd{float:left; padding:0.5rem 1rem; box-sizing: border-box;
 	width:12.75rem; height: 4.125rem; background-color:#fff30d;
-			font-size: 1rem; /*text-indent:1rem;*/ line-height:4.125rem; color:#171717;}
+			font-size: 1rem; /*text-indent:1rem;*/ line-height:3.125rem; color:#171717;}
 .more_area dl>dd>a{display: block; width: 100%; height: 100%; color:inherit;}
 
 
-.more_area p {width: 100%; height: auto; font-size:0.516667rem;}
+.more_area p{width: 100%; height: auto; 
+	        text-align:right; font-size:0.7rem; line-height: 130%;}
 
 
