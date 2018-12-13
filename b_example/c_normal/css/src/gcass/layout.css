@@ -125,7 +125,10 @@ h1 {margin-bottom:1.875rem; width: 100%; height: 105px; background-color:#acf;}
         position: absolute; z-index:-1; top: 0; right: 50%; margin-right:-50vw;
 				width: 50vw; height: 100%; background-color:inherit;}
 
+#viewBox .com {margin: auto; margin-top: 5rem; width: 340px; height: 550px; background-color:#acf;}
 
+
+/* #footBox ================================*/
 #footBox{position: relative; z-index: 100; 
 	  width: 100%; height:6.875rem; background-color:#ffff55;}
 
