@@ -10,23 +10,26 @@
 
 #homeBox a{display: block; width: 100%; height: 100%; background-color:inherit; text-align: center;
  line-height:1.875rem; color:#fff;
-	background-repeat:no-repeat; background-position:50%}
+ background-image: url("../../../../img/gcass/homeBox/homeBox.png");
+ background-repeat:no-repeat; /*background-position:50%*/
+ background-position-y:0; }
 
 #homeBox li:last-child>a{text-align: left; text-indent:1rem; 
 	color:#171717;}
 
-#homeBox ul>li:nth-child(1)>a{background-image: url("../../../../img/gcass/homeBox/home.png");}	
-#homeBox ul>li:nth-child(2)>a{background-image: url("../../../../img/gcass/homeBox/study.png");}	
-#homeBox ul>li:nth-child(3)>a{background-image: url("../../../../img/gcass/homeBox/education.png");}	
+#homeBox ul>li>a:hover,
+#homeBox ul>li>a:focus{background-image: url("../../../../img/gcass/homeBox/homeBox_over.png");}
+
+#homeBox ul>li:nth-child(1)>a{background-position-x: 0; /*background-image: url("../../../../img/gcass/homeBox/home.png");*/}	
+#homeBox ul>li:nth-child(2)>a{background-position-x: -95px; /*background-image: url("../../../../img/gcass/homeBox/study.png");*/}	
+#homeBox ul>li:nth-child(3)>a{background-position-x: -190px; /*background-image: url("../../../../img/gcass/homeBox/education.png");*/}	
 
 #homeBox ul>li:last-child a:after{content:" "; display: block;
 	position: absolute; z-index: -1; top: 0; left: 0;
   width: 50vw; height: 100%; background-color:inherit;}
 
-#homeBox ul>li>a:hover{background-color: #acc;}
-#homeBox ul>li>a:focus{background-color: #afc;}
-
 #homeBox:before, #homeBox::before{content:" "; display: block;
 					position: absolute; z-index: -1; top: 0; left: 50%; margin-left:-50vw;
 					width: 100vw; height: 100%; background-color:inherit; }
+					
 /* ======================================== */
