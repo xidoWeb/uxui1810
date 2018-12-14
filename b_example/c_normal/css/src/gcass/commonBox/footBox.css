@@ -13,24 +13,37 @@
 				position: absolute; z-index: 500; left: 50%; top: 0; margin-left: -50vw;
 				border-top:0.0625rem solid #171717;}
 
-#footBox h2 {float:left; margin-right:1.5625rem; width:4.5rem; height: 3rem; background-color:#acf;}
+#footBox h2 {float:left; margin-right:1.5625rem; width:4.5rem; height: 3rem;
+	background-image: url("../../../../img/gcass/footBox/footBox_logo.png"); background-repeat: no-repeat; background-position: 50% 50%;}
 
 /* .info_area ------------------- */
-.info_area {float:left; margin-right:1.5625rem; width:5.625rem; height:2.8125rem; background-color:#acf;}
+.info_area {float:left; margin-right:1.5625rem; width:5.625rem; height:2.8125rem;}
 .location{border-bottom:0.0625rem solid #575757; box-sizing:border-box; width: 100%; height: 1.25rem;}
+
+.info_area a{background-image: url("../../../../img/gcass/footBox/info_over.png"); background-repeat: no-repeat;}
+
+.info_area a:hover, 
+.info_area a:focus{background-image: url("../../../../img/gcass/footBox/info.png");}
+
+.location a{background-position: 50% 0;}
 
 .sns{width: 100%; height: 1.5625rem;}
 .sns li{float:left; padding:0.0625rem 0.125rem 0; box-sizing:border-box; width: 33.333333%; height:1.5rem;}
-.sns li>a{background-color:#fff;}
+
+.sns li:nth-child(1)>a{background-position: 0 100%;}
+.sns li:nth-child(2)>a{background-position: 50% 100%;}
+.sns li:nth-child(3)>a{background-position: 100% 100%;}
 
 /* .addr_area ------------------- */
-.addr_area {float:left; width:22.5rem; height:auto;}
+.addr_area {float:left; width:22.5rem; height:34px; background-image: url("../../../../img/gcass/footBox/address.png");
+	background-repeat: no-repeat; background-position: 0 0;}
+
 .addr_area>p{font-size:0.9rem; letter-spacing:-0.025rem; color:#171717; }
 .addr_area>p>strong{font-size: 0;}
 .dash:before{content:"."; color:#575757; font-size:0.5rem;}
 
 /* .more_area ------------------- */
-.more_area {float:right; margin-top:-4.75rem; width:18.75rem; height:auto;}
+.more_area {float:right; margin-top:-4.70rem; width:18.75rem; height:auto;}
 
 .more_area dl {width: 100%; height: auto; margin-bottom:0.5rem;}
 .more_area dl>dt{float:left; width:5.9375rem; height: 4.125rem; background-color:#575757;
@@ -40,6 +53,20 @@
 	width:12.75rem; height: 4.125rem; background-color:#fff30d;
 	font-size: 1rem; /*text-indent:1rem;*/ line-height:3.125rem; color:#171717;}
 .more_area dl>dd>a{display: block; width: 100%; height: 100%; color:inherit;}
+
+
+.more_area dl>dt:first-of-type,
+.more_area dl>dd:first-of-type{background-image: url("../../../../img/gcass/footBox/family_site_01.png");}
+
+.more_area dl>dt:nth-of-type(2),
+.more_area dl>dd:nth-of-type(2){background-image: url("../../../../img/gcass/footBox/family_site_02.png");}
+
+.more_area dl>dt,.more_area dl>dd{background-repeat: no-repeat; background-position-y:0;}
+
+.more_area dl>dt{ background-position-x: 0;}
+.more_area dl>dd{ background-position-x: 100%;}
+
+
 
 
 .more_area p{width: 100%; height: auto; text-align:right; font-size:0.7rem; line-height: 130%;}
