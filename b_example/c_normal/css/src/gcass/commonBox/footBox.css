@@ -1,0 +1,47 @@
+/* footBox.css */
+
+/* #footBox ================================*/
+#footBox{position: relative; z-index: 100; 
+		padding:0.625rem 2.5rem 1.75rem; box-sizing: border-box;
+	  	width: 100%; height:6.875rem;}
+
+#footBox:before, #footBox::before{content:" "; display: block;
+				position: absolute; z-index: -1; top: 0; left: 50%; margin-left:-50vw;
+				width: 100vw; height: 100%; background-color:inherit; }
+
+#footBox:after, #footBox::after{content:" "; display: block; width: 100vw; height: 0;
+				position: absolute; z-index: 500; left: 50%; top: 0; margin-left: -50vw;
+				border-top:0.0625rem solid #171717;}
+
+#footBox h2 {float:left; margin-right:1.5625rem; width:4.5rem; height: 3rem; background-color:#acf;}
+
+/* .info_area ------------------- */
+.info_area {float:left; margin-right:1.5625rem; width:5.625rem; height:2.8125rem; background-color:#acf;}
+.location{border-bottom:0.0625rem solid #575757; box-sizing:border-box; width: 100%; height: 1.25rem;}
+
+.sns{width: 100%; height: 1.5625rem;}
+.sns li{float:left; padding:0.0625rem 0.125rem 0; box-sizing:border-box; width: 33.333333%; height:1.5rem;}
+.sns li>a{background-color:#fff;}
+
+/* .addr_area ------------------- */
+.addr_area {float:left; width:22.5rem; height:auto;}
+.addr_area>p{font-size:0.9rem; letter-spacing:-0.025rem; color:#171717; }
+.addr_area>p>strong{font-size: 0;}
+.dash:before{content:"."; color:#575757; font-size:0.5rem;}
+
+/* .more_area ------------------- */
+.more_area {float:right; margin-top:-4.75rem; width:18.75rem; height:auto;}
+
+.more_area dl {width: 100%; height: auto; margin-bottom:0.5rem;}
+.more_area dl>dt{float:left; width:5.9375rem; height: 4.125rem; background-color:#575757;
+	line-height:4.125rem; font-size:1rem; text-align: center; color:#fff; }
+
+.more_area dl>dd{float:left; padding:0.5rem 1rem; box-sizing: border-box;
+	width:12.75rem; height: 4.125rem; background-color:#fff30d;
+	font-size: 1rem; /*text-indent:1rem;*/ line-height:3.125rem; color:#171717;}
+.more_area dl>dd>a{display: block; width: 100%; height: 100%; color:inherit;}
+
+
+.more_area p{width: 100%; height: auto; text-align:right; font-size:0.7rem; line-height: 130%;}
+
+

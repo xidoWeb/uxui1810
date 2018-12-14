@@ -1,0 +1,22 @@
+/* headBox.css */
+
+/* #headBox ================================== */
+#headBox{float:left; position: relative; z-index: 100; 
+	padding:3.4375rem 3.125rem 6.25rem 2.5rem; box-sizing: border-box; 
+	width:15.625rem; height:auto; min-height:44.375rem; background-color:#777777;}
+
+#headBox:before, #headBox::before{content:" "; display: block; 
+        position: absolute; z-index:-1; top: 0; left: 50%; margin-left:-50vw;
+		width: 50vw; height: 100%; background-color:inherit;
+		display: none; }
+
+h1 {margin-bottom:1.875rem; width: 100%; height: 6.5625rem; background-color:#acf;}
+
+#gnb {width: 100%; height: auto; min-height:10rem; background-color:#acf;}
+#gnb > ul {width: 100%; height: auto;}
+#gnb > ul > li {margin-bottom: 1rem; width: 100%; height: 2.8125rem;}
+#gnb > ul > li:last-child {margin-bottom: 0; height:7rem;}
+
+#gnb > ul > li > a {display: block; box-sizing:border-box; border-bottom:0.25rem solid #fff; width: 100%; height: 100%;}
+#gnb > ul > li > a:focus{border-color:#000;}
+/* ======================================== */

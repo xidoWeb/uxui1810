@@ -1,0 +1,13 @@
+/* main_page.css */
+
+@charset "UTF-8";
+
+@import url("./commonBox/common_page.css");
+
+@import url("./commonBox/homeBox.css");
+@import url("./commonBox/headBox.css");
+
+@import url("./mainPage/viewBox.css");
+
+@import url("./commonBox/footBox.css");
+

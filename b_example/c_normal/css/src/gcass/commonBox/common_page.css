@@ -1,0 +1,6 @@
+/* common_page.css */
+
+
+body{overflow-x: hidden;}
+#wrap{margin: auto; width:61.25rem; height:53.125rem;}
+.box_wrap{width:100%; height:auto; min-height:40rem;}
