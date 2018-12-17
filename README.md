@@ -33,22 +33,19 @@
   2. 일러스트
   3. 인디자인
   4. pdf프로그램(리더, 아크로뱃)
-
-
+  5. colour constrast analyser :명도대비 체크 프로그램
 
 ---
 
-- ### 개발
+- ### 개발 프로그램
   1. 에디터(서브라임텍스트)
-  2. git/ 
+  2. git || desktop github
      2-1. desktop.github.com
   3. 어시스터PS
   4. node.js
   5. 스크린리더프로그램
   6. typora
-
-
-
+  
 ---
 
 - ### 브라우저: 확장프로그램
@@ -62,10 +59,9 @@
   8. firebug(파이어폭스)
 
 
-
 ---
 
-- ### 서브라임텍스트 
+- ### 서브라임텍스트 추가설치
 
    #### 기본.  install package control
  1. conver to utf-8
