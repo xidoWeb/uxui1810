@@ -3,6 +3,8 @@
 ---
 
 ##  color 
+### 기본 색상
+
 mainColor   : #fff30d
 subColor1   : #777777
 subColor2   : #888888
@@ -11,15 +13,33 @@ textColor1  : #171717
 textColor2  : #ffffff
 background1 : #adadad
 
+
+
+### 명도대비
+
+#fff30d : #171717 (4.5:1) 글씨를 전경색을 사용할 수 있음.
+
+
+
 ---
 
 ## font 
+fontFamily : 
+
+- 웹폰트
+
+- 영문
+
+- 한글
+
+
 fontSize(h1)    : 
 fontSize(h2)    : 
 fontSize(h3)    : 
 fontSize(p)     : 12pt
 fontSize(point) : 12pt/bold
 단, 일부 디자인내용을 따를 수 있다.
+
 - 서체의 크기는 최소 6pt이하로 제작할 수는 없다. 
 
 ---
