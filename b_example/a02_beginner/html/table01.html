@@ -42,7 +42,9 @@
 .table_col_2{background-color: #cf0;}
 .table_col_3{background-color: #cff;}
 
+.box4_1{background-color: #fcc;}
 	</style>
+}
 
 
 </head>
@@ -88,7 +90,7 @@
 				<th>제목2</th>
 				<th>제목3</th>
 				<th colspan="2">제목4,5</th>
-				<!-- <th>제목5</th> -->
+			
 			</tr>
 			<tr>
 				<td rowspan="3">1-1</td>
@@ -98,18 +100,17 @@
 				<td>1-5</td>
 			</tr>
 			<tr>
-				<!-- <td>2-1</td> -->
+				
 				<td>2-2</td>
 				<td>2-3</td>
 				<td colspan="2" rowspan="2">2-4</td>
-				<!-- <td>2-5</td> -->
+		
 			</tr>
 			<tr>
-				<!-- <td>3-1</td> -->
+				
 				<td>3-2</td>
 				<td>3-3</td>
-				<!-- <td>3-4</td> -->
-				<!-- <td>3-5</td> -->
+	
 			</tr>
 		</table>
 	</div>
@@ -117,23 +118,21 @@
 		<h2>table 간단한 테스트</h2>
 		<table summary="colspan과 rowspan의 간단한 이해용 연습">
 			<caption>셀 합치기</caption>
-			<!--  ==========================  -->
+
 			<colgroup>
 				<col span="1" class="table_col_1" />
 				<col span="2" class="table_col_2" />
-				<!-- <col span="1" class="table_col_3" /> -->
+
 				<col span="3" class="table_col_3" />
-				<!-- <col span="1" class="table_col_3" />
-				<col span="1" class="table_col_3" /> -->
+
 			</colgroup>
-			<!--  ==========================  -->
+
 			<tr>
 				<td class="t1">1-1</td>
 				<td colspan="2">2-2</td>
-				<!-- <td>3-3</td> -->
+
 				<td colspan="3">4-4</td>
-				<!-- <td>5-5</td> -->
-				<!-- <td>6-6</td> -->
+
 			</tr>
 			<tr>
 				<td class="t1">1-1</td>
@@ -145,31 +144,68 @@
 			</tr>
 			<tr>
 				<td class="t1">1-1</td>
-				<!-- <td>2-2</td> -->
-				<!-- <td>3-3</td> -->
+
 				<td colspan="3" rowspan="3">4-4</td>
-				<!-- <td>5-5</td> -->
-				<!-- <td>6-6</td> -->
+
 			</tr>
 			<tr>
 				<td class="t1">1-1</td>
 				<td>2-2</td>
-				<!-- <td>3-3</td> -->
-				<!-- <td>4-4</td> -->
-				<!-- <td>5-5</td> -->
-				<!-- <td>6-6</td> -->
+
 			</tr>
 			<tr>
 				<td class="t1">1-1</td>
 				<td>2-2</td>
 				<td>3-3</td>
-				<!-- <td>4-4</td> -->
-				<!-- <td>5-5</td> -->
-				<!-- <td>6-6</td> -->
 			</tr>
 		</table>
 	</div>
+	<div class="box box_04">
 
+		<table summary="접근성을 고려하여 메뉴판 제작하기">
+			<caption>중국집 음식가격</caption>
+
+			<colgroup>
+				<col class="box4_1">
+			</colgroup>
+
+			<tr>
+				<th scope="col">메뉴</th>
+				<th scope="col" colspan="2">가격 및 칼로리</th>
+				<th scope="col">원산지</th>
+				<th scope="col">매움정도</th>
+				<th scope="col">재료</th>
+			</tr>
+			<tr>
+				<td>짜장면</td>
+				<td scope="row">5500원</td>
+				<td>860kcal</td>
+				<td>중국</td>
+				<td>보통</td>
+				<td>면,춘장,양파,고기,기름</td>
+			</tr>
+			<tr>
+				<td>짬뽕</td>
+				<td scope="row">7000원</td>
+				<td>684kcal</td>
+				<td>국내산</td>
+				<td>보통, 매움</td>
+				<td>양파, 고기, 해산물</td>
+			</tr>
+			<tr>
+				<td>탕수육</td>
+				<td scope="row">12000원</td>
+				<td>3200kcal</td>
+				<td>한국</td>
+				<td>순한맛</td>
+				<td>고기, 기름, 전분, 사과, 당근, 오이, 파인애플</td>
+			</tr>
+		</table>
+	</div>
+ 
+  <div class="box box_05">
+  	
+  </div>
 	<!-- script -->
 	<!-- <script src="../js/base/jquery-3.3.1.min.js"></script> -->
 	<!-- <script src="../js/base/jquery-ui.min.js"></script> -->
