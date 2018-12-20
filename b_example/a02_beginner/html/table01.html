@@ -31,15 +31,20 @@
 	th,td{padding:0.5rem;}
 
 	tr:first-of-type{background-color: #ccc;}
-	table,
-	tr>th:first-of-type,
-	tr>td:first-of-type{border-left-width:0;}
+	table, tr>th:first-of-type, tr>td:first-of-type{border-left-width:0;}
 
-	table,
-	tr>th:last-of-type,
-	tr>td:last-of-type{border-right-width: 0;}
+	table, tr>th:last-of-type, tr>td:last-of-type{border-right-width: 0;}
+
+/* ================================= */
+/*.t1{background-color: #a90; width:100px;}*/
+
+.table_col_1{background-color: #acf;}
+.table_col_2{background-color: #cf0;}
+.table_col_3{background-color: #cff;}
 
 	</style>
+
+
 </head>
 <body>
 	<!-- layout -->
@@ -112,8 +117,18 @@
 		<h2>table 간단한 테스트</h2>
 		<table summary="colspan과 rowspan의 간단한 이해용 연습">
 			<caption>셀 합치기</caption>
+			<!--  ==========================  -->
+			<colgroup>
+				<col span="1" class="table_col_1" />
+				<col span="2" class="table_col_2" />
+				<!-- <col span="1" class="table_col_3" /> -->
+				<col span="3" class="table_col_3" />
+				<!-- <col span="1" class="table_col_3" />
+				<col span="1" class="table_col_3" /> -->
+			</colgroup>
+			<!--  ==========================  -->
 			<tr>
-				<td>1-1</td>
+				<td class="t1">1-1</td>
 				<td colspan="2">2-2</td>
 				<!-- <td>3-3</td> -->
 				<td colspan="3">4-4</td>
@@ -121,7 +136,7 @@
 				<!-- <td>6-6</td> -->
 			</tr>
 			<tr>
-				<td>1-1</td>
+				<td class="t1">1-1</td>
 				<td rowspan="2">2-2</td>
 				<td rowspan="3">3-3</td>
 				<td>4-4</td>
@@ -129,7 +144,7 @@
 				<td>6-6</td>
 			</tr>
 			<tr>
-				<td>1-1</td>
+				<td class="t1">1-1</td>
 				<!-- <td>2-2</td> -->
 				<!-- <td>3-3</td> -->
 				<td colspan="3" rowspan="3">4-4</td>
@@ -137,7 +152,7 @@
 				<!-- <td>6-6</td> -->
 			</tr>
 			<tr>
-				<td>1-1</td>
+				<td class="t1">1-1</td>
 				<td>2-2</td>
 				<!-- <td>3-3</td> -->
 				<!-- <td>4-4</td> -->
@@ -145,7 +160,7 @@
 				<!-- <td>6-6</td> -->
 			</tr>
 			<tr>
-				<td>1-1</td>
+				<td class="t1">1-1</td>
 				<td>2-2</td>
 				<td>3-3</td>
 				<!-- <td>4-4</td> -->
