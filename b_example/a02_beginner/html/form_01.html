@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/base/reset.css" />
+	<link rel="stylesheet" href="../css/base/common.css" />
+	<title>Document</title>
+	<style>
+		h1{margin-bottom: 2rem; padding: 1rem; background-color: #acf; font-size: 1.2rem;}
+
+		form{padding: 2rem; background-color: #ffc;}
+		fieldset{padding: 1rem;}
+		legend{background-color: #a33; padding: 0.5rem 3rem; color:#fff; font-weight:bold; border-radius:0.5rem;}
+
+    input{height: 2rem; border:2px solid #111; text-indent:0.5rem; font-size: 1.2rem;}
+
+    footer{margin-top: 150rem; margin-bottom: 100rem;}
+    label{display: block; width: 0; height: 0; overflow: hidden;}
+
+    #idName{color:#f06;}
+	</style>
+</head>
+<body>
+	<!-- layuout -->
+	<div id="wrap">
+		<h1>form 기초 개념 이해하기1</h1>
+		<form action="#" method="post">
+			<fieldset>
+				<legend>간단한 form 기초코드의 내용에 대한 이해</legend>
+        <label for="searchName">검색할 자료 이름을 입력하세요.</label>
+        <input type="text" id="searchName" name="searchBox" value="" placeholder="검색어를 입력하세요." />
+        
+
+
+        <br />
+        <br />
+        <label for="idName">아이디를 입력하세요</label>
+        <input type="text" id="idName" name="idBox" value="" placeholder="id를 입력하세요.">
+
+        <br />
+        <label for="pwName">비밀번호를 입력하세요</label>
+        <input type="password" id="pwName" name="pwBox" value="비밀번호를 입력하세요.">
+
+        <br />
+        <label for="yourName">이름를 입력하세요</label>
+        <input type="text" id="yourName" name="yourBox" value="">
+
+        <br />
+        <label for="numberName">연락처를 입력하세요</label>
+        <input type="text" id="numberName" name="numBox" value="">
+
+        <!--  input요소의 id는 실, label요소의 for는 바늘 -->
+        
+
+      </fieldset>
+    </form>
+  </div>
+  <footer>
+  </footer>
+
+</body>
+</html>
