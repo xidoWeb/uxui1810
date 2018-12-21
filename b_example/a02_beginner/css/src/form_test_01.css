@@ -1,0 +1,34 @@
+/* form_test_01.css */
+
+form,fieldset, legend{margin: 0; padding: 0; border: 0;}
+
+#wrap{width: 100%; height: 100%;
+	background-color:#faf;}
+
+.member_box{
+	position: fixed;
+	top: 50%; left: 50%; margin-top: -70px;
+	margin-left: -150px;
+	padding:7px; padding-left:17px;
+	border:3px solid #333;
+	box-sizing: border-box;
+	width: 300px; height: 140px;
+	background-color:#111;
+	border-radius:6px;}
+
+form, fieldset{width:100%; height:100%;}
+
+.user{margin-bottom:10px;  width: 100%; height: 73px;}
+
+.user > dt{float:left; width:100px; height:32px; background-color: #acf;}
+.user > dd{float: right; width:140px; height:32px; background-color:#fac}
+
+.user > dt:first-of-type,
+.user > dd:first-of-type{margin-bottom:9px;}
+
+
+.check{width: 100%; height: 35px;}
+.check>p{float:left; padding-top: 8px; box-sizing:border-box;
+	width:100px; height:32px; background-color: #acf;
+	font-size:0.8rem}
+.check>div{float: right; width:140px; height:35px; background-color:#fac}
