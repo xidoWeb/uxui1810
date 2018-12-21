@@ -31,6 +31,135 @@
 				</fieldset>
 			</form>
 		</div>
+		<!--  ====================================  -->
+		<div class="box form_basic2">
+			<form action="" method="post">
+				<fieldset class="view">
+					<legend>input type 형식 01: 입력형태</legend>
+					<div class="before">
+						<label for="idName">아이디<span class="hidden">를 입력하세요.</span></label> 
+						<input type="text" id="idName" name="idName" value="" />
+							<br />
+						<label for="pwName">비밀번호<span class="hidden">를 입력하세요.</span></label> 
+						<input type="password" id="pwName" name="pwName" value="" />
+
+						<p class="result">입력한 값: <span></span></p>
+					</div>
+
+					<div class="after">
+
+						<label for="serName">검색어 입력</label>
+						<input type="search" id="serName" name="serName" value="" required="required" /><br />
+						
+						<label for="urlName">주소 입력</label>
+						<input type="url" id="urlName" name="urlName" value="" required="required" /><br />
+	
+						<label for="emailName">메일 입력</label>
+						<input type="email" id="emailName" name="emailName" value="" required="required" /><br />	
+
+						<label for="telName">연락처</label>
+						<input type="tel" id="telName" name="telName" value="" required="required" /><br />
+					</div>
+
+					<!-- <button type="submit">중간체크</button> -->
+
+					<div class="yet">
+						<label for="month">월체크</label>
+						<input type="month" id="month" name="month" value="" /><br />
+
+						<label for="week">주체크</label>
+						<input type="week" id="week" name="week" value="" /><br />
+
+						<label for="date">날짜체크</label>
+						<input type="date" id="date" name="date" value="" /><br />
+
+						<label for="time">시간체크</label>
+						<input type="time" id="time" name="time" value="" /><br />
+
+						<label for="datetime">날짜시간체크</label>
+						<input type="datetime" id="datetime" name="datetime" value="" /><br />
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>input type 형식 02: 선택형태</legend>
+					<div class="radio">
+						<p>당신의 성별을 선택하세요.</p>
+						
+						<ul>
+							<li>
+								<input type="radio" id="ra_1" name="radioSel" value="남성">
+								<label for="ra_1"><i></i> 남성</label>
+							</li>
+							<li>
+								<input type="radio" id="ra_2" name="radioSel" value="여성">
+								<label for="ra_2"><i></i> 여성</label>
+							</li>
+							<li>
+								<input type="radio" id="ra_3" name="radioSel" value="양성" checked="checked">
+								<label for="ra_3"><i></i> 양성</label>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="checkbox">
+						<p>주말에 하고싶은 일을 선택하시오.</p>
+
+						<input type="checkbox" id="ch_01" name="checkSel" value="첫번째 체크" />
+						<label for="ch_01"><i></i>잠</label>
+
+						<input type="checkbox" id="ch_02" name="checkSel" value="두번째 체크" />
+						<label for="ch_02"><i></i>술먹기</label>
+
+						<input type="checkbox" id="ch_03" name="checkSel" value="세번째 체크" />
+						<label for="ch_03"><i></i>쉬기</label>
+
+						<input type="checkbox" id="ch_04" name="checkSel" value="네번째 체크" checked="checked" />
+						<label for="ch_04"><i></i>공부</label>
+
+						<input type="checkbox" id="ch_05" name="checkSel" value="다섯번째 체크" checked="checked" />
+						<label for="ch_05"><i></i>복습</label>
+					</div>
+
+					<div class="after"></div>
+				</fieldset>
+
+				<fieldset>
+					<legend>input type 형식 03</legend>
+				</fieldset>
+
+				<fieldset>
+					<legend>input type 형식 04</legend>
+				</fieldset>
+
+				<fieldset>
+					<legend>input type 형식 05</legend>
+				</fieldset>
+			</form>
+		</div>
 	</div>
+
+	<!-- script -->
+	<script src="https://unpkg.com/jquery"></script>
+	<script>
+		(function($) {
+			var before = $('.before');
+			var key1   = before.find('input').eq(0);
+			var key2   = before.find('input').eq(1);
+			var result = $('.result').children('span');
+
+			key1.on('keyup',function(){
+				var val1 = $(this).val();
+				result.text(val1);
+			});
+
+			key2.on('keyup',function() {
+				var val2 = $(this).val();
+				result.text(val2);
+			});
+		})(jQuery);
+	</script>
+
 </body>
 </html>
