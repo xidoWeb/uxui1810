@@ -18,18 +18,35 @@
 						<legend class="hidden">회원 로그인 페이지</legend>
 
 						<dl class="user">
-							<dt>user name</dt>
+							<dt>
+								<label for="idname">user name</label>
+							</dt>
 							<dd>
-								
+								<input type="text" id="idName" name="idName" value=""
+									required="required" placeholder="Username" />
 							</dd>
 
-							<dt>password</dt>
-							<dd></dd>
+							<dt>
+								<label for="pwName">password</label>
+							</dt>
+							<dd>
+								<input type="password" id="pwName" name="pwName" value=""
+									required="required" placeholder="password" />
+							</dd>
 						</dl>
 
 						<div class="check">
-							<p>remember me</p>
-							<div class="ok"></div>
+							<div class="remember">
+							<input type="checkbox" id="rememberCheck"
+								name="rememberCheck" value="true" />
+								<label for="rememberCheck">remember me</label>
+							</div>
+
+							<div class="ok">
+								<button type="submit">
+									sign in
+								</button>
+							</div>
 						</div>
 					</fieldset>
 				</form>
