@@ -125,26 +125,67 @@
 					<div class="after">
 						
 						<label for="sel_21">수치/수량을 입력하세요.</label>
-						<input type="number" min="1" max="20" step="4" name="" id="" value="">
+						<input type="number" min="1" max="20" step="4" name="num" id="num" value="">
 
 						<label for="sel_22">원하는 값을 선택하세요.</label>
-						<input type="range" min="1" max="20" step="4" name="" id="" value="">
-
+						<input type="range" min="1" max="20" step="4" name="count" id="count" value="">
+					</div>
+					<div class="yet">
 						<label for="sel_23">색상을 선택/입력하세요</label>
-						<input type="color" name="" id="" value="">
+						<input type="color" name="color" id="colorSel" value="">
 					</div>
 				</fieldset>
 
 				<fieldset>
-					<legend>input type 형식 03</legend>
+					<legend>input type 형식 03: 버튼의 기능</legend>
+					<div class="keep">
+						<input type="submit" name="submit1" value="동의" id="ok" />
+						<input type="image" name="image" value="동의" src="../img/icon/icon_03.png" alt="이미지설명">
+						<input type="reset" name="reset" value="취소">
+						<input type="button" name="button" value="주소검색">
+						<input type="file" name="file" value="" multiple>
+					</div>
 				</fieldset>
 
 				<fieldset>
-					<legend>input type 형식 04</legend>
+					<legend>input type 형식 04: 특수</legend>
+					<input type="hidden" id="boxTest" name="boxTest" value="test확인" />
 				</fieldset>
 
 				<fieldset>
-					<legend>input type 형식 05</legend>
+					<legend>input type 형식 05: 멀티기능</legend>
+
+					<div class="one">
+						<label for="textArea">필요한 사항을 입력</label>
+						<textarea name="textArea" id="textArea" cols="100" rows="5">약관내용을 작성하여도 문제되지 않습니다.</textarea>
+						<!-- readonly="readonly" -->
+					</div>
+					<div class="two">
+						<p>저녁에 먹을 음식을 선택하세요.</p>
+
+						<select name="sel00" id="sel00">
+							<option>선택하세요.</option>
+
+							<optgroup label="고기류">
+								<option>-------------------------</option>
+								<option value="beef">소고기</option>
+								<option value="pork">돼지고기</option>
+								<option value="chicken">닭갈비</option>
+							</optgroup>
+
+							<optgroup label="음료">
+								<option value="water">물</option>
+								<option value="cider">사이다</option>
+								<option value="pepsi">콜라</option>
+							</optgroup>
+						</select>
+					</div>
+					<div class="three">
+						<button type="submit">확인</button>
+						<button type="reset">취소</button>
+						<button type="button">버튼</button>
+						<button>버튼</button>
+					</div>
 				</fieldset>
 			</form>
 		</div>
@@ -168,6 +209,25 @@
 				var val2 = $(this).val();
 				result.text(val2);
 			});
+
+//  ----------------------------
+		 var color = $('#colorSel');
+		 color.on('change', function(e) {
+		 		console.log(e);
+		 		var colorVal = $(this).val();
+		 		console.log(colorVal);
+
+		 		$(this).attr({'type':'text'});
+		 		$(this).val(colorVal);
+		 });
+
+
+		 $(document).on('mousemove',function(e) {
+		 	//console.log(e);
+		 	var x = e.originalEvent.pageX;
+		 	var y = e.originalEvent.pageY;
+		 	console.log(x, y);
+		 });
 		})(jQuery);
 	</script>
 

@@ -66,3 +66,16 @@ fieldset div{border-top:1px solid #77a; margin-top: 1rem; padding-top: 1rem;}
 
 
 /* ======================= */
+
+.keep input[type="submit"] {
+	background-color:#866;
+	border:none;
+	padding: 1rem;
+	background-image: url("../../img/icon/icon_03.png");
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+}
+
+/* ======================================= */
+
+button{cursor:pointer;}
