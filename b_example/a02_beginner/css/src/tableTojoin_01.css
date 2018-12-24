@@ -25,14 +25,37 @@ h1{margin-bottom:50px;
 	width: 100%; height:auto;  
 	text-align: center; border-bottom:1px solid #333;}
 
-table{margin-bottom: 1rem; width: 100%; height: auto; min-height:5rem; background-color: #cff;}
+table{margin-bottom: 1rem; width: 100%; height: auto; min-height:5rem; background-color: #cff; border: 0;}
 
 thead{border: 0;}
 
-tbody{width: 100%; height: auto;}
+tbody{width: 100%; height: auto; border: 0;}
 
 th{width: 15%; height:30px; text-align:left; text-indent:1rem;}
-td{padding-left:1rem; box-sizing: border-box; width: 85%; height: 30px;}
+td{padding:0.25rem 1rem; box-sizing: border-box; width: 85%; height: 30px;}
+
+
+#in_05 + .in_text:before{content:"* "; color:#f06;}
+#in_05 + .in_text:after{content:"같은 암호를 입력하세요."; color:#171717;}
+
+.mail_area>input{width:150px;}
+.mail_area>select{width:110px; height: 100%;}
+
+#in_06{margin-right: 0;}
+#in_06 ~ .in_text:before{content:" @ "; color:#171717; font-weight: bold;}
+
+
+
+/* ==================================== */
+.input-text{margin-right: 1rem; width: 200px; height: 100%;}
+.check-btn{border: 0; padding: 0.1rem 1rem; background-color: #56a; color:#fff; font-weight: bold;
+	cursor:pointer;}
+
+
+
+
+
+
 
 /* ============================= */
 .check_btn{margin: auto; width: 200px; height: 30px;}

@@ -35,8 +35,9 @@
 						<tr> 
 							<th><label for="in_01">아이디</label></th>   
 							<td>
-								<input type="text" id="in_01" name="idName" value="" />
-								<button type="button">
+								<input type="text" id="in_01" class="input-text" name="idName" value="" 
+								       placeholder="id 입력" />
+								<button type="button" class="check-btn">
 									<span class="hidden">아이디 </span>중복확인
 								</button>
 							</td> 
@@ -44,32 +45,86 @@
 
 						<tr> 
 							<th><label for="in_02">이름</label></th>    
-							<td></td> 
+							<td>
+								<input type="text" id="in_02" class="input-text" name="userName" value="" 
+								       placeholder="사용자이름을 입력">
+							</td> 
 						</tr>
 
 						<tr> 
-							<th><label for="in_03">성별</label></th>    
-							<td></td> 
+							<th>
+								<label for="in_03">성별 
+									<span class="hidden">을 선택하세요. <br /> 기본은 남성입니다.</span>
+								</label>
+							</th>    
+							<td>
+								<input type="radio" id="in_03" name="gender" value="남성" checked>
+								<label for="in_03">남성</label>
+								<input type="radio" id="in_03-1" name="gender" value="여성">
+								<label for="in_03-1">여성</label>
+							</td> 
 						</tr>
 
 						<tr> 
-							<th><label for="in_04">암호</label></th>    
-							<td></td> 
+							<th>
+								<label for="in_04">암호
+									<span class="hidden"> 여덟자리이상 열다섯자리 이하의 글자를 입력하세요.</span>
+								</label>
+							</th>    
+							<td>
+								<input type="password" id="in_04" class="input-text" name="pwName" value="" 
+								placeholder="비밀번호">
+							</td> 
 						</tr>
 
 						<tr> 
-							<th><label for="in_05">암호확인</label></th>  
-							<td></td> 
+							<th>
+								<label for="in_05">
+									<span class="hidden">이전의 작성된 </span>
+									암호확인
+									<span class="hidden">입니다. 다시한번 동일하게 작성하세요.</span>
+								</label>
+							</th>  
+							<td>
+								<input type="password" id="in_05" class="input-text" name="pwName2" value="" 
+								placeholder="비밀번호 확인">
+								<span class="in_text"> <!-- 이미지 내용 --> </span>
+							</td> 
 						</tr>
 
 						<tr> 
 							<th><label for="in_06">이메일</label></th>   
-							<td></td> 
+							<td class="mail_area">
+								<input type="text" id="in_06" class="input-text" 
+								       name="firstMailName" value="" />
+
+								<label for="in_06-1" class="hidden">
+									메일 주소를 작성하거나 주소를 선택하세요.
+								</label>
+
+								<span class="in_text"><!-- 이미지 내용 --></span>
+
+								<input type="text" id="in_06-1" class="input-text" 
+								       name="lastMailName" value="" />
+
+								<select name="mailSel" id="in_06-2">
+									<option value="naver">naver.com</option>
+									<option value="daum">daum.net</option>
+									<option value="google">google.com</option>
+									<option value="nate">nate.com</option>
+									<option value="yahoo">yahoo.co.kr</option>
+								</select>
+								<label for="in_06-2" class="hidden">이메일주소를 선택하세요</label>
+							</td> 
 						</tr>
 
 						<tr> 
 							<th><label for="in_07">주소</label></th>    
-							<td></td> 
+							<td>
+								<input type="text" id="in_07" class="input-text" name="addName" value="" 
+								       placeholder="주소 입력" />
+								<button type="button" class="check-btn">주소찾기</button>
+							</td> 
 						</tr>
 
 						<tr> 
