@@ -16,10 +16,84 @@
 		<form action="" method="post">
 			<fieldset>
 				<legend class="hidden">회원가입 내용 양식</legend>
+				
+			<!-- 	<colgroup>
+					<col class="title">
+					<col class="content">
+				</colgroup> -->
 
 				<table summary="테이블을 이용한 회원가입페이지 생성하기">
 					<caption class="hidden">회원가입페이지 상세내용</caption>
+
+					<thead class="hidden">
+						<tr>
+							<th>분류</th>
+							<th>내용작성</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr> 
+							<th><label for="in_01">아이디</label></th>   
+							<td>
+								<input type="text" id="in_01" name="idName" value="" />
+								<button type="button">
+									<span class="hidden">아이디 </span>중복확인
+								</button>
+							</td> 
+						</tr>
+
+						<tr> 
+							<th><label for="in_02">이름</label></th>    
+							<td></td> 
+						</tr>
+
+						<tr> 
+							<th><label for="in_03">성별</label></th>    
+							<td></td> 
+						</tr>
+
+						<tr> 
+							<th><label for="in_04">암호</label></th>    
+							<td></td> 
+						</tr>
+
+						<tr> 
+							<th><label for="in_05">암호확인</label></th>  
+							<td></td> 
+						</tr>
+
+						<tr> 
+							<th><label for="in_06">이메일</label></th>   
+							<td></td> 
+						</tr>
+
+						<tr> 
+							<th><label for="in_07">주소</label></th>    
+							<td></td> 
+						</tr>
+
+						<tr> 
+							<th><label for="in_08">휴대폰</label></th>   
+							<td></td> 
+						</tr>
+
+						<tr> 
+							<th><label for="in_09">관심</label></th>    
+							<td></td> 
+						</tr>
+
+						<tr> 
+							<th><label for="in_10">자기소개</label></th>  
+							<td></td> 
+						</tr>
+
+					</tbody>
 				</table>
+
+				<div class="check_btn">
+					<input type="submit" name="send" value="확인" />
+					<input type="reset" name="remove" value="다시입력" />
+				</div>
 
 			</fieldset>
 		</form>

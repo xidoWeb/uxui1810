@@ -25,5 +25,19 @@ h1{margin-bottom:50px;
 	width: 100%; height:auto;  
 	text-align: center; border-bottom:1px solid #333;}
 
-table{width: 100%; height: auto; min-height:5rem; background-color: #cff;}
+table{margin-bottom: 1rem; width: 100%; height: auto; min-height:5rem; background-color: #cff;}
 
+thead{border: 0;}
+
+tbody{width: 100%; height: auto;}
+
+th{width: 15%; height:30px; text-align:left; text-indent:1rem;}
+td{padding-left:1rem; box-sizing: border-box; width: 85%; height: 30px;}
+
+/* ============================= */
+.check_btn{margin: auto; width: 200px; height: 30px;}
+
+input[type="submit"]{float: left; width:50px; height: 100%; 
+	border:0; background-color: #333; color:#fff; text-align: center; text-indent: 0;}
+input[type="reset"]{float: right; width:100px; height: 100%; 
+	border:0; background-color: #333; color:#fff; text-align: center; text-indent: 0;}
