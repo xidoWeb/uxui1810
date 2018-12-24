@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* tableTojoin_01.css */
+
+/* more reset */
+table,thead,tbody,tfoot,th,td{margin: 0; padding: 0; 
+	border:1px solid #333; /* border-left: 0; border-right: 0; */
+	border-spacing:0; border-collapse: collapse;}
+
+
+form,fieldset,legend {margin: 0; padding: 0; border: 0;}
+input{border:1px solid #333; box-sizing: border-box; text-indent:0.5rem;}
+select{border:1px solid #333; box-sizing: border-box; }
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+select{cursor:pointer;}
+
+
+/* layout */
+#wrap{margin: auto; padding-top: 1rem;
+	width: 650px; height: auto; min-height:10rem; 
+	background-color: #dfdfdf;}
+h1{margin-bottom:50px; 
+	width: 100%; height:auto;  
+	text-align: center; border-bottom:1px solid #333;}
+
+table{width: 100%; height: auto; min-height:5rem; background-color: #cff;}
+
