@@ -28,12 +28,10 @@ h1{margin-bottom:50px;
 table{margin-bottom: 1rem; width: 100%; height: auto; min-height:5rem; background-color: #cff; border: 0;}
 
 thead{border: 0;}
-
 tbody{width: 100%; height: auto; border: 0;}
 
 th{width: 15%; height:30px; text-align:left; text-indent:1rem;}
 td{padding:0.25rem 1rem; box-sizing: border-box; width: 85%; height: 30px;}
-
 
 #in_05 + .in_text:before{content:"* "; color:#f06;}
 #in_05 + .in_text:after{content:"같은 암호를 입력하세요."; color:#171717;}
@@ -44,7 +42,12 @@ td{padding:0.25rem 1rem; box-sizing: border-box; width: 85%; height: 30px;}
 #in_06{margin-right: 0;}
 #in_06 ~ .in_text:before{content:" @ "; color:#171717; font-weight: bold;}
 
+.phone_number {height:auto; word-spacing:-0.15rem; text-transform:uppercase;}
+.phone_number > .in_text:before{content:"-";}
+[for="tel_03"]>.in_text:before{content:"+"; font-weight: bold;}
+.phone_number > .input-text{margin-top: 0.3rem; margin-right: 0; width:150px; height:22px;}
 
+#in_10{width: 100%; height:10rem; overflow-y:auto;}
 
 /* ==================================== */
 .input-text{margin-right: 1rem; width: 200px; height: 100%;}

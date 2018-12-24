@@ -129,17 +129,75 @@
 
 						<tr> 
 							<th><label for="in_08">휴대폰</label></th>   
-							<td></td> 
+							<td class="phone_number"> 
+								<!-- (input[id=tel_$$ name=tel_$$ value]+label[for=tel_$$]>span.hidden{ telecom})*3 -->
+								<input type="radio" id="tel_01" name="telecom" value="">
+								<label for="tel_01">sk t<span class="hidden">elecom</span></label>
+
+								<input type="radio" id="tel_02" name="telecom" value="">
+								<label for="tel_02">kt<span class="hidden"> telecom</span></label>
+
+								<input type="radio" id="tel_03" name="telecom" value="">
+								<label for="tel_03">lg u 
+									<span class="in_text"></span>
+									<span class="hidden">plus telecom</span></label>
+
+								<input type="radio" id="tel_03" name="telecom" value="">
+								<label for="tel_03">알뜰폰</label>
+
+								<br />
+
+							<!-- (input[type=tel id=mobNum_$$ name=mobNum_$$ value]+label[for=mobNum_$$].hidden{전화번호 입력하세요.})*3 -->
+								<!-- <input type="tel" id="mobNum_01" name="mobNum_01" value="" maxlength="3" /> -->
+								<select name="mobNum_01" id="mobNum_01" class="input-text">
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="012">012</option>
+									<option value="013">013</option>
+									<option value="014">014</option>
+									<option value="015">015</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select>
+								<label for="mobNum_01" class="hidden">전화번호 앞자리를 입력하세요.</label>
+
+								<span class="in_text"><!-- code --></span>
+
+								<input type="tel" id="mobNum_02" name="mobNum_02" value="" maxlength="4" class="input-text" />
+								<label for="mobNum_02" class="hidden">전화번호 가운데 셋 또는 네자리를 입력하세요.</label>
+								<span class="in_text"><!-- code --></span>
+
+								<input type="tel" id="mobNum_03" name="mobNum_03" value="" maxlength="4" class="input-text" />
+								<label for="mobNum_03" class="hidden">전화번호 마지막 네자리를 입력하세요.</label>
+
+							</td> 
 						</tr>
 
 						<tr> 
 							<th><label for="in_09">관심</label></th>    
-							<td></td> 
+							<td>
+								<input type="checkbox" name="checkValue" value="check_01" id="in_09">
+								<label for="in_09">쇼핑</label>
+
+								<input type="checkbox" name="checkValue" value="check_02" id="check_02">
+								<label for="check_02">게임</label>
+
+								<input type="checkbox" name="checkValue" value="check_03" id="check_03">
+								<label for="check_03">여행</label>
+
+								<input type="checkbox" name="checkValue" value="check_04" id="check_04">
+								<label for="check_04">기타</label>
+
+							</td> 
 						</tr>
 
 						<tr> 
 							<th><label for="in_10">자기소개</label></th>  
-							<td></td> 
+							<td>
+								<textarea name="in_10" id="in_10" cols="30" rows="10"></textarea>
+							</td> 
 						</tr>
 
 					</tbody>
