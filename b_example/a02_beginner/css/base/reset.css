@@ -25,7 +25,47 @@ hr{border-bottom:1px solid #333; margin: 0; padding: 0; width: 100%;}
 abbr{text-decoration:none;}
 address{font-style:normal;}
 
+/* ======= */
+table,td,th,thead,tbody,tfoot{margin: 0; padding: 0; border:1px solid #333;
+	border-spacing:0; border-collapse:collapse; box-sizing:border-box;}
+
+thead{background-color: #dfdfdf;}
+tfoot{background-color: #aaa;}
+
+.table_design thead,
+.table_design tbody,
+.table_design tfoot,
+.table_design th:first-of-type,
+.table_design td:first-of-type{border-left: 0;}
+
+.table_design thead,
+.table_design tbody,
+.table_design tfoot,
+.table_design th:last-of-type,
+.table_design td:last-of-type{border-right: 0;}
+
+form,fieldset,legend{margin: 0; padding: 0; border: 0;}
+input,select,button{border:1px solid #777; box-sizing:border-box; cursor:pointer;}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="tel"]{text-indent:0.5rem;}
+
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus{outline:0; background-color:rgba(255,200,0,0.3);}
+
+::-webkit-input-placeholder{color:#555;}
+::-moz-placeholder{color:#555;}
+::-ms-placeholder{color:#555;}
+::-o-placeholder{color:#555;}
+
+
+/* ======= */
+
 header,nav,section,article,aside,footer,main,figure,figcaption{display: block;}
-
-
-
