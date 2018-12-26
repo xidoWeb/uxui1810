@@ -51,3 +51,18 @@ input[type="submit"]{float: right; margin-right: -30px; margin-top: -5px; border
 	background-color: #1166c9; color:#fff; font-weight: bold; 
 	letter-spacing:2rem; text-indent:2rem; text-shadow:1px 1px 0 #171717;
 	border-radius:2px; background-position: -12px -258px;}
+
+
+
+.borderT{width: 100px; height: 100px; margin: 20rem auto; 
+	background-color: #ACC; border-left:20px ridge #ddd;
+	border-top-color: #5cc;
+	border-bottom-color:#c55;
+	border-left-color: #5f5;
+	border-right-color: #f5f;
+}
+.arrT{width: 0;height: 0; border: 20px solid #333; margin:20rem auto;
+		border-top-color: transparent;
+		border-bottom-color:#c55;
+		border-left-color: transparent;
+		border-right-color: transparent;}
