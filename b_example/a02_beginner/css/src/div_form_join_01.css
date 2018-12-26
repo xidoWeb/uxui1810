@@ -39,6 +39,5 @@ input[type="reset"]{float: left; margin-top: 6px; border:1px solid #1166c9;
 
 input[type="submit"]{float: right; border: 0; width: 150px; height: 100%;
 	background-color: #1166c9; color:#fff; font-weight: bold; 
-	letter-spacing:2rem; text-indent:2rem;
-	text-shadow:1px 1px 0 #171717;
-	border-radius:2px;}
+	letter-spacing:2rem; text-indent:2rem; text-shadow:1px 1px 0 #171717;
+	border-radius:2px; background-position: -12px -258px;}
