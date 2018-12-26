@@ -26,7 +26,12 @@
 				<legend class="hidden">회원가입에 필요한 상세내용 작성란</legend>
 				<dl class="join_form clearfix">
 					<dt><label for="member_01"><i class="join_img member_01"></i>아이디<i class="fas fa-asterisk"></i></label></dt>
-					<dd></dd>
+					<dd>
+						<!-- input[type=text]#member_01+button[type=button]{중복확인} -->
+						<input type="text" id="member_01" name="idName" value="" class="text-box" />
+						<button name="dupCheck" class="btn-check" type="button">중복확인</button>
+						<i class="duplication-check join_img"><!-- check--></i>
+					</dd>
 				</dl>
 				<dl class="join_form clearfix">
 					<dt>
@@ -46,6 +51,7 @@
 					<dt><label for="member_03"><i class="join_img member_03"></i>성별<i class="fas fa-asterisk"></i></label></dt>
 					<dd></dd>
 				</dl>
+
 				<dl class="join_form clearfix">
 					<dt>
 						<label for="member_04">
@@ -60,14 +66,26 @@
 					</dt>
 					<dd></dd>
 				</dl>
+
 				<dl class="join_form clearfix">
-					<dt><label for="member_05"><i class="join_img member_05"></i>암호확인<i class="fas fa-asterisk"></i></label></dt>
-					<dd></dd>
+
+					<dt><label for="member_05">
+						<i class="join_img member_05"></i>
+						<strong>암호확인</strong>
+						<i class="fas fa-asterisk"></i></label>
+						<p class="hidden" id="info">위에서 작성하시 암호를 다시한번 작성해 주세요.</p>
+					</dt>
+
+					<dd>
+						<input type="password" aria-label="password" aria-describedby="info" 
+									 id="member_05" name="memberPw2" value="" placeholder="암호확인" />
+					</dd>
 				</dl>
 				<dl class="join_form clearfix">
 					<dt><label for="member_06"><i class="join_img member_06"></i>이메일</label></dt>
 					<dd></dd>
 				</dl>
+
 				<dl class="join_form clearfix">
 					<dt><label for="member_07"><i class="join_img member_07"></i>주소</label></dt>
 					<dd></dd>

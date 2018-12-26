@@ -69,6 +69,20 @@ form>fieldset:first-of-type{width: 100%; height:auto; min-height:10rem;
 .join_form:last-of-type>dd{min-height:5.3em;}
 
 
+/* dd내부 정리 ----------------------- */
+.text-box{margin-right:0.3rem; width: 230px; height: 25px; background-color:transparent; 
+	border: 0; border-bottom:2px solid #1166c9;}
+.btn-check{margin-right:0.3rem; width: 80px; height: 30px; background-color: #1166c9; color:#fff;
+	font-weight: bold; border-radius:0.125rem;}
+
+.duplication-check{
+	display: inline-block; width: 22px; height: 22px;
+	padding-top: 0.3rem; 
+	/*background-origin:padding-box;*/
+	background-position:-45px -126px;}
+.plus{background-position:-11px -126px;}
+
+
 /* fieldset:last-of-type ============================== */
 
 form>fieldset:last-of-type{padding: 20px 200px; padding-bottom: 25px; box-sizing: border-box;
