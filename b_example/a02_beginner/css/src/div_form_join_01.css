@@ -32,10 +32,20 @@ form>fieldset:first-of-type{width: 100%; height:auto; min-height:10rem;
 
 /* fieldset:first-of-type ============================== */
 .join_form{width: 100%; height:auto; border-bottom:1px solid #fff;}
-.join_form:last-of-type{border: 0;}
-.join_form>dt{float: left; width:27%; height: 40px; background-color: #ffa2bd;}
-.join_form>dd{float: right; width: 70%; height: 40px; background-color: #dfdfdf;}
 
+
+.join_form:last-of-type{border: 0;}
+.join_form>dt{float: left; padding:8px 8px 30px 10px; box-sizing: border-box;
+	width:27%; height:auto; min-height: 40px; background-color: #ffa2bd;}
+.join_form>dd{float: right; padding:8px 20px 6px 20px; box-sizing: border-box;
+	width: 70%; height:auto; min-height: 40px; background-color: #dfdfdf;}
+
+
+.join_form:nth-of-type(7)>dt{min-height:5.3rem;}
+.join_form:nth-of-type(7)>dd{min-height:5.3rem;}
+
+.join_form:last-of-type>dt{min-height:5.3rem;}
+.join_form:last-of-type>dd{min-height:5.3em;}
 
 
 /* fieldset:last-of-type ============================== */
@@ -53,16 +63,3 @@ input[type="submit"]{float: right; margin-right: -30px; margin-top: -5px; border
 	border-radius:2px; background-position: -12px -258px;}
 
 
-
-.borderT{width: 100px; height: 100px; margin: 20rem auto; 
-	background-color: #ACC; border-left:20px ridge #ddd;
-	border-top-color: #5cc;
-	border-bottom-color:#c55;
-	border-left-color: #5f5;
-	border-right-color: #f5f;
-}
-.arrT{width: 0;height: 0; border: 20px solid #333; margin:20rem auto;
-		border-top-color: transparent;
-		border-bottom-color:#c55;
-		border-left-color: transparent;
-		border-right-color: transparent;}
