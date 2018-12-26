@@ -3,6 +3,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="../css/base/reset.css">
 	<link rel="stylesheet" href="../css/base/common.css">
 	<link rel="stylesheet" href="../css/src/div_form_join_01.css">
@@ -12,9 +14,10 @@
 	<!-- layout -->
 	<div id="wrap">
 		<h1 class="hidden">회원가입 만들기</h1>
-		<h2>회원가입</h2>
+		<h2><i class="join_img"></i>회원가입</h2>
 		<p class="member_info">
-			<strong class="hidden">중요</strong> 
+			<strong class="hidden">중요</strong>
+			<i class="fas fa-asterisk"><!-- fontawesome --></i>
 			<span class="hidden">표시는</span> 필수입력사항
 		</p>
 
@@ -25,7 +28,8 @@
 			</fieldset>
 			<fieldset>
 				<legend class="hidden">회원가입내용 작성후 처리 버튼</legend>
-
+				<input type="reset" name="cancleBtn" value="다시입력" />
+				<input type="submit" name="checkSend" value="확인" />
 			</fieldset>
 		</form>
 	</div>
