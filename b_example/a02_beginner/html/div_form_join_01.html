@@ -28,7 +28,7 @@
 					<dt><label for="member_01"><i class="join_img member_01"></i>아이디<i class="fas fa-asterisk"></i></label></dt>
 					<dd>
 						<!-- input[type=text]#member_01+button[type=button]{중복확인} -->
-							<input type="text" id="member_01" name="idName" value="" 
+						<input type="text" id="member_01" name="idName" value="" 
 										placeholder="사용자 아이디" class="text-box" />
 						<button name="dupCheck" class="btn-check" type="button">중복확인</button>
 						<i class="duplication-check join_img"><!-- check--></i>
@@ -66,12 +66,15 @@
 							<span class="hidden">생성하실 </span>
 							<strong>암호</strong>
 							<span class="hidden">를 입력하세요.<br />
-							암호는 최소 여덟글에서 열다섯글자 사이로 입력해야 합니다.
+							암호는 최소 여덟에서 열다섯글자 사이로 입력해야 합니다.
 							</span>
-							<i class="fas fa-asterisk"></i>
+							<i class="fas fa-asterisk" aria-hidden="true"></i>
 						</label>
 					</dt>
-					<dd></dd>
+					<dd>
+						<input type="password" id="member_04" name="pwName" value="" placeholder="암호 8~15자 내외 입력" class="text-box" />
+						<label for="member_04" aria-hidden="true">8~15글자를 입력하세요.</label>
+					</dd>
 				</dl>
 
 				<dl class="join_form clearfix">
@@ -84,8 +87,8 @@
 					</dt>
 
 					<dd>
-						<input type="password" aria-label="password" aria-describedby="info" 
-									 id="member_05" name="memberPw2" value="" placeholder="암호확인" />
+						<input type="password" id="member_05" name="pwReName" value="" placeholder="암호와 동일한 내용을 작성" class="text-box" />
+						<label for="member_05" aria-hidden="true">위와 동일한 암호 입력</label>
 					</dd>
 				</dl>
 				<dl class="join_form clearfix">
@@ -95,11 +98,32 @@
 
 				<dl class="join_form clearfix">
 					<dt><label for="member_07"><i class="join_img member_07"></i>주소</label></dt>
-					<dd></dd>
+					<dd>
+						<input type="text" id="member_07" name="addressName" value="" 
+										placeholder="주소를 선택/입력" class="text-box" />
+						<button name="findAddress" class="btn-check" type="button">주소찾기</button>
+					</dd>
 				</dl>
 				<dl class="join_form clearfix">
 					<dt><label for="member_08"><i class="join_img member_08"></i>휴대폰</label></dt>
-					<dd></dd>
+					<dd>
+						<div class="telecom_check">
+							<input type="radio" checked="checked" name="telecom" value="sk" id="member_08" />
+							<label for="member_08"><i class="join_img"></i> sk t<span class="hidden">elecom</span></label>
+
+							<input type="radio" name="telecom" value="kt" id="member_08-1" />
+							<label for="member_08-1"><i class="join_img"></i> kt<span class="hidden"> telecom</span></label>
+
+							<input type="radio" name="telecom" value="lg" id="member_08-2" />
+							<label for="member_08-2"><i class="join_img"></i> lg<span class="hidden"> u plus</span></label>
+
+							<input type="radio" name="telecom" value="other" id="member_08-3" />
+							<label for="member_08-3"><i class="join_img"></i> 알뜰폰</label>
+						</div>
+						<div class="tel_number">
+							
+						</div>
+					</dd>
 				</dl>
 				<dl class="join_form clearfix">
 					<dt><label for="member_09"><i class="join_img member_09"></i>관심</label></dt>
