@@ -37,7 +37,7 @@ form>fieldset:first-of-type{width: 100%; height:auto; min-height:10rem;
 
 .join_form:last-of-type{border: 0;}
 .join_form>dt{float: left; padding:8px 8px 10px 30px; box-sizing: border-box;
-	width:27%; height:100%; min-height:40px; background-color: #ffa2bd;
+	width:27%; height:40px; background-color: #ffa2bd;
 	font-family:'맑은고딕', malgum-gothic, sans-serif; font-size:1.5rem; font-weight: bold;}
 
 .join_form>dt>label{width: 100%; height: 100%;}
@@ -59,14 +59,14 @@ form>fieldset:first-of-type{width: 100%; height:auto; min-height:10rem;
 
 
 .join_form>dd{float: right; padding:8px 20px 6px 20px; box-sizing: border-box;
-	width: 70%; height:100%; min-height: 40px; background-color: #dfdfdf;}
+	width: 70%; height: 40px; background-color: #dfdfdf;}
 
 
 .join_form:nth-of-type(8)>dt{min-height:5.3rem;}
 .join_form:nth-of-type(8)>dd{min-height:5.3rem;}
 
-.join_form:last-of-type>dt{min-height:5.3rem;}
-.join_form:last-of-type>dd{min-height:5.3em;}
+.join_form:nth-of-type(10)>dt{height:15rem;}
+.join_form:nth-of-type(10)>dd{height:15rem;}
 
 
 /* dd내부 정리 ----------------------- */
@@ -89,6 +89,17 @@ form>fieldset:first-of-type{width: 100%; height:auto; min-height:10rem;
 
 /* email ------------------ */
 .email>.text-box{width:30%;}
+.email>dl.text-box{float: right; height: 26px; position: relative; z-index: 100;}
+.email>dl.text-box button{border:0; width: 100%; height: 100%; background-color:transparent; text-align: left; text-indent:0.5rem;}
+
+.email>dl.text-box dt{width: 100%; height: 100%; padding-bottom: 2px;}
+.email>dl.text-box dt i{float: right; width: 18px; height: 100%; background-position: -10px -130px;}
+.email>dl.text-box dd{width: 100%; height:auto; display: none;}
+.email>dl.text-box dd>ul{width: 100%; height:auto;}
+.email>dl.text-box dd>ul>li{width: 100%; height:28px; background-color: #fff; border-bottom:1px solid #ff558d; box-sizing: border-box;}
+.email>dl.text-box:hover dd{display: block;}
+
+
 
 
 /* ---------------- */

@@ -106,9 +106,9 @@
 						<input type="text" id="member_06-1" name="emailSite" value=""
 									 placeholder="메일 사이트"  class="text-box" />
 					  <label for="member_06-1" class="hidden">@뒤에 사용하는 이메일주소의 사이트이름 작성 또는 오른쪽 항목에서 선택하세요.</label>
-
-						<!-- <input type="text" id="member_06-2" name="emailSelect" value="" class="text-box" /> -->
-					  <label for="member_06-2" class="hidden">이메일 사이트 항목을 선택하세요 없으면 왼쪽에 기입하세요.</label>
+					
+						
+					 <!-- 
 					  <select name="emailSelect" id="member_06-2" class="text-box">
 					  	<option>메일 주소를 선택하세요.</option>
 					  	<option value="naver.com">naver.com</option>
@@ -116,6 +116,21 @@
 					  	<option value="gmail.com">gmail.com</option>
 					  	<option value="hotmail.com">hotmail.com</option>
 					  </select>
+					   -->
+					  <input type="text" id="member_06-2" name="emailSelect" value="" class="hidden" />
+					  <label for="member_06-2" class="hidden">이메일 사이트 항목을 선택하세요 없으면 왼쪽에 기입하세요.</label>
+						<dl class="text-box">
+							<dt><button type="button">사이트 주소<span class="hidden">를 선택하세요.</span><i class="join_img"></i></button></dt>
+							<dd>
+								<ul>
+									<li><button type="button">naver.com</button></li>
+									<li><button type="button">daum.net</button></li>
+									<li><button type="button">gmail.com</button></li>
+									<li><button type="button">hotmail.com</button></li>
+								</ul>
+							</dd>
+						</dl>
+
 					</dd>
 				</dl>
 
