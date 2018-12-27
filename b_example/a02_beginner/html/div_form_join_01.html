@@ -121,17 +121,44 @@
 							<label for="member_08-3"><i class="join_img"></i> 알뜰폰</label>
 						</div>
 						<div class="tel_number">
-							
+							<input type="text" id="telInput_01" name="telInput_01" value="" max-length="3" 
+										 placeholder="번호 앞자리"  class="text-box" />
+						  <label for="telInput_01" class="hidden">사용하고계신 휴대폰 앞자리 번호를 작성해주세요.</label>
+
+              <span aria-hidden="true">-</span>
+							<input type="text" id="telInput_02" name="telInput_02" value="" max-length="4" 
+										 placeholder="번호 가운데"  class="text-box" />
+						  <label for="telInput_02" class="hidden">휴대폰 가운데자리 번호를 작성해주세요.</label>
+
+							<span aria-hidden="true">-</span>
+							<input type="text" id="telInput_03" name="telInput_03" value="" max-length="4" 
+										 placeholder="번호 뒷자리"  class="text-box" />
+						  <label for="telInput_03" class="hidden">휴대폰 뒷자리 번호를 작성해주세요.</label>
+
 						</div>
 					</dd>
 				</dl>
 				<dl class="join_form clearfix">
 					<dt><label for="member_09"><i class="join_img member_09"></i>관심</label></dt>
-					<dd></dd>
+					<dd class="favorite">
+						<input type="checkbox" name="favorite" value="shopping" id="member_09" />
+						<label for="member_09"><i class="join_img"></i>쇼핑</label>
+
+						<input type="checkbox" name="favorite" value="game" id="member_09-1" />
+						<label for="member_09-1"><i class="join_img"></i>게임</label>
+
+						<input type="checkbox" name="favorite" value="trable" id="member_09-2" />
+						<label for="member_09-2"><i class="join_img"></i>여행</label>
+
+						<input type="checkbox" name="favorite" value="other" id="member_09-3" />
+						<label for="member_09-3"><i class="join_img"></i>기타</label>
+					</dd>
 				</dl>
 				<dl class="join_form clearfix">
 					<dt><label for="member_10"><i class="join_img member_10"></i>자기소개</label></dt>
-					<dd></dd>
+					<dd>
+						<textarea name="introduce" id="member_10" cols="50" rows="10"></textarea>
+					</dd>
 				</dl>
 			</fieldset>
 			<fieldset>
