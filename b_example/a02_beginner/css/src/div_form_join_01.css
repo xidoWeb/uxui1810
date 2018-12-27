@@ -31,13 +31,13 @@ form>fieldset:first-of-type{width: 100%; height:auto; min-height:10rem;
 	background-color: #ff558d;}
 
 /* fieldset:first-of-type ============================== */
-.join_form{width: 100%; height:auto; border-bottom:1px solid #fff;
+.join_form{width: 100%; height:auto; min-height:40px; border-bottom:1px solid #fff;
 	color:#171717;}
 
 
 .join_form:last-of-type{border: 0;}
 .join_form>dt{float: left; padding:8px 8px 10px 30px; box-sizing: border-box;
-	width:27%; height:auto; min-height: 40px; background-color: #ffa2bd;
+	width:27%; height:100%; min-height:40px; background-color: #ffa2bd;
 	font-family:'맑은고딕', malgum-gothic, sans-serif; font-size:1.5rem; font-weight: bold;}
 
 .join_form>dt>label{width: 100%; height: 100%;}
@@ -59,7 +59,7 @@ form>fieldset:first-of-type{width: 100%; height:auto; min-height:10rem;
 
 
 .join_form>dd{float: right; padding:8px 20px 6px 20px; box-sizing: border-box;
-	width: 70%; height:auto; min-height: 40px; background-color: #dfdfdf;}
+	width: 70%; height:100%; min-height: 40px; background-color: #dfdfdf;}
 
 
 .join_form:nth-of-type(8)>dt{min-height:5.3rem;}
@@ -86,6 +86,9 @@ form>fieldset:first-of-type{width: 100%; height:auto; min-height:10rem;
 .gender i{float: left; width: 26px; height: 26px; background-position:-45px -170px;}
 .gender input[type="radio"]{position: relative; z-index: -1; width: 0; height: 0; overflow: hidden; }
 .gender input[type="radio"]:checked + label>i{background-position-x:-10px;}
+
+/* email ------------------ */
+.email>.text-box{width:30%;}
 
 
 /* ---------------- */
