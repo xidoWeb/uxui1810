@@ -1,0 +1,152 @@
+/* css_deep_01.css */
+
+/* css3Pie 사용법
+ * IE에서 사용할수 없는 기능을 CSS3PIE에서 구현할 수 있도록 만들어져 있다.
+ * 이를 사용하기 위해서는 일단 불러오고!!!( <script src="경로/PIE_IE9.js"></script>	)
+ * 사용하는 속성의 말미에 PIE를 적용을 시킨다. (  behavior:url(경로/PIE.htc);  )
+ * 이때! 주의사항 - 적용시킨 PIE는 css문서기준이아닌, html문서의 기준!
+ */
+
+
+#wrap{width: 100%; min-width:1400px; height: auto; min-height:100%; background-color: #ccc;}
+
+h1{padding: 1rem; background-color: #0ac; color:#fff; text-align: center;}
+
+h2{ margin-bottom: 1rem; border-bottom: 2px solid #333;
+	margin-top: 1rem; text-align: center;}
+
+h2+div{margin: auto; margin-bottom: 2rem;
+	width:80%; height:800px; background-color: #fff;}
+
+.option_1>ul{width: 100%; height: 100%;}
+.option_1>ul>li{margin: 3rem; float:left; 
+				width: 500px; height: 100px; background-color: #acc;
+				text-align: center; line-height:100px; font-weight: bold;
+				font-size: 1.4rem;}
+
+/* box-shadow:x축 y축 blur offset color inset; 
+
+ * box-shadow:x축 y축; - 최소수치
+ * box-shadow:x축 y축 color;
+ * box-shadow:x축 y축 번짐의정도 color;
+ * box-shadow:x축 y축 번짐의정도  크기 color;
+ * box-shadow:x축 y축 번짐의정도  크기 color 안쪽그림자;
+
+*/
+
+.option_1>ul>li:nth-child(1){box-shadow:1rem 1rem 0.5rem #acf;}
+.option_1>ul>li:nth-child(2){box-shadow:1rem 1rem 1rem 1rem #fa7;}
+.option_1>ul>li:nth-child(3){box-shadow:1rem 1rem 0.2rem #733 inset;}
+.option_1>ul>li:nth-child(4){text-shadow:0.1rem 0.1rem 0.2rem #f06; color:#fa0;}
+.option_1>ul>li:nth-child(5){color:#fff;
+	text-shadow: -0.05rem 0rem 0.2rem #171717, 
+				 0rem -0.05rem 0.2rem #171717, 
+				 0  0  0.02rem #fff;
+
+    box-shadow: -1rem -1rem 0.3rem #f06, 
+    			1rem 1rem 0.3rem #f6f, 
+    			0.2rem 0.2rem 0.1rem #333 inset; 
+
+}
+.option_1>ul{position: relative;}
+.option_1>ul>li.snow{position: absolute; top: 50%; left: 50%; 
+				margin-top: -3px; margin-left: 3px;
+				width: 6px; height:6px; border-radius:50%;
+				background-color: #000;
+		box-shadow:
+			10rem 10rem #47f,
+			10rem -10rem #f7f,
+			-7rem -10rem #7ff,
+			-7rem -10rem #7f4,
+			-8rem -11rem #71f,
+			-9rem -12rem #72f,
+			-10rem -13rem #3ff,
+			-11rem -14rem #4ff,
+			-12rem -15rem #5ff,
+			-13rem -16rem #6ff,
+			-14rem -17rem #7ff,
+			-15rem -18rem #8ff,
+			-16rem -19rem #9f0,
+			-17rem -110rem #7ff;
+
+		behavior:url(../ie/css3pie/PIE.htc);
+			}
+
+/* ======================= */
+.option_2>ul{width: 100%; height: 100%;}
+.option_2>ul>li{margin: 3rem; float: left; width: 200px; height: 100px; background-color: #a72; text-align: center; line-height: 100px; font-weight: bold; color:#fff; font-size: 2rem;}
+.option_2>ul>li:nth-child(1){border-radius:1rem;}
+.option_2>ul>li:nth-child(2){border-radius:2rem 0 0 0;}
+.option_2>ul>li:nth-child(3){border-radius:0 2rem 1rem;}
+.option_2>ul>li:nth-child(4){border-bottom-left-radius:2rem;}
+.option_2>ul>li:nth-child(5){border-bottom-right-radius:1rem;}
+.option_2>ul>li:nth-child(6){border-radius:100%;}
+.option_2>ul>li:nth-child(7){border-radius:50%;}
+.option_2>ul>li:nth-child(8){border-top-left-radius:10rem 3rem;}
+.option_2>ul>li:nth-child(9){border-bottom-right-radius:15rem 2rem;}
+.option_2>ul>li:nth-child(10){border-bottom-right-radius:4rem;
+							 border-top-right-radius:9rem;}
+
+
+/* ======================= */
+.option_3>ul{width: 100%; height: 70%; background-color: #faa;}
+.option_3>ul>li{margin:2rem; width: 100px; height: 100px; background-color: #777; color:#fff; font-weight: bold; 
+	text-align: center; line-height:100px;
+	font-size: 1rem; font-family::"맑은고딕", malgun-gothic;
+	padding: 5px; box-sizing: border-box; float: left;
+}
+
+.option_3>ul>li>div{width: 90px; height: 90px; background-color: #730;}
+
+/* transform, translate, transition 구분하자
+ * transform: translate() | rotate() | skew() | scale() ...
+
+ 강제로 위치를 이동시키거나, 회전하거나, 뒤틀거나, 크기를 변경하거나...
+
+ * transform-origin:x y; 축이되는 위치를 지정하는 것
+ */
+
+.option_3>ul>li:nth-child(1):hover>div{transform:translateX(-3rem);}
+.option_3>ul>li:nth-child(2):hover>div{transform:translateY(4rem);}
+.option_3>ul>li:nth-child(3):hover>div{transform:rotateX(80deg);}
+.option_3>ul>li:nth-child(4):hover>div{transform:rotateY(45deg);}
+.option_3>ul>li:nth-child(5):hover>div{transform:rotate(60deg);}
+.option_3>ul>li:nth-child(6):hover{transform:skewX(60deg);}
+.option_3>ul>li:nth-child(6):hover>div{transform:skewX(-60deg);}
+.option_3>ul>li:nth-child(7):hover{transform:skewY(60deg);}
+.option_3>ul>li:nth-child(7):hover>div{transform:skewY(-60deg);}
+.option_3>ul>li:nth-child(8):hover>div{transform:scaleX(2);}
+.option_3>ul>li:nth-child(9):hover>div{transform:scale(0.5,2);}
+.option_3>ul>li:nth-child(10)>div{transition:all 500ms; transform-origin:0 0;}
+.option_3>ul>li:nth-child(10):hover>div{transform:rotate(45deg); opacity: 0;}
+
+.option_3>ul>li:nth-child(11)>div{transform-origin:0 0; transition:all 500ms ease;}
+.option_3>ul>li:nth-child(11):hover>div{transform:translate(2rem) rotate(45deg) scale(2);}
+
+
+.option_3>ol{position: relative; width: 100%; height: 30%; background-color: #cfa;
+}
+/*.option_3>ol>li{padding: 1rem; border:1rem solid #15f; box-sizing:border-box;
+	width:10rem; height:20rem; background-color: #fff; border-radius:0.7rem; 
+	box-shadow:0.2rem 0.2rem 0.2rem rgba(0,0,0,0.7) inset;
+	position: absolute; top: 50%; margin-top: -10rem; left: 50%; margin-left: -5rem; transition:all 500ms ease-in;}*/
+
+.option_3>ol>li{width: 10rem; height: 20rem; 
+	position: absolute; left: 50%; top: 50%; margin-top: -10rem; margin-left: -5rem;
+	-webkit-perspective:300px;
+	 }
+
+.option_3>ol>li>div{border:1rem solid #35a; box-sizing:border-box; 
+					border-radius:0.7rem;
+					width: 100%; height: 100%; background-color: #fff;
+					text-align: center; font-size: 1.3rem; padding-top: 1rem;
+					transition: all 500ms ease-in;}
+
+.option_3>ol>li:nth-child(1){transform:translateX(-400%);}
+.option_3>ol>li:nth-child(2){transform:translateX(-200%);}
+.option_3>ol>li:nth-child(3){transform:translateX(0);}
+.option_3>ol>li:nth-child(4){transform:translateX(200%);}
+.option_3>ol>li:nth-child(5){transform:translateX(400%);}
+
+
+.option_3>ol:hover>li>div{transform:rotateY(180deg);}

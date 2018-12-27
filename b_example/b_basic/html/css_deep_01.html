@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- css_deep_01.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="../css/base/reset.css" />
+	<link rel="stylesheet" href="../css/base/common.css" />
+	<link rel="stylesheet" href="../css/src/css_deep_01.css" />
+
+	<!--[if IE]>
+		<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../ie/css3pie/PIE_IE9.js"></script>
+		<script src="../ie/ie9.min.js"></script>
+	<![endif]-->
+
+	<title>css 고급기능을 적용해보자!</title>
+</head>
+<body>
+	<!-- layout -->
+	<div id="wrap">
+		<h1>css의 추가 기능들을 적용해보기</h1>
+		<!-- (h2{기능}+div.option_$) -->
+
+		<h2>그림자 만들기</h2>
+		<div class="option_1">
+			<ul>
+				<li>박스1:drop shadow</li>
+				<li>박스2:drop shadow:offset 설정</li>
+				<li>박스3:inner shadow</li>
+				<li>text1:text shadow</li>
+				<li>multi shadow</li>
+				<li class="snow"><!-- 눈송이 --> </li>
+			</ul>
+		</div>
+
+		<h2>외곽 둥글게 만들기</h2>
+		<div class="option_2">
+			<ul>
+				<li>전체값</li>
+				<li>왼쪽상단</li>
+				<li>오른상단</li>
+				<li>왼하단</li>
+				<li>오른하단</li>
+				<li>전체100%</li>
+				<li>전체50%</li>
+				<li>왼3rem,상10rem</li>
+				<li>오른2rem,하15rem</li>
+				<li>겹치기</li>
+			</ul>
+		</div>
+
+		<h2>transform 적용하기</h2>
+		<div class="option_3">
+			<ul>
+				<li> <div>translate-x</div> </li>
+				<li> <div>transition-y</div> </li>
+				<li> <div>rotate-x</div> </li>
+				<li> <div>rotate-y</div> </li>
+				<li> <div>rotate-z</div> </li>
+				<li> <div>skew-x</div> </li>
+				<li> <div>skew-y</div> </li>
+				<li> <div>scale-x</div> </li>
+				<li> <div>scale-y</div> </li>
+				<li> <div>origin</div> </li>
+				<li> <div>multi:tr</div> </li>
+			</ul>
+			<ol>
+				<li><div>card1</div></li>
+				<li><div>card2</div></li>
+				<li><div>card3</div></li>
+				<li><div>card4</div></li>
+				<li><div>card5</div></li>
+			</ol>
+		</div>
+
+		<h2>transition 애니메이션</h2>
+		<div class="option_4"></div>
+
+		<h2>animation &amp; keyframes</h2>
+		<div class="option_5"></div>
+
+
+	<!-- 위내용 참고1: http://css3generator.com/ -->
+	<!-- 위내용 참고2: https://html-css-js.com/css/generator/ -->
+
+	<!-- 속도설정 참고3: http://cubic-bezier.com/ -->
+	<!-- 속도설정(js에서 사용) 참고4: https://easings.net/ko -->
+	</div>
+
+
+	<!-- script -->
+	<!-- <script src="../js/base/jquery-3.3.1.min.js"></script> -->
+	<!-- <script src="../js/base/jquery-ui.min.js"></script> -->
+	<!-- <script src="../js/src/css_deep_01.js"></script> -->
+</body>
+</html>
