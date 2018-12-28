@@ -59,16 +59,80 @@ h3{margin: 1rem auto; padding: 0.5rem; background-color: #333; color:#fff;}
 p{width: 100%; height: 100%; background-color:rgba(255,255,255,0.3); text-align: center;
   font-size: 2rem; line-height: 10rem;font-weight: bold;}
 
-.move_line>div{position: absolute; transition:all 500ms ease; background-color: #33f;}
+.move_line>div{position: absolute;  background-color: #33f;
+  transition:all 500ms ease 0ms;
+  /*transition-property: all;*/
+  /*transition-duration: 500ms;*/
+  /*transition-timing-function: ease;*/
+  /*transition-delay:0ms;*/
+}
 
-.line_01{top: 0; left: 0;     width:  0;   height: 1rem; transition-delay:2000ms; }
-.line_02{top: 0; right: 0;    height: 0;   width: 1rem;  transition-delay:1500ms;}
-.line_03{bottom: 0; right: 0; width:  0;   height: 1rem; transition-delay:1000ms;}
-.line_04{bottom: 0; left: 0;  height: 0;   width: 1rem;  transition-delay:500ms;}
+.move_line > .line_01{top:0; left:0; width:0; height:1rem; transition-delay:1500ms;}
+.move_line > .line_02{top:0; right:0; height:0; width:1rem; transition-delay:1000ms;}
+.move_line > .line_03{bottom:0; right:0; width:0; height:1rem; transition-delay:500ms;}
+.move_line > .line_04{bottom:0; left:0; height:0; width:1rem; transition-delay:0ms;}
 
-.move_line:hover .line_01{width:  100%; transition-delay:500ms; }
-.move_line:hover .line_02{height: 100%; transition-delay:1000ms; }
-.move_line:hover .line_03{width:  100%; transition-delay:1500ms; }
-.move_line:hover .line_04{height: 100%; transition-delay:2000ms; }
+.move_line:hover .line_01{width:  100%; transition-delay: 0ms;}
+.move_line:hover .line_02{height: 100%; transition-delay:500ms; }
+.move_line:hover .line_03{width:  100%; transition-delay:1000ms; }
+.move_line:hover .line_04{height: 100%; transition-delay:1500ms; }
 
+/*p{background-position: 50px 50px; background-color: #fff; border-color:#acf;}*/
 
+/* transition_test2 */
+.multi_link{width: 100%; height: 20rem; background-color: #cac; margin-bottom: 10rem; 
+  background-image: url("../../img/funiture_01.jpg");
+  background-repeat:no-repeat; background-position:50% 50%;
+  background-size:130% auto;}
+
+.multi_link>ul{width: 100%; height: 100%;
+              background-color: rgba(50,15,20,0.5);}
+
+.multi_link>ul>li{float: left; width: 20%; height: 100%;
+              border-right:1px solid #fff; box-sizing: border-box;}
+.multi_link>ul>li:last-child{border-right: 0;}
+
+.multi_link a{display: block; padding: 5rem 1rem; box-sizing:border-box;
+  width: 100%; height: 100%; transition:all 500ms ease;
+  color:#fff; font-size: 1.1rem;}
+
+  .link_wrap{width: 100%; height: 100%; transition:all 500ms ease;}
+  .link_wrap>i{position: relative; margin:auto; margin-bottom:0.5rem; display:block; width:2rem; height:2rem; 
+    border-radius:50%; border:2px solid #fff; box-sizing:border-box;
+    text-align: center; line-height:calc(2rem - 4px);
+    font-size: 1.5rem; font-weight: bold;  transition:all 500ms ease-in-out;}
+  
+  .link_wrap>i:after{content:"+"; display: block; line-height: 2rem;
+      position: absolute; top:50%; left:50%; margin-top: -1rem; margin-left: -1rem;
+      width:2rem; height:2rem;  border-radius:50%; background-color:#fff; color:#171717;
+      transform:scale(0); transition:all 200ms ease;}
+
+  .link_wrap>h4{width:100%; height:auto; margin-bottom:0.5rem; 
+      font-weight:normal; font-size:0.875rem; 
+      transition:all 500ms ease;}
+  .link_wrap>h5{margin-bottom: 1.5rem; width: 100%; height: auto; font-size: 1.2rem;  
+      transition:all 500ms ease-in-out;}
+  .link_wrap>h5::first-letter{text-transform:uppercase;}
+  .link_wrap>p{line-height: 110%; background-color: transparent;
+    font-size:0.875rem; text-align:left; font-weight: normal; opacity: 0;
+    transition:all 500ms ease;}
+
+.multi_link a:hover,
+.multi_link a:focus{background-color:rgba(0,0,0,0.7);}
+
+/*.multi_link a:hover > .link_wrap,
+.multi_link a:focus > .link_wrap{transform:translateY(-2rem);}*/
+
+.multi_link a:hover i,
+.multi_link a:focus i{transform:translateY(-2rem);}
+.multi_link a:hover i:after,
+.multi_link a:focus i:after{transform:scale(1);}
+
+.multi_link a:hover h4,
+.multi_link a:focus h4{transform:translateY(-2rem);}
+
+.multi_link a:hover h5,
+.multi_link a:focus h5{transform:translateY(-2rem);}
+
+.multi_link a:hover p,
+.multi_link a:focus p{opacity:1; transform:translateY(-2rem);}
