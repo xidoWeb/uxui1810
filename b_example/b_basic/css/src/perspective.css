@@ -1,0 +1,12 @@
+/* perspective.css */
+
+#wrap{margin: auto; width: 60rem; height: auto; min-height: 5rem; background-color: #dfdfdf;}
+
+h1{text-align: center; border-bottom: 1px solid  #333; margin-bottom: 1rem;}
+
+.per{position: relative; margin: auto; width: 90%; height: 20rem; background-color: #ccf; perspective:200px; perspective-origin:50% 100%;}
+
+.card{width: 5rem; height: 10rem; background-color: #f66; border-radius: 0.4rem; }
+
+.card1{float:left; transform:rotateY(15deg);}
+.card2{float: right; transform:rotateY(-15deg);}
