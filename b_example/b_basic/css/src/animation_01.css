@@ -12,22 +12,63 @@ h2{width: 100%; height: auto; padding: 1rem; box-sizing: border-box; background-
   text-align: center; line-height: 100px; font-size: 1.5rem; color:#fff; font-weight: bold;}
 
 
-  .out_box li:nth-child(1):hover{background-color: #f06;}
-  .out_box li:nth-child(2){}
-  .out_box li:nth-child(3){}
-  .out_box li:nth-child(4){}
-  .out_box li:nth-child(5){}
-  .out_box li:nth-child(6){}
-  .out_box li:nth-child(7){}
+  .out_box li:nth-child(1):hover{background-color: #f06;} /* 단순하게 변화 */
+  .out_box li:nth-child(2):hover{background-color: #60f; height:200px; font-size: 2rem;
+      transition-property:height, background-color; transition-duration:1000ms;}
+
+  .out_box li:nth-child(3):hover{height:300px; 
+      transition-duration:500ms; transition-property:height; 
+      transition-timing-function:cubic-bezier(.15,.92,.62,.03);}
+  .out_box li:nth-child(4):hover{font-size: 10rem;
+      transition-property:font-size; transition-duration:500ms; transition-delay:200ms;}
+  .out_box li:nth-child(5):hover{height:300px; background-color: #fa0; transform:translateY(3rem);
+      transition:all 1000ms ease 200ms;}
+  .out_box li:nth-child(6){transition:all 1000ms linear;}
+  .out_box li:nth-child(6):hover{background-color:#171717; text-shadow:0.5rem 0.5rem 0.5rem #fff;}
+  .out_box li:nth-child(6):active{box-shadow:0.3rem 0.3rem 0.3rem #ff0 inset;}
+  .out_box li:nth-child(7){transition:all 500ms ease;}
+  .out_box li:nth-child(7):hover{height:300px; background-color: #f90;
+                          transition-duration:2000ms;}
 
 /** transition
   * transition이란? css의 변화를 부드럽게 animation기능으로 처리되는 형태를 만드는 것을 말한다.
 
-  * transition-duration: ;  --
-  * transition-property: ;  --
-  * transition-timing-function: ;  --
-  * transition-delay: ;  --
+  * transition-duration: ;  -- 변화하는 시간 기본은 초단위, 1초(1s) | (1000ms)
 
-  * transition: ;  --
-  
+  * transition-property: ;  -- 어떠한 속성을 변화시킬것인가?
+
+  * transition-timing-function: ;  --변화의 흐름에대한 속도를 어떻게 처리할것인가?
+          - ease(빨리지다느리게-좀더 자연스럽게) | ease-in(점점 빠르게) | ease-out(점점 느리게) | ease-in-out(빨라지다 느리게) | linear(같은속도로) | cubic-bezier(.15,.92,.62,.03) (사용자지정)
+          
+  * transition-delay: ;  -- 지연시간: 얼마의 시간뒤에 transition기능을 수행할 것인가?
+
+  * transition:property  duration  timing-function  delay;  
+          - transition이 가지는 속성을 하나로 뭉쳐서 처리하는 기능
+          - 작성된 시간은 앞에있는것은 진행시간, 뒤에있는것은 지연시간
+          - 가급적이면 순서를 지켜서 속성값을 작성해야한다.
+        
+  * transition 작성시 :hover | :active | :focus 등등 
+    기존형태에서 변화의 시점을 던져주는 상황(이벤트 발생시점) 에 transition을 작성하면, 
+    원래대로 돌아갈 때에는 transition기능이 적용되지 않는다!!
 */
+
+/* transition_test1 =========================== */
+h3{margin: 1rem auto; padding: 0.5rem; background-color: #333; color:#fff;}
+
+.move_line{position: relative; margin: auto; padding: 2rem; box-sizing:border-box; width: 30rem; height: 15rem; background-color: #caa; }
+p{width: 100%; height: 100%; background-color:rgba(255,255,255,0.3); text-align: center;
+  font-size: 2rem; line-height: 10rem;font-weight: bold;}
+
+.move_line>div{position: absolute; transition:all 500ms ease; background-color: #33f;}
+
+.line_01{top: 0; left: 0;     width:  0;   height: 1rem; transition-delay:2000ms; }
+.line_02{top: 0; right: 0;    height: 0;   width: 1rem;  transition-delay:1500ms;}
+.line_03{bottom: 0; right: 0; width:  0;   height: 1rem; transition-delay:1000ms;}
+.line_04{bottom: 0; left: 0;  height: 0;   width: 1rem;  transition-delay:500ms;}
+
+.move_line:hover .line_01{width:  100%; transition-delay:500ms; }
+.move_line:hover .line_02{height: 100%; transition-delay:1000ms; }
+.move_line:hover .line_03{width:  100%; transition-delay:1500ms; }
+.move_line:hover .line_04{height: 100%; transition-delay:2000ms; }
+
+
