@@ -1,4 +1,4 @@
-/* animateion_01.css */
+ animateion_01.css */
 
 #wrap{margin: auto; width: 60rem; height: auto; min-height: 10rem;}
 h1{margin-bottom: 1rem; padding: 1rem; text-align: center; border-bottom: 1px solid  #333;}
@@ -100,7 +100,7 @@ p{width: 100%; height: 100%; background-color:rgba(255,255,255,0.3); text-align:
   .link_wrap>i{position: relative; margin:auto; margin-bottom:0.5rem; display:block; width:2rem; height:2rem; 
     border-radius:50%; border:2px solid #fff; box-sizing:border-box;
     text-align: center; line-height:calc(2rem - 4px);
-    font-size: 1.5rem; font-weight: bold;  transition:all 500ms ease-in-out;}
+    font-size: 1.5rem; font-weight: bold; transition:all 500ms ease-in-out;}
   
   .link_wrap>i:after{content:"+"; display: block; line-height: 2rem;
       position: absolute; top:50%; left:50%; margin-top: -1rem; margin-left: -1rem;
@@ -108,10 +108,11 @@ p{width: 100%; height: 100%; background-color:rgba(255,255,255,0.3); text-align:
       transform:scale(0); transition:all 200ms ease;}
 
   .link_wrap>h4{width:100%; height:auto; margin-bottom:0.5rem; 
-      font-weight:normal; font-size:0.875rem; 
-      transition:all 500ms ease;}
+      font-weight:normal; font-size:0.875rem; transition:all 500ms ease;}
+
   .link_wrap>h5{margin-bottom: 1.5rem; width: 100%; height: auto; font-size: 1.2rem;  
       transition:all 500ms ease-in-out;}
+
   .link_wrap>h5::first-letter{text-transform:uppercase;}
   .link_wrap>p{line-height: 110%; background-color: transparent;
     font-size:0.875rem; text-align:left; font-weight: normal; opacity: 0;
@@ -136,3 +137,131 @@ p{width: 100%; height: 100%; background-color:rgba(255,255,255,0.3); text-align:
 
 .multi_link a:hover p,
 .multi_link a:focus p{opacity:1; transform:translateY(-2rem);}
+
+
+/* animation =================================== */
+.ani_narr{font-size: 1rem; line-height: 1.2; text-align: left;}
+.ani_box{margin-bottom: 5rem; width: 100%; height:1000px; background-color: #fac;}
+
+.check{width:30px; height: 30px; margin-left: -100px;}
+
+.ani_box>ul{width: 100%; height: 100%; padding-top: 1rem;}
+.ani_box li{margin: 1rem; width: 50px; height: 50px; border-radius:25px; background-color: #069; text-align: center; line-height: 50px; color:#fff;}
+
+
+.check:checked + ul > li:nth-child(1){
+  animation-name:oneFrame; 
+  animation-duration:1000ms;
+  animation-iteration-count:2; 
+}
+.ani_box  li:nth-child(2){
+  animation-name: oneFrame;
+  animation-duration:2000ms;
+  animation-iteration-count:infinite;
+  animation-direction:alternate-reverse;
+}
+
+/*.ani_box ul{overflow: hidden;}*/
+@keyframes oneFrame {
+  0%{transform:translate(0); background-color: #0af;}
+  50%{transform:translate(10rem, 3rem);}
+  100%{transform:translate(30rem); background-color: #f06;}
+}
+
+.ani_box li:nth-child(3){
+  animation-name:twoFrame;
+  animation-duration:3000ms;
+  animation-iteration-count:3;
+  animation-timing-function:ease-in;
+  animation-direction: alternate;
+  animation-fill-mode:both;
+}
+
+@keyframes twoFrame {
+ 0%{transform:translate(0) rotate(0deg) scale(1);} 
+ 100%{transform:translate(30rem) rotate(720deg) scale(2);} 
+}
+
+
+.ani_box li:nth-child(4){
+  animation-name:threeFrame;
+  animation-duration:1000ms;
+  animation-direction: alternate;
+  animation-iteration-count:infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function:ease;
+  animation-play-state:paused;
+}
+.ani_box:hover li:nth-child(4){ animation-play-state: running; }
+
+
+.ani_box:hover li:nth-child(5){
+  animation-name:threeFrame;
+  animation-duration:1000ms;
+  animation-direction: alternate;
+  animation-iteration-count:infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function:ease;
+}
+
+@keyframes threeFrame {
+  0%{background-color:#f06;}
+  100%{background-color:#fa0; width:150px; transform:scale(1.1);}
+}
+
+.ani_box li:nth-child(6){
+  /*animation:name duration count direction;*/
+  animation:set 2000ms 5 normal;
+}
+@keyframes set {
+  0%{width: 100px; height: 100px; background-color: #f07;}
+  /*50%{transform:translate(3rem) rotate(360deg);}*/
+  100%{width:500px; height: 300px; background-color: #fff;}
+}
+
+
+
+/*.check:checked + ul>li{transform:translate(10rem); transition:all 1000ms;}*/
+
+/** animation
+  * animation이란?transition과 달리 반복성을가지거나, 단일성이아닌 여러복합성의 기능을 수행할때
+
+  * animation-name: ;  -- animation 기능을 수행할 함수(@keyframes)를 선택
+  * animation-duration: ;  -- animation 진행할 시간
+  * animation-direction: ;  -- animation이 종료 후 진행할 방향 설정
+      - normal | reverse | alternate | alternate-reverse
+
+  * animation-fill-mode: ;  -- animation 시작하기전/끝이후에 어떻게 적용할것인가
+      - none | forward | backward | both
+
+  * animation-iteration-count: ;  -- animation 반복여부, 무한반복( infinite )
+
+  * animation-timing-function: ;  -- 속도조절
+
+  * animation-play-state: ;  -- 멈춤, 재생 설정
+      - running | pause
+
+  * animation-delay: ;  -- 지연시간
+
+  * animation:name duration count direction;
+----------------------------------------------------------------------------------
+  * @keyframes {}
+  * @keyframes란? animation에서 지정한 이름의 기능을 수행하기위한 처리 내용, 일종의 함수
+  * @keyframes는 선택자 내부에 작성하는 것이 아니다~
+
+
+*/
+
+/*
+@media screen () {}
+@charset " ";
+@import url();
+@keyframes {}
+
+div{}
+
+var Fbox = function(){};
+Fbox();
+
+@keyframes shani {}
+div{animation-name:shani;}
