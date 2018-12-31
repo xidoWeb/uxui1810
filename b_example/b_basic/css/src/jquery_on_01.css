@@ -1,0 +1,13 @@
+/* jquery_on_01.css */
+
+#wrap{height: 62.5rem; padding-top: 10rem;  }
+
+.btn_area{margin-top:1rem; padding-top:1rem; padding-bottom:0.5rem; 
+      width: 60rem; height: auto; background-color: #7cf;}
+
+.btn_area li{padding: 1rem; margin-right: 0.5rem;  float:left; height:2rem; background-color:#fff;}
+.btn_area li>a{display: block; width: 100%;  height: 100%;}
+
+p{margin-top:1rem; padding:0.5rem; background-color:#dfdfdf; font-size:1.2rem;  }
+
+p>span{display: inline-block; width: 500px;  height: 3rem; background-color: #aaa;}
