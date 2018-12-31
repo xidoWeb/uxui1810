@@ -90,6 +90,88 @@ fcList.children().on('mouseenter',function() {
 fcList.children().on('mouseleave',function() {
    $(this).css({backgroundColor:'#fa0'});
 });
+// =================================
+$('#key').on('keypress',function(e) {
+  console.log(e);
+});
+
+$('#key2').on('keyup', function(e){
+  // console.log(e.key.toString().toLowerCase() );
+
+  console.log(e.keyCode);
+  switch(e.keyCode){
+    case 37:
+      $(this).css({backgroundColor:'#f06'});
+      break;
+    case 38:
+      $(this).css({backgroundColor:'#06f'});
+      break;
+    case 39:
+      $(this).css({backgroundColor:'#6f0'});
+      break;
+    case 40:
+      $(this).css({backgroundColor:'#faf'});
+      break;
+  }
+});
+
+// ==================================
+// 브라우저의 화면의 크기가 변형되었을때
+// $(window)
+// $(document)
+// $(this)
+
+
+
+
+
+//  =============================
+
+
+var ww = $(window).width();
+console.log(ww);
+// ===============================
+var mob = 480;
+var tab = 768;
+var pc  = 1366;
+var pcf = 1920;
+
+
+var device = function(result) {
+  var mydevice = '';
+  if(result <= mob){
+    console.log('모바일크기');
+    mydevice = 'mobileV';
+  }else if(result > mob && result <= tab){
+    console.log('모바일 가로크기');
+    mydevice = 'mobileH';
+  }else if(result > tab && result <= pc){
+    console.log('laptop 크기');
+    mydevice = 'laptop';
+  }else if(result > pc && result <= pcf){
+    console.log('pc일반 크기');
+    mydevice = 'pc';
+  }else{
+    console.log('pc full 크기');
+    mydevice = 'pcfull';
+  }
+  console.log(mydevice);
+  return mydevice;
+};
+device(ww);
+
+
+$(window).on('resize',function() {
+  $('#wrap').css({backgroundColor:'#ca9'});
+  var nw = $(window).width();
+  console.log(nw);
+
+  if(ww !== nw){
+    window.location.reload();
+  }
+
+});
+
 
 })(jQuery);
 
