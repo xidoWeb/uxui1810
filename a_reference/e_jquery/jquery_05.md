@@ -1,16 +1,70 @@
 ### event
 
-- on()
-  - click
-  - dblclick
-  - mousedown
-  - mouseup
-  - keypress
-  - keydown
-  - keyup
-  - mouseenter
-  - mouseleave
-  - mouseover
-  - mouseout
-  - resize
-  - ......
+#### **on()** 메소드의 기능
+
+*1.9이전버전*
+
+```javascript
+$('li').click(function(){ /* 기능을 수행 */ });
+```
+
+*2018년 현재*
+
+```javascript
+$('li').on('click', function(){
+	// 기능을 수행    
+});
+// -----------------------------
+var view = functino(){/* 기능수행내용 */};
+$('li').on('click', view);
+```
+
+- 키보드/ 마우스 제어
+
+  - **click** : 마우스 클릭
+  - **dblclick** : 더블클릭
+  - **mousedown** : 마우스 눌렀을때
+  - **mouseup** : 마우스 눌렀다가 띄었을때
+  - **keypress** : 키 눌렀다 띄었을때(영문, 숫자, 스페이스, 엔터키 등의 제한된 키에 대한 값만 반응)
+  - **keydown** :키 누르고 있을때
+  - **keyup** :키 눌려저 있는상황에서 띄었을때
+  - **mouseenter** : 마우스가 대상위치에 올라갔을때
+  - **mouseleave** : 마우스가 대상위치에서 벗어났을때
+  - **mouseover** : 마우스가 대상위치에 올라갔을때(겹치는 부분시 중복처리)
+  - **mouseout** : 마우스가 대상위치에서 벗어났을때(겹치는 부분시 중복처리)
+  - mousewheel
+
+- 기능
+
+  - change
+
+  - **focus**
+
+  - **blur**
+
+- 화면상의 제어
+
+  - **resize** : 크기가 변형 되었을 때
+  - **scroll** : 스크롤기능이 수행되었을 때
+
+- touch
+
+  - **touchstart** : touch가 시작되는 위치
+  - **touchend** :touch가 끝나는(떨어지는) 위치
+  - **touchmove** : touch되어있는 무언가가 움직일때 발생하는 ...
+
+  - touch기능에는 이벤트 추가 속성이 발생한다.(originalEvent 내부에 좌표값을 나타내는 속성을 사용)
+
+  ---
+
+  #### on이 아닌 이벤트 메소드
+
+- **off()**
+
+- **one()**
+
+- **ready()**
+
+- **trigger()**
+
+- **hover()** : mouseenter, mouseleave 기능을 통합 on() 메소드에 포함되지 X, 실상용은 적다
