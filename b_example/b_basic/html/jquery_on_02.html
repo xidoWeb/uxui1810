@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/jquery_on_02.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- layout -->
+    <div id="wrap">
+      <h1>on 메소드 이해하기2</h1>
+
+      <h2>mouseenter/mouseover, mouseleave/mouseout</h2>
+      <div class="mouse_event">
+        <p class="mouseenter">mouseenter
+          <strong>내부</strong>
+          마우스 외곽: <span class="out"></span>
+        </p>
+
+        <p class="mouseover">mouseover
+          <strong>내부</strong>
+          마우스 외곽: <span class="out"></span>
+        </p>
+      </div>
+    <!-- change ======================== -->
+      <h2>change</h2>
+      <div class="change">
+        <label for="sel">신년 소망을 선택하세요.</label>
+        <select name="" id="sel" class="sel">
+          <option>선택하세요.</option>
+          <option value="pay">건물주</option>
+          <option value="size">44사이즈</option>
+          <option value="faceoff">성형</option>
+          <option value="newcar">새차사기</option>
+          <option value="etc">etc</option>
+        </select>
+        <p>소망은 <span></span> 이시군요?</p>
+      </div>
+
+
+      <!-- scroll ====================== -->
+      <h2>scroll</h2>
+      <div class="position">
+        <p class="fix">현재 브라우저에 고정되었습니다.</p>
+      </div>
+    </div>
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  <script src="../js/src/jquery_on_02.js"></script>
+</body>
+</html>

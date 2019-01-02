@@ -21,8 +21,8 @@ $('li').on('click', view);
 
 - 키보드/ 마우스 제어
 
-  - **click** : 마우스 클릭
-  - **dblclick** : 더블클릭
+  - **click** : 마우스 클릭(왼버튼)
+  - **dblclick** : 더블클릭(왼버튼)
   - **mousedown** : 마우스 눌렀을때
   - **mouseup** : 마우스 눌렀다가 띄었을때
   - **keypress** : 키 눌렀다 띄었을때(영문, 숫자, 스페이스, 엔터키 등의 제한된 키에 대한 값만 반응)
@@ -32,20 +32,24 @@ $('li').on('click', view);
   - **mouseleave** : 마우스가 대상위치에서 벗어났을때
   - **mouseover** : 마우스가 대상위치에 올라갔을때(겹치는 부분시 중복처리)
   - **mouseout** : 마우스가 대상위치에서 벗어났을때(겹치는 부분시 중복처리)
-  - mousewheel
+  - mousewheel, DOMMouseScroll
 
 - 기능
 
-  - change
+  - **change** : 무언가 변화(값)가 되었을때 
 
-  - **focus**
+  - **focus** : a, button,form안의 요소(input, textarea, select ...), tabindex속성을 가진것이 선택되었을때
 
-  - **blur**
+  - **blur** : focus가 빠져나갔을때
 
 - 화면상의 제어
 
   - **resize** : 크기가 변형 되었을 때
   - **scroll** : 스크롤기능이 수행되었을 때
+    - 다음 메소드를 같이 알아야한다
+    - scrollTop() : 스크롤바의 상단의 위치값
+    - offset().top  : scrollTop(0)값에서 떨어진 위치값
+    - offset().left :  브라우저 왼쪽에서 떨어진 위치값
 
 - touch
 
