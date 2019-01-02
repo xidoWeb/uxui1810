@@ -41,9 +41,9 @@ sel.on('change', function(e){
 
 // scroll ====================================
 var st = $(window).scrollTop();
-console.log(st);
+// console.log(st);
 var pt = $('.position').offset().top; // --> scrollTop(0)기준
-console.log(pt);
+// console.log(pt);
 
 $(window).on('scroll',function(){
   st = $(window).scrollTop();
@@ -59,6 +59,26 @@ $(window).on('scroll',function(){
 
   $('body').css({backgroundColor:"#ccc"});
 });
+
+
+//  offset이해
+var porOffset = $('.por').offset().top;
+var pofOffset = $('.pof').offset().top;
+
+console.log(porOffset, 'vs', pofOffset);
+$('.por').children('span').text(porOffset);
+$('.pof').children('span').text(pofOffset);
+
+$(window).on('scroll', function() {
+  porOffset = $('.por').offset().top;
+  pofOffset = $('.pof').offset().top;
+
+  console.log(porOffset, ' * ', pofOffset);
+  $('.por').children('span').text(porOffset);
+  $('.pof').children('span').text(pofOffset);
+});
+
+
 
 
 

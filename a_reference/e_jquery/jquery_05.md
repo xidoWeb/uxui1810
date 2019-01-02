@@ -51,7 +51,7 @@ $('li').on('click', view);
     - offset().top  : scrollTop(0)값에서 떨어진 위치값
     - offset().left :  브라우저 왼쪽에서 떨어진 위치값
 
-- touch
+- touch(css상에서 스마트폰의 기준으로보면, 터치의 의미)
 
   - **touchstart** : touch가 시작되는 위치
   - **touchend** :touch가 끝나는(떨어지는) 위치
