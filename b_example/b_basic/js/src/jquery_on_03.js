@@ -11,10 +11,10 @@
 
 
   btn1.on('click',function(e) {
-    e.preventDefault();
-    viewBox.css({transform:'translate(0)',
-                transition:'all 300ms ease'});
-  });
+      e.preventDefault();
+      viewBox.css({transform:'translate(0)',
+                  transition:'all 300ms ease'});
+    });
 
   btn2.on('click',function(e) {
     e.preventDefault();
@@ -28,12 +28,24 @@
 
   var start = '';
   var end = '';
-
-    $(window).on('touchstart',function(e){
+ // 터치 시작/끝 기능으로 처리하기
+  $(window).on('touchstart',function(e){
       // console.log(e.touches[0]);
     start = e.touches[0].pageX;
     console.log('터치시작:',start)
   });
+
+  // 브라우저 크기값 계산
+  var winW = $(window).width();
+
+  $(window).on('touchmove',function(e) {
+    console.log(e.originalEvent.touches[0].pageX);
+    var move = e.originalEvent.touches[0].pageX / winW * 100;
+
+    $('.view_box').css({transform:'translate('+ -move/2 +'%)'});
+
+  });
+
 
   $(window).on('touchend',function(e){
     end = e.changedTouches[0].pageX;
@@ -42,18 +54,22 @@
     
     var result =  end - start;
     if(result < 0){
-      viewBox.css({transform:'translate(-50%)',
-                transition:'all 300ms ease'});
+      // viewBox.css({transform:'translate(-50%)',transition:'all 300ms ease'});
+
+      // btn2.on('click');
+      btn2.trigger('click');
     }else if(result > 0){
-      viewBox.css({transform:'translate(0)',
-                transition:'all 300ms ease'});
+      // viewBox.css({transform:'translate(0)',transition:'all 300ms ease'});
+      // btn1.on('click');
+      btn1.trigger('click');
     }
   });
+ 
+  if(winW > 800){
+    $(window).off('touchmove');
+  }
 
-  // $(window).on('touchmove',function(e) {
-  //   console.log(e.originalEvent.touches[0].pageX);
 
-  // });
 
 
   // clientX, clientY  ->  브라우저 기준 좌표

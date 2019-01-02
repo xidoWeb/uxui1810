@@ -55,20 +55,21 @@ $('li').on('click', view);
 
   - **touchstart** : touch가 시작되는 위치
   - **touchend** :touch가 끝나는(떨어지는) 위치
-  - **touchmove** : touch되어있는 무언가가 움직일때 발생하는 ...
+  - **touchmove** : touch되어있는 무언가가 움직일때 발생하는 
 
-  - touch기능에는 이벤트 추가 속성이 발생한다.(originalEvent 내부에 좌표값을 나타내는 속성을 사용)
+  - touch기능에는 이벤트 추가 속성이 발생한다.
+    (originalEvent 내부에 좌표값을 나타내는 속성을 사용)
 
   ---
 
   #### on이 아닌 이벤트 메소드
 
-- **off()**
+- **off()** : on() 메소드를 강제로 끄는기능
 
-- **one()**
+- **one()** : 한번만 실행하도록 처리
 
-- **ready()**
+- **ready()** : html문서가 모두 준비되고 난 다음에 구현되도록 처리
 
-- **trigger()**
+- **trigger()** : 다른 함수를 실행하게 만드는 메소드
 
 - **hover()** : mouseenter, mouseleave 기능을 통합 on() 메소드에 포함되지 X, 실상용은 적다
