@@ -3,7 +3,8 @@
 (function($) {
   var accordion = $('.accordion');
   var accorBtn = accordion.find('dt').children('button');
-  
+  var accorDd  = accordion.find('dd');
+
   accorDd.eq(0).show();
   accorBtn.eq(0).addClass('active');
 
