@@ -1,5 +1,6 @@
 //  accordion_01.js
 
+
 (function($) {
   var accordion = $('.accordion');
   var accorBtn = accordion.find('dt').children('button');

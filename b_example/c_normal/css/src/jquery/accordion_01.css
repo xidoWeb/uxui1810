@@ -13,24 +13,18 @@ h2{width: 100%; height: 30px; font-size: 1.2rem; border-bottom:1px solid #333; t
 #gnb>div{width: 100%; height: 100%;}
 #gnb dl{float: left; padding: 0 0.5rem; box-sizing: border-box; width: 20%; height: 100%; }
 #gnb dl>dt{width: 100%; height: 100%; font-size: 1.2rem; line-height: 30px;
-      text-transform: uppercase; background-color: #caa; text-indent: 1rem; }
+      text-transform: uppercase; background-color: #933; text-indent: 1rem; }
 #gnb dl>dt>a{display: block; width: 100%; height: 100%; color:#fff;}
-#gnb dl>dd{width: 100%; height: auto; padding-top: 1rem; padding-bottom: 0.5rem;
+
+#gnb dl>dd{ display: none;
+  width: 100%; height: auto; padding-top: 1rem; padding-bottom: 0.5rem;
   background-color: #333; text-indent: 1rem;}
+
 
 #gnb dl>dd>ul{width: 100%; height: auto;}
 #gnb dl>dd>ul>li{ margin-bottom: 0.5rem; width: 100%; height: 2rem;border-bottom: 1px solid #fff;}
 #gnb dl>dd>ul>li:last-child{margin-bottom: 0; border-bottom: 0;}
 #gnb ul a{display: block; width: 100%; height: 100%; line-height:2rem; color:#fff;}
-
-
-
-
-
-
-
-
-
 
 
 
