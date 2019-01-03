@@ -1,0 +1,44 @@
+/* accordion_01.css */
+
+#wrap{margin: auto; width: 100%; height: auto; min-height:10rem; background-color: #dfdfdf;}
+
+/* #headBox ======================= */
+#headBox{padding: 1rem; box-sizing:border-box; width: 100%; height: 7rem; background-color: #aaa;}
+h1{float:left; padding: 0.5rem; box-sizing:border-box; width: 150px; height: 70px; color:#fff;
+  background-color: #833; font-size: 1rem;}
+h2{width: 100%; height: 30px; font-size: 1.2rem; border-bottom:1px solid #333; text-indent:1rem; margin-bottom: 1rem;}
+
+
+/* #conBox ======================= */
+#conBox{
+  padding:1rem; box-sizing: border-box;
+  width: 100%; height: auto; min-height:50rem;
+  background-color: #cff;}
+
+.accordion{margin: auto; width: 70%; min-width:600px; 
+          height: auto; min-height:5rem; border:2px solid #07f;}
+.accordion>dl{width: 100%; height: auto;}
+.accordion dt{width: 100%; height: 40px; border-bottom: 1px solid #fff;
+  background-color: #047; }
+.accordion dt:last-of-type{border:none;}
+
+.accordion dt>button{width: 100%; height: 100%; border: 0; background-color:transparent;
+  cursor:pointer;color:#fff; text-align: left; text-indent:1rem;
+  font-size: 1.2rem; font-family:"맑은고딕",sans-serif;}
+.accordion dt>button:focus,
+.accordion dt>button:hover{background-color: #407; font-weight: bold;}
+
+.accordion dd{padding: 0.5rem; box-sizing: border-box;
+  width: 100%; height: auto; min-height:7rem; background-color: #ccf; 
+  display: none;}
+
+dt:hover + dd{display: block;}
+dt:focus + dd{display: block;}
+
+
+
+
+
+/* #footBox ======================= */
+#footBox{padding: 1rem; box-sizing:border-box;  width: 100%; height: 10rem; background-color: #555; color:#fff;}
+#footBox>h2{border-color:#fff;}
