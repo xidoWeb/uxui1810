@@ -29,11 +29,10 @@ h2{width: 100%; height: 30px; font-size: 1.2rem; border-bottom:1px solid #333; t
 .accordion dt>button:hover{background-color: #407; font-weight: bold;}
 
 .accordion dd{padding: 0.5rem; box-sizing: border-box;
-  width: 100%; height: auto; min-height:7rem; background-color: #ccf; 
-  display: none;}
+  width: 100%; height:7rem; background-color: #ccf;
+    display: none; }
 
-dt:hover + dd{display: block;}
-dt:focus + dd{display: block;}
+
 
 
 
