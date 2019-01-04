@@ -1,0 +1,26 @@
+/* toggle_01.css */
+
+#wrap{margin: auto; padding: 2rem 1rem; box-sizing:border-box;width: 60rem; height: 75rem;}
+
+.view_box{padding:2rem; box-sizing:border-box; width:100%; height:20rem;}
+h2{text-align: center; border-bottom:1px solid #333; margin-bottom: 1rem;}
+
+.view_box>p{padding-left: 1rem; padding-right: 2rem; box-sizing:border-box; width: 100%; height: 13rem;background-color: #7af; color:#333; }
+.view_box>p.active{display: none;}
+
+dl{padding: 1rem; box-sizing: border-box; width: 100%; height: auto; }
+dt{width: 100%; height: 1.875rem; line-height: 1.875rem; background-color: #acf;}
+dd{width: 100%; height: 3rem; margin-bottom: 1rem; border-bottom: 1px solid #333;}
+
+dd>button{padding:1rem; background-color:#3cf; color:#fff; border:0; cursor:pointer; margin-right:1rem;}
+
+dd>button:hover,
+dd>button:focus{background-color: #39f;}
+
+
+.test{width: 90%; height: 20rem; border:5px solid #77f;}
+.rotate{transform-origin:0 0; transform:rotate(-90deg) translateX(-300px); width:300px; height:300px; background-color:#acc;
+  box-sizing: border-box; padding: 0.3rem; overflow: hidden;}
+
+.rotate>p{padding: 0.5rem; box-sizing:border-box; 
+  transform:rotate(90deg); width:300px; height:300px; color:#fff;}
