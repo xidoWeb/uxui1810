@@ -88,17 +88,20 @@
 
   viewWidth.on('click',function(e){
     e.preventDefault();
-    viewP.css({display:'block', width:0, paddingLeft:0, paddingRight:0, overflow:'hidden'},function(){
-      viewP.animate({width:pWidth, paddingLeft:pplInt, paddingRight:pprInt}, timed*2);
-    });
+    viewP.css({display:'block', width:0, paddingLeft:0, paddingRight:0, overflow:'hidden'});
+    viewP.animate({width:pWidth, paddingLeft:pplInt, paddingRight:pprInt}, timed);
   });
-
 
   closeWidth.on('click',function(e) {
     e.preventDefault();
-    viewP.animate({width:0, paddingLeft:0, paddingRight:0, overflow:'hidden'}, timed*2, function(){
+    viewP.animate({width:0, paddingLeft:0, paddingRight:0, overflow:'hidden'}, timed, function(){
       viewP.css({display:'none'});
     });
   });
+
+
+
+
+
 
 })(jQuery);
