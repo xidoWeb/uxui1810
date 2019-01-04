@@ -27,6 +27,7 @@
       // 2.blur 처리가 된다면
     ddLast.on('blur',function(){
       // 3.해당dd는 사라져라
+      
       nextDd.slideUp();
     });
   });
@@ -68,5 +69,17 @@ $('#headBox').on('mouseleave',function(e) {
   gnbDd.slideUp();
 });
 
-
 })(jQuery);
+
+
+
+
+
+// slideDown()
+/*
+display:none;
+
+display:block; height:0;
+
+height:10rem; transition:height timed linear;
+*/

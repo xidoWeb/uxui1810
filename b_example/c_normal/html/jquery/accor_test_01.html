@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- accor_test.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+
+  <!--[if IE]>
+    <script src="../../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../../ie/css3pie/PIE_IE9.js"></script>
+    <script src="../../ie/ie9.min.js"></script>
+  <![endif]-->
+
+  <title>filename</title>
+  <style>
+    .accor{margin:auto; width: 600px; height: auto;}
+    dt{width: 100%; height: 50px; background-color: #39f;}
+    dt>a{display:block; padding:0.5rem; box-sizing:border-box; width:100%; height:100%; color:#fff; text-transform:uppercase; font-family:"맑은고딕"; font-weight: bold; font-size: 1.5rem; line-height:34px;
+      border-bottom: 1px solid #fff;}
+    dt>a:hover,dt>a:focus{background-color: #047;}
+    dt>a>span{float: right; width: 10%; height: 100%; border-left:1px solid #fff;}
+    .arror{display: block; width: 90%; height: 90%; text-align: center; font-style: normal;}
+
+    dd{display: none; padding: 1rem; box-sizing:border-box; width: 100%; height: auto; background-color: #ace;}
+
+    dd.view{display:block; animation:view 500ms 1;}
+    @keyframes view {
+      0%{height:0; padding-top:0; padding-bottom:0; overflow:hidden; }
+      100%{height:10rem; padding-top:0.5rem; padding-bottom:0.5rem; overflow:hidden;}
+    }
+  </style>
+</head>
+<body>
+  <!-- layout -->
+  <dl class="accor">
+  <dt><a href="#">content title
+    <span><i class="arror">&darr;</i></span></a></dt>
+  <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore sapiente iusto corporis tempore laudantium at! Quidem iure nulla magnam ex impedit architecto consequuntur, repellat consectetur distinctio magni ratione est, facere eligendi aperiam tempora sint ut cum! Consequatur, omnis veniam quibusdam minus consequuntur aspernatur! Ipsum voluptatibus sit odit eos iusto, voluptatem, necessitatibus, atque quia sapiente voluptates nisi voluptatum. Libero nobis, esse labore, quas magnam dicta, quae tempore odio ducimus magni distinctio eius doloremque id repudiandae ipsa aperiam voluptatibus laboriosam eos tenetur aut inventore? Esse doloribus ipsum explicabo incidunt culpa, debitis laboriosam voluptatum eaque pariatur id officiis assumenda fugiat. Quo, cumque? Doloremque rem soluta, ut qui ipsa odit quisquam officia quibusdam inventore voluptas, animi velit aspernatur beatae a facilis corporis nihil, libero quae! Aspernatur quibusdam voluptatum consectetur qui, hic? Nihil laboriosam, nobis ex illo sed, dolores, nulla quia dignissimos consequatur sequi sunt atque repudiandae beatae sint deleniti iusto. Sunt praesentium tempore veritatis, odio maiores aut, explicabo harum nobis quod nulla ex, consectetur iusto provident saepe. Amet dignissimos dolores enim repudiandae cumque, beatae delectus nesciunt. Nobis sunt, quasi nihil harum. Ea delectus rem fuga, esse nemo cupiditate! Consectetur molestiae non amet sed fuga quia quaerat eveniet eligendi dolorum aut! Voluptates quaerat sunt ipsam.</dd>
+  <dt><a href="#">content title
+    <span><i class="arror">&darr;</i></span></a></dt>
+  <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias illo illum ex incidunt corrupti et fuga, expedita blanditiis dicta voluptatem. Tenetur commodi sint provident eaque, inventore unde molestiae officiis suscipit assumenda vero, ab vel architecto cumque praesentium dolorem deleniti pariatur a? Reiciendis error, totam repudiandae fugit dolorum id quis tenetur adipisci non modi animi esse iure, quidem earum veniam voluptate expedita, vitae deleniti. Excepturi consequuntur possimus, autem laboriosam sint assumenda porro, inventore obcaecati debitis aspernatur non cupiditate, aliquam pariatur! Recusandae placeat impedit rem nisi, et adipisci molestiae fugit ipsa reiciendis maiores, harum libero, eaque atque voluptatem ea velit neque. Blanditiis.</dd>
+  <dt><a href="#">content title
+    <span><i class="arror">&darr;</i></span></a></dt>
+  <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae amet ex commodi, debitis quisquam quod aut? Soluta est fugit necessitatibus accusamus, mollitia laboriosam voluptatem delectus magni voluptatibus ex velit, temporibus cumque itaque nulla sint atque aperiam vero quas quae, molestiae sunt ipsam vitae. Distinctio neque animi repudiandae veritatis, exercitationem sit rerum voluptas, molestiae repellendus id facere ullam asperiores cumque in quia quas beatae? Non adipisci ratione molestiae earum? Nobis omnis voluptatem cumque accusantium sit ipsum sint, ipsa laboriosam ea, odit dolores, eum perferendis quidem dicta libero! Animi dolorem quae perferendis at quam vero blanditiis labore nulla officiis, consequuntur, aliquid eos.</dd>
+  <dt><a href="#">content title
+    <span><i class="arror">&darr;</i></span></a></dt>
+  <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, vero dolores commodi, atque voluptatem tempore amet veniam similique debitis velit, voluptatibus hic! Exercitationem iste, culpa. Libero nisi distinctio officiis nostrum iusto, numquam in asperiores corporis totam maxime, consequuntur, rem laborum natus repellendus accusantium. Voluptatibus ullam, labore dolores velit, atque voluptatum.</dd>
+</dl>
+
+  <!-- script -->
+  <script src="../../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../../js/base/jquery-ui.min.js"></script>
+  <script>
+    (function($) {
+      // 내용에대해 이해하기~~
+      var accor = $('.accor');
+      var accorDt = accor.children('dt');
+    
+      // var dd = $(this).parent().next('dd'); //말도안되는 내용
+
+      // accor.children('dd').eq(0).slideDown();
+      accor.children('dd').eq(0).addClass('view');
+
+      accorDt.children('a').on('click', function(e) {
+        e.preventDefault();
+        var dd = $(this).parent().next('dd');
+        // var view = dd.css('display') == 'block';
+        // if(view){ dd.slideUp(); }else{ dd.slideDown(); }
+        dd.stop().addClass('view');
+        dd.siblings('dd').stop().removeClass('view');
+      });
+
+
+
+
+    })(jQuery);
+
+    // display:none;  -> 
+    // display:block; height:0; padding-top:0; padding-bottom:0; overflow:hidden; ->
+    // h:?, pt:?, pb:?
+
+
+// 사옹자 제어에 토글: 키보드, 마우스 드래그
+// hover(
+//   function(){}, // 마우스 올렸을때
+//   function(){}  // 마우스 벗어났을때
+//   )
+
+
+  </script>
+</body>
+</html>

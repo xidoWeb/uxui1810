@@ -17,10 +17,10 @@
       var _this = $(this);
       var dd = _this.parent().next('dd');
 
-       dd.slideToggle();
+       dd.slideToggle(5000);
 
       var ddS = dd.siblings('dd');
-      ddS.slideUp();
+      ddS.slideUp(5000);
 
       _this.addClass('active');
       var dtButton = _this.parent().siblings('dt').children('button');
