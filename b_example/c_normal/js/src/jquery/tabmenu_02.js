@@ -16,10 +16,13 @@
   };
   devideWidth(winWidth);
 
+
   $(window).on('resize',function() {
     var nowWinWidth = $(window).width();
-    // devideWidth(nowWinWidth);
-    location.reload();
+
+    if(winWidth !== nowWinWidth){
+      location.reload();
+    }
   });
 
   
