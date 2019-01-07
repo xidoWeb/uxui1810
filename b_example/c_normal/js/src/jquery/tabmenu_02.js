@@ -1,46 +1,33 @@
 // tabmenu_02.js
 
 (function($) {
-
   var winWidth = $(window).width();
   var mobWidth = 640;
   var nowDevice = '';
-
-// =====================================
+// ======================================================================================
   var myDevice = function(device){    
-    if(device <= mobWidth){ nowDevice = 'mobile'; }else{ nowDevice = 'pc'; }
+    // if(device <= mobWidth){ nowDevice = 'mobile'; }else{ nowDevice = 'pc'; }
+    (device <= mobWidth) ? nowDevice = 'mobile' : nowDevice = 'pc';
     return nowDevice;
   };
   var beforeDevice = myDevice(winWidth);
   console.log(beforeDevice);
-// =====================================
+// ======================================================================================
   var tabMenu = $('.tab_menu');
   var devideWidth = function(device){
-    if(device <= mobWidth){ tabMenu.addClass('mob'); }else{ tabMenu.addClass('tab'); }
+    // if(device <= mobWidth){ tabMenu.addClass('mob'); }else{ tabMenu.addClass('tab'); }
+    (device <= mobWidth) ? tabMenu.addClass('mob') : tabMenu.addClass('tab'); 
   };
   devideWidth(winWidth);
-// =====================================
-
+// ======================================================================================
   $(window).on('resize',function() {
     var nowWinWidth = $(window).width();
-
-    if(winWidth !== nowWinWidth){
-      // location.reload();
-
-      var afterDevice = myDevice(nowWinWidth);
-      // console.log(afterDevice);
-      
-      if(beforeDevice !== afterDevice){
+    var afterDevice = myDevice(nowWinWidth);
+    if(winWidth !== nowWinWidth && beforeDevice !== afterDevice){
         location.reload();
-      }
-
     }
   });
-
   
-
-
-
   // tab_menu 사용
   //step1 : 타블렛영역 처리
 
