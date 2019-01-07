@@ -23,21 +23,70 @@
   tabMenu.find('a').on('focus',function(e) {
     e.preventDefault();
     $(this).on('keyup', function(evt) {
-      console.log(evt.keyCode);
+      evt.preventDefault();
+      // console.log(evt.keyCode);
+
       // 키보드가 tab버튼일경우 다른 tab_menu로 이동
       // 키보드가 화살표 좌,우 방향키일경우 옆 버튼으로 이동
-      // tab:9  , 왼방향:37, 오른쪽 방향: 39
-      switch(evt.keyCode){
+      // tab:9  , 왼방향:37, 위:38, 오른쪽 방향: 39, 아래:40
+      var ek = evt.keyCode;
+
+      // if(ek == 9){}
+      // else if(ek == 37 || ek ==38){}
+      // else if(ek == 39 || ek == 40){}
+
+      // (ek == 9) ? /*참 */ : (ek == 37) ?/* 37이면 */ : (ek == 39)? : ;
+
+
+
+      switch(ek){
         case 9:
+          $('.mob').find('li').eq(0).children('a').focus();
         break;
 
         case 37:
+        case 38:
+          $(this).parent().prev('li').children('a').focus();
         break;
 
         case 39:
+        case 40:
+          $(this).parent().next('li').children('a').focus();
         break;
       }
     });
   });
+
+// ===================================================================
+var mobile  = $('.mob');
+var mobMenu = mobile.children('ul');
+var mobList = mobMenu.children('li');
+
+mobList.on('click',function(e) {
+  e.preventDefault();
+  // e.stopPropagation();
+  var viewMenu = mobMenu.hasClass('view') == false;
+    mobList.show();
+    mobMenu.addClass('view');
+  // if(viewMenu){
+  //   mobList.show();
+  //   mobMenu.addClass('view');
+  // }else{
+  //   var i = $(this).index();
+  //   console.log(i);
+  // }
+
+
+  mobList.on('click',function(evt) {
+    evt.preventDefault();
+    // evt.stopPropagation();
+    // e.bubbles(false)
+    console.log(e.bubbles);
+    var i = $(this).index();
+    console.log(i);
+  });
+});
+
+
 
 })(jQuery);
