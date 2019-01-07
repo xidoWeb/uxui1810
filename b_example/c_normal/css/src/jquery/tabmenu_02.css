@@ -1,33 +1,26 @@
 /* tabmenu_02.css */
 
-.tab_menu{margin: auto; margin-bottom: 3rem; height: auto;
-  border-bottom: 1px solid  #333;}
-
-
-.tab{width: 900px;}
-.tab>ul{width: 100%; height:40px;}
-.tab li{float: left; padding-right: 0.2rem; box-sizing: border-box;
-  width: 25%; height: 100%; }
-.tab li:last-child{padding-right:0;}
-.tab li>a{display: block; width: 100%; height: 100%; text-align: center;
-  line-height:40px; background-color: #dfdfdf; color:#171717;}
-.tab li.active>a{background-color: #acc; font-weight: bold;} 
-
-.content{padding:1rem; box-sizing:border-box; 
-  width: 100%; height: 40rem; background-color: #cdd;}
+.tab_menu{margin: auto; margin-bottom: 3rem; height: auto; border-bottom: 1px solid  #333;}
+.content{padding:1rem; box-sizing:border-box; width: 100%; height: 40rem; background-color: #cdd;}
 .content>div{width: 100%; height: 100%; display: none;}  
 .content>div:first-of-type{display: block;}
 
-/* ===========================================  */
+/* mobile ================================ */
+@media screen and (max-width: 640px) {
+  .mob{width: 480px;}
+  .mob>ul{position: relative; z-index: 500; margin-bottom: 0.5rem; width: 80%; height:40px; }
+  .mob li{width: 100%; height: 100%; background-color: #dfdfdf; box-shadow:0.1rem 0.1rem 0.1rem #333; display: none;}
+  .mob li>a{display: block; margin:0.2rem 0; width: 100%; height: 100%; text-indent:1rem; line-height: 40px; color:#171717; }
+  .mob li.active{display: block;}
+  .mob li.active>a{background-color: #acc; font-weight: bold;}
+}
 
-
-.mob{width: 480px;}
-.mob>ul{position: relative; z-index: 500; 
-        margin-bottom: 0.5rem; width: 80%; height:40px; }
-.mob li{width: 100%; height: 100%; background-color: #dfdfdf;
-      box-shadow:0.1rem 0.1rem 0.1rem #333; display: none;}
-
-.mob li>a{display: block; margin:0.2rem 0; width: 100%; height: 100%; text-indent:1rem; line-height: 40px; color:#171717; }
-
-.mob li.active{display: block;}
-.mob li.active>a{background-color: #acc; font-weight: bold;}
+/* mobile other ================================ */
+@media screen and (min-width: 641px) {
+  .tab{width: 900px;}
+  .tab>ul{width: 100%; height:40px;}
+  .tab li{float: left; padding-right: 0.2rem; box-sizing: border-box; width: 25%; height: 100%; }
+  .tab li:last-child{padding-right:0;}
+  .tab li>a{display: block; width: 100%; height: 100%; text-align: center; line-height:40px; background-color: #dfdfdf; color:#171717;}
+  .tab li.active>a{background-color: #acc; font-weight: bold;} 
+}

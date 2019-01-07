@@ -2,6 +2,30 @@
 
 (function($) {
 
+  var winWidth = $(window).width();
+  var mobWidth = 640;
+
+  var tabMenu = $('.tab_menu');
+
+  var devideWidth = function(device){
+    if(device <= mobWidth){
+      tabMenu.addClass('mob');
+    }else{
+      tabMenu.addClass('tab');
+    }
+  };
+  devideWidth(winWidth);
+
+  $(window).on('resize',function() {
+    var nowWinWidth = $(window).width();
+    // devideWidth(nowWinWidth);
+    location.reload();
+  });
+
+  
+
+
+
   // tab_menu 사용
   //step1 : 타블렛영역 처리
 
@@ -40,9 +64,9 @@
 
 
       switch(ek){
-        case 9:
-          $('.mob').find('li').eq(0).children('a').focus();
-        break;
+        // case 9:
+        //   $('.mob').find('li').eq(0).children('a').focus();
+        // break;
 
         case 37:
         case 38:
