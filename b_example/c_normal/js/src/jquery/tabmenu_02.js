@@ -79,8 +79,8 @@ mobList.on('click',function(e) {
 
     mobMenu.removeClass('view');
     mobList.eq(i).addClass('active');
-    mobList.eq(i).siblings('li').hide();
     mobList.eq(i).siblings('li').removeClass('active');
+    mobList.eq(i).siblings('li').hide();
   }
 
 });
