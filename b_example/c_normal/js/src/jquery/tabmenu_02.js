@@ -61,30 +61,28 @@
 var mobile  = $('.mob');
 var mobMenu = mobile.children('ul');
 var mobList = mobMenu.children('li');
+var mobCon  = mobile.find('.content');
 
 mobList.on('click',function(e) {
   e.preventDefault();
   // e.stopPropagation();
   var viewMenu = mobMenu.hasClass('view') == false;
+   
+  if(viewMenu){
     mobList.show();
     mobMenu.addClass('view');
-  // if(viewMenu){
-  //   mobList.show();
-  //   mobMenu.addClass('view');
-  // }else{
-  //   var i = $(this).index();
-  //   console.log(i);
-  // }
-
-
-  mobList.on('click',function(evt) {
-    evt.preventDefault();
-    // evt.stopPropagation();
-    // e.bubbles(false)
-    console.log(e.bubbles);
+  }else{
     var i = $(this).index();
-    console.log(i);
-  });
+    // console.log(i);
+    mobCon.children('div').eq(i).show();
+    mobCon.children('div').eq(i).siblings('div').hide();
+
+    mobMenu.removeClass('view');
+    mobList.eq(i).addClass('active');
+    mobList.eq(i).siblings('li').hide();
+    mobList.eq(i).siblings('li').removeClass('active');
+  }
+
 });
 
 
