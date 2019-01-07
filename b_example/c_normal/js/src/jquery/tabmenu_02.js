@@ -4,24 +4,36 @@
 
   var winWidth = $(window).width();
   var mobWidth = 640;
+  var nowDevice = '';
 
+// =====================================
+  var myDevice = function(device){    
+    if(device <= mobWidth){ nowDevice = 'mobile'; }else{ nowDevice = 'pc'; }
+    return nowDevice;
+  };
+  var beforeDevice = myDevice(winWidth);
+  console.log(beforeDevice);
+// =====================================
   var tabMenu = $('.tab_menu');
-
   var devideWidth = function(device){
-    if(device <= mobWidth){
-      tabMenu.addClass('mob');
-    }else{
-      tabMenu.addClass('tab');
-    }
+    if(device <= mobWidth){ tabMenu.addClass('mob'); }else{ tabMenu.addClass('tab'); }
   };
   devideWidth(winWidth);
-
+// =====================================
 
   $(window).on('resize',function() {
     var nowWinWidth = $(window).width();
 
     if(winWidth !== nowWinWidth){
-      location.reload();
+      // location.reload();
+
+      var afterDevice = myDevice(nowWinWidth);
+      // console.log(afterDevice);
+      
+      if(beforeDevice !== afterDevice){
+        location.reload();
+      }
+
     }
   });
 
