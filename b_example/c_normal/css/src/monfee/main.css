@@ -9,7 +9,18 @@
 /* #headBox ===============================================================================  */
 
 #headBox { position: absolute;  bottom:0;  left: 0; z-index:1000; 
-  width: 100%; height: 120px; background-color: #999;}
+  width: 100%; height: 120px; background-color:#fff; box-shadow:0 0.5rem 0.5rem rgba(23,23,23,0.5);}
+
+#headBox>.container{position: relative;}
+#headBox>.container:before,
+#headBox>.container::before{content:" "; display: block; 
+  position:absolute; top:120%; left:2rem; width: 150px; height: 150px;
+  background-image: url("../../../img/monfee/character.svg"); background-repeat: no-repeat; background-position: 50%;}
+
+#headBox>.container:after,
+#headBox>.container::after{content:" "; display: block; 
+   position: absolute; top: 100%; left: 0; z-index: -1;
+   width: 100%; height:14rem;  background-color:rgba(170,51,0,0.7); }
 
 h1{float: left; width:220px; height: 100%; background-color: #a30;}
 h1>a{background-image: url("../../../img/monfee/monfee_big_logo.png");
@@ -19,15 +30,18 @@ h1>a{background-image: url("../../../img/monfee/monfee_big_logo.png");
 #gnb > .list{width: 100%; height: 100%;}
 #gnb > .list > dl{float:left; padding:0 0.5rem; box-sizing:border-box;  width: 25%; height: 100%;}
 #gnb dl > dt{padding:1.5rem 0; box-sizing:border-box; width: 100%; height: 100%;}
-  #gnb dl > dt>a{position: relative; display: block; width: 100%; height: 100%; text-align: left; line-height:1.1; font-size:1.75rem; color:inherit; }
-#gnb dl > dt>a>span{display: block; 
+ #gnb dl > dt>a{position: relative; display: block; width: 100%; height: 100%; text-align: left; line-height:1.1; font-size:1.75rem; color:inherit; }
+#gnb dl > dt>a>span{display: block; padding-left:0.5rem; box-sizing:border-box;
   position: absolute; top: 50%; left:0; transform:translateY(-50%);
   width:100%; height:auto;}
 
 #gnb dl > dt>a:hover,|
 #gnb dl > dt>a:focus{border-bottom:0.3rem solid #a30;}|
 
-#gnb dl > dd{width:100%; height:auto; background-color: #fff;}
+#gnb dl > dd{padding-top:30px; width:100%; height:auto;}
+#gnb dl > dd>a{display:block;  margin-bottom:0.2rem; padding-left:0.5rem; box-sizing: border-box;width:100%; height:26px; color:#fff;}
+#gnb dl > dd>a:hover,
+#gnb dl > dd>a:focus{text-decoration:underline; text-decoration-color:#fff}
 
 
 
