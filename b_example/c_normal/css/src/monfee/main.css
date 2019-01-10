@@ -1,0 +1,55 @@
+/*  main.css */
+.container{margin:auto; width: 60rem; height: 100%; background-color:rgba(0,0,0,0.2); }
+.con_plus{width:80%; max-width:80%;}
+*:focus{outline:5px solid #fa0;}
+
+
+#wrap {position:relative; width: 100%; height: 100%; min-width: 60rem; min-height: 10rem; background-color: #caa;}
+
+/* #headBox ===============================================================================  */
+
+#headBox { position: absolute;  bottom:0;  left: 0; z-index:1000; 
+  width: 100%; height: 120px; background-color: #999;}
+
+h1{float: left; width:220px; height: 100%; background-color: #a30;}
+h1>a{background-image: url("../../../img/monfee/monfee_big_logo.png");
+  background-size:80%;}
+
+#gnb{float:right; width:620px; height:100%; background-color: #fff;}
+#gnb > .list{width: 100%; height: 100%;}
+#gnb > .list > dl{float:left; padding:0 0.5rem; box-sizing:border-box;  width: 25%; height: 100%;}
+#gnb dl > dt{padding:1.5rem 0; box-sizing:border-box; width: 100%; height: 100%;}
+  #gnb dl > dt>a{position: relative; display: block; width: 100%; height: 100%; text-align: left; line-height:1.1; font-size:1.75rem; color:inherit; }
+#gnb dl > dt>a>span{display: block; 
+  position: absolute; top: 50%; left:0; transform:translateY(-50%);
+  width:100%; height:auto;}
+
+#gnb dl > dt>a:hover,|
+#gnb dl > dt>a:focus{border-bottom:0.3rem solid #a30;}|
+
+#gnb dl > dd{width:100%; height:auto; background-color: #fff;}
+
+
+
+/* #adBanner ===============================================================================  */
+
+#adBanner {width: 100%;height: calc(100% - 120px);background-color: #a30;}
+
+/* #bestNews ===============================================================================  */
+
+#bestNews {margin-top: 120px;width: 100%;height: 3200px;background-color: #bbb;}
+
+  .news{width: 100%; height:1080px; background-color: #1af;}
+  .issue_text{width: 100%; height:860px; background-color: #2fb;}
+  .issue_icon{width: 100%; height:480px; background-color: #f3c;}
+  .content_text{width: 100%; height:600px; background-color: #4dd;}
+  .material_icon{width: 100%; height:196px; background-color: #fef;}
+
+
+/* #location ===============================================================================  */
+
+#location { width: 100%; height: 1150px; background-color: #fff; }
+
+/* #footBox ===============================================================================  */
+
+#footBox { width: 100%; height: 400px; background-color: #656565 }
