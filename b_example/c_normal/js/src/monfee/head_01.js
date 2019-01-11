@@ -20,13 +20,13 @@
     if(vs) {  headBox.css({position:'fixed', top:0, bottom:'auto'}); } else { headBox.removeAttr('style');}
 
     //1-2의 문제 해결: 화면의 높이를 기준으로 절반아래로 header가 있으면 위로 하위메뉴가 나오게 처리
-    var heightVs = scrollOffset >= winH/2; 
-    console.log(heightVs);
-    if(!heightVs){
-      // heightVs의 값이false인경우
+    var heightVs = scrollOffset < winH/2; 
+    // console.log(heightVs);
+    if(heightVs){
+      // heightVs의 true
       headCon.addClass('up');
     }else{
-      // heightVs의 값이 true인경우
+      // heightVs의 값이 false
       headCon.removeClass('up');
     }
 
