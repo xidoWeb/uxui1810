@@ -15,7 +15,7 @@
 
 .container {margin: auto; padding:0 0.625rem; box-sizing:border-box; 
             width: auto; max-width: 60rem; height: auto;}
+.w80 {width: 80%;}
 
 .container_wrap {margin: auto; padding:0 0.625rem; box-sizing: border-box; 
             width: auto; max-width: auto; height: auto;}
-
