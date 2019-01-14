@@ -79,10 +79,9 @@
 
           setTimeout(function(){
             viewBanner.css({ transition: 'left 500ms ease' });
-          },1);
+          },10);
 
         }, 500);
-
 
       }else{
         showI -= 1;
@@ -104,9 +103,28 @@
   });
 
   // 위 문제점: 전체를 순환하는 기능을 만들어야한다!
-    //  왼버튼클릭시 showI -= 1 --> -1 이었던 아이를 leng-2의 수치로 변경하여, 해당위치로 이동하게 만들자!
-    
+    // 왼버튼클릭시 showI -= 1 --> -1 이었던 아이를 leng-2의 수치로 변경하여, 해당위치로 이동하게 만들자!
+    // 일부 오류발생
 
   // 덤: 일정 시간마다 자동으로 순환하는 기능을 수행하게 만들자!
+  // setInterval(function(){}, 1000);  // 일정시간(1000)마다 동작하게 하는 함수
+  // clearInterval(function(){});  // setInterval을 강제로 멈추게(setInterval을 삭제)하는 함수
 
+  var movingSlide;
+
+  var startMove = function(){
+    movingSlide = setInterval(function(){
+      console.log('go!go!go!');
+      nextBtn.trigger('click');
+    }, 1000);
+  };
+
+  var stopMove = function(){
+    clearInterval( movingSlide );
+  };
+  
+  startMove();
+  banner.on({ 'mouseenter': stopMove, 'mouseleave': startMove  });
+
+  
 })(jQuery);
