@@ -28,21 +28,28 @@
   // -----------------------------------------------------------------------
   // 좌,우 버튼을 클릭하든, 인디케이트를 클릭하든 공통의 기능을 하는 변수가 하나 필요하다!
   var showI =  0;
+  var btnArea = banner.find('.arrow_btn');
+  var nextBtn = btnArea.children('.next_btn');
+  var prevBtn = btnArea.children('.prev_btn');
+  var indicator = banner.find('.indicator');
+  var indiLi = indicator.find('li');
+  // console.log( indiLi.length );
+
   var SlideBanner = function(i){
+    indiLi.removeClass('active');
+    indiLi.eq(showI).addClass('active');
     viewBanner.css({left: i * -100 + '%'});
   };
   SlideBanner(showI);
 
   // 좌,우 버튼 클릭시
-  var btnArea = banner.find('.arrow_btn');
-  var nextBtn = btnArea.children('.next_btn');
-  var prevBtn = btnArea.children('.prev_btn');
 
     // nextBtn클릭시 변수 showI에 1씩 더하는 기능 부여
     // 최대 숫자는 전체 갯수-2 까지만 가능
     nextBtn.on('click',function(e) {
       e.preventDefault();
       if (showI >= len-2){ showI = len-2;  }else{  showI += 1;  }
+      console.log(showI)
       SlideBanner(showI);
     });
 
@@ -57,6 +64,14 @@
 
   // 인디케이터
 
+  
+  indiLi.on('click',function(e) {
+    e.preventDefault();
+    showI = $(this).index();
+    console.log(showI);
 
+   
+    SlideBanner(showI);
+  });
 
 })(jQuery);
