@@ -21,10 +21,10 @@
   
   var len = viewBannerList.length;
   // console.log(len);
-  viewBanner.css({ width: len * 100 + '%', marginLeft: -100 + '%', 
-                position:'relative', top:0, left:0, transition:'left 500ms ease'});
+  viewBanner.css({ width: len * 100 + '%', marginLeft: -100 + '%', position:'relative', top:0, left:0});
   viewBannerList.css({ width: 100 / len + '%'});
-  
+
+
   // -----------------------------------------------------------------------
   // 좌,우 버튼을 클릭하든, 인디케이트를 클릭하든 공통의 기능을 하는 변수가 하나 필요하다!
   var showI =  0;
@@ -38,7 +38,7 @@
   var SlideBanner = function(i){
     indiLi.removeClass('active');
     indiLi.eq(showI).addClass('active');
-    viewBanner.css({left: i * -100 + '%'});
+    viewBanner.animate({left: i * -100 + '%'},500);
   };
   SlideBanner(showI);
 
@@ -53,41 +53,25 @@
       SlideBanner(showI);
     });
 
-    // prevBtn클릭시 변수 showI에 1씩 빼는 기능 부여
-    // 최소 숫자 -1까지만 가능
-    /* // 1차 기능처리
-    prevBtn.on('click', function (e) {
-      e.preventDefault();
-      if(showI <= -1){ showI = -1; }else{ showI -= 1; }
-      SlideBanner(showI);
-    });
-    */
-
-    // 2차 기능처리
-    prevBtn.on('click', function(e){
+    // 3차기능처리
+     prevBtn.on('click',function(e){
       e.preventDefault();
       if(showI <= 0){
         showI = -1;
-        viewBanner.css({ left: showI * -100 + '%' });
-        console.log(showI);
-        // 0.5초 뒤에 마지막 위치로 이동
-        // setTimeout(function(){}, 500);
-        setTimeout(function () { 
-          showI = len - 2;
-          console.log(showI);
-          viewBanner.css({ left: showI * -100 + '%', transition:'none'});
-
-          setTimeout(function(){
-            viewBanner.css({ transition: 'left 500ms ease' });
-          },10);
-
-        }, 500);
+        indiLi.removeClass('active');
+        indiLi.eq(showI).addClass('active');
+        viewBanner.animate({ left: showI * -100 + '%' }, 1000, function(){
+          showI = len -2;
+          viewBanner.css({ left: showI  * -100 + '%'});
+        });
 
       }else{
         showI -= 1;
         SlideBanner(showI);
-      }
-    });
+      }      
+     });
+
+
 
 
 
@@ -123,8 +107,8 @@
     clearInterval( movingSlide );
   };
   
-  startMove();
-  banner.on({ 'mouseenter': stopMove, 'mouseleave': startMove  });
+  // startMove();
+  // banner.on({ 'mouseenter': stopMove, 'mouseleave': startMove  });
 
   
 })(jQuery);
