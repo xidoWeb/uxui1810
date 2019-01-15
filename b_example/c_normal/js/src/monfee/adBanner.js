@@ -48,9 +48,16 @@
     // 최대 숫자는 전체 갯수-2 까지만 가능
     nextBtn.on('click',function(e) {
       e.preventDefault();
-      if (showI >= len-2){ showI = len-2;  }else{  showI += 1;  }
+      if (showI >= len-2){ 
+        viewBanner.css({ left: 100 + '%' });
+
+        showI = 0;
+        SlideBanner(showI);
+      }else{  
+        showI += 1;  
+        SlideBanner(showI);      
+      }
       console.log(showI)
-      SlideBanner(showI);
     });
 
     // 3차기능처리
@@ -60,7 +67,7 @@
         showI = -1;
         indiLi.removeClass('active');
         indiLi.eq(showI).addClass('active');
-        viewBanner.animate({ left: showI * -100 + '%' }, 1000, function(){
+        viewBanner.animate({ left: showI * -100 + '%' }, 500, function(){
           showI = len -2;
           viewBanner.css({ left: showI  * -100 + '%'});
         });
