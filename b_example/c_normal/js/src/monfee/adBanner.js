@@ -38,7 +38,7 @@
   var SlideBanner = function(i){
     indiLi.removeClass('active');
     indiLi.eq(showI).addClass('active');
-    viewBanner.animate({left: i * -100 + '%'},500);
+    viewBanner.stop(true, false).animate({left: i * -100 + '%'},500);
   };
   SlideBanner(showI);
 
@@ -50,7 +50,6 @@
       e.preventDefault();
       if (showI >= len-2){ 
         viewBanner.css({ left: 100 + '%' });
-
         showI = 0;
         SlideBanner(showI);
       }else{  
@@ -67,7 +66,7 @@
         showI = -1;
         indiLi.removeClass('active');
         indiLi.eq(showI).addClass('active');
-        viewBanner.animate({ left: showI * -100 + '%' }, 500, function(){
+        viewBanner.stop(true, false).animate({ left: showI * -100 + '%' }, 500, function(){
           showI = len -2;
           viewBanner.css({ left: showI  * -100 + '%'});
         });

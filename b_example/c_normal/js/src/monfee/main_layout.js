@@ -29,4 +29,10 @@ var mainUrl = './main/';
 adBanner.load(mainUrl + 'adBanner.html');
 
 
+// news.html 생성하기
+  var bestNews = $('#bestNews');
+  bestNews.children('h2').after('<div class="news"></div>');
+  // $('.news').load( link('news', mainUrl) );
+  $('.news').load( mainUrl + 'news.html' );
+
 })(jQuery);

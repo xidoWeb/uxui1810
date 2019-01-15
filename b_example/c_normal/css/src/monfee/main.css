@@ -83,7 +83,7 @@ h1>a{background-image: url("../../../img/monfee/monfee_big_logo.png");
 #adBanner .prev_btn{float:left; background-position-x:0;}
 
 /*  =---------------------------------------------------------------------  */
-#adBanner > .view_outer{position:relative; width: 100%; height: 100%; overflow: hidden;}
+#adBanner > .view_outer{position:relative; width: 100%; height: 100%; /*overflow: hidden;*/}
 
 #adBanner .add_text{display:none;  position:absolute; top:0; left:0;
   padding:10rem 10vw; padding-left: 20vw; box-sizing: border-box;
@@ -121,7 +121,22 @@ h1>a{background-image: url("../../../img/monfee/monfee_big_logo.png");
 
 #bestNews {margin-top: 120px;width: 100%;height: 3200px;background-color: #bbb;}
 
-  .news{width: 100%; height:1080px; background-color: #1af;}
+  .news{padding-top:2rem; padding-bottom:2rem; width: 100%; height:auto; min-height:3rem; background-color:#fff;}
+  .news h3{margin-bottom:1rem; width: 100%; height:auto; font-size: 1.4rem; text-decoration:underline;}
+  .news_list{float:left; margin-right:1.333333%; margin-bottom:1rem; width:24%; height:400px; background-color: #5cc;}
+  .news_list:nth-of-type(4n){margin-right:0;}
+  .news_list>a{display: block; width: 100%; height: 100%;}
+
+  .news_list>a:hover .img_list:before,
+  .news_list>a:focus .img_list:before{content:" "; display:block; position:absolute; width:100%; height:100%; background-color:rgba(170,51,0,0.7);}
+
+
+  .news_list .img_list{position:relative; width: 100%; height:220px; border-radius:0.3rem; background-repeat: no-repeat; background-position: 50% 50%; overflow:hidden;  background-size: cover; background-color: #fff;}
+  .news_list dl{padding:0.3rem; box-sizing:border-box; width: 100%; height:150px; }
+  .news_list dl>dt{margin-bottom:5px; width: 100%; height:20px; font-size:1.15rem; font-weight:bold;}
+  .news_list dl>dd{width: 100%; height:125px; font-size:0.875rem; color:#555;}
+
+
   .issue_text{width: 100%; height:860px; background-color: #2fb;}
   .issue_icon{width: 100%; height:480px; background-color: #f3c;}
   .content_text{width: 100%; height:600px; background-color: #4dd;}
