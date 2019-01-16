@@ -145,20 +145,20 @@ h1>a{background-image: url("../../../img/monfee/monfee_big_logo.png");
     
   .issue_text .news_text {position:relative; z-index:300; margin:auto; 
     width: 80%; height: 520px; background-color: #fa0;}
-    
+
   .issue_text .news_text>dl{
     display: none;
     position:absolute; top: 0; left: 0;
     padding:3rem 2rem; box-sizing:border-box;
     width:70%; height:100%;
   }
-  .issue_text .news_text>dl.active{display: block;}
+  /* .issue_text .news_text>dl.active{display: block;} */
 
   .issue_text .news_text>dl>dt{margin-bottom:0.5rem; width:100%; height:3rem; font-size:1.3rem; text-decoration:underline;}
   .issue_text .news_text>dl>dd{width:100%; height:auto; max-height:380px; font-size:1rem;}
 
 
-  .issue_text .news_img {position:absolute; top: 0; left: 0; z-index: 100; width: 100%; height: 100%; background-color: #777;}
+  .issue_text .news_img {position:absolute; top: 0; left: 0; z-index: 100; width: 100%; height: 100%;  background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;}
 
 
 /*  .issue_icon --------------------------------------------------------------------- */
