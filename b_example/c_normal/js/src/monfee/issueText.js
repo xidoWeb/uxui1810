@@ -37,24 +37,28 @@
 
   // step1 : indicator를 선택시 해당하는 dl이 나타나게 만들기
   var index = 0;
-  newsLi.eq(0).show();
-  imgBg.css({ backgroundImage: 'url(' + url + imgList[0] + ')' });
-
-  indiLi.on('click', function(e){
-    e.preventDefault();
-    index = $(this).index();
-    // newsLi.fadeOut();
+  var IssueView = function(index){
+    //---------------------------------
     var dl = newsLi.eq(index);
-    dl.siblings('dl').stop(true, false).fadeOut(500);
-    dl.siblings('dl').removeClass('active');
     dl.delay(500).stop(true, false).fadeIn(500);
+    dl.siblings('dl').stop(true, false).fadeOut(500);
     dl.addClass('active');
+    dl.siblings('dl').removeClass('active');
 
     indiLi.eq(index).addClass('active');
     indiLi.eq(index).siblings('li').removeClass('active');
 
     // step2
-    imgBg.css({ backgroundImage: 'url(' + url + imgList[index] +')'});
+    imgBg.css({ backgroundImage: 'url(' + url + imgList[index] + ')' });
+    //---------------------------------
+  };
+  IssueView(index);
+
+  indiLi.on('click', function(e){
+    e.preventDefault();
+    index = $(this).index();
+    // newsLi.fadeOut();
+    IssueView(index);
   });
 
 
