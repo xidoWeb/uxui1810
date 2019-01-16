@@ -130,16 +130,30 @@ h1>a{background-image: url("../../../img/monfee/monfee_big_logo.png");
 
 /*  .issue_text --------------------------------------------------------------------- */
   .issue_text{position:relative; padding-top:260px; box-sizing:border-box; width: 100%; height:860px; background-color: #2fb;}
-  .issue_text .indi_cator {position:absolute; bottom:6rem; right:15%; z-index:500; width: 260px; height: 40px; background-color: #fff;}
 
+  .issue_text .indi_cator {position:absolute; bottom:6rem; right:15%; z-index:500; width:270px; height: 40px;}
+    .issue_text .indi_cator>ul{float:left; width:calc(100% - 85px); height:100%;}
+    .issue_text .indi_cator>ul>li{float:left; width:40px; height:100%; margin-right:5px; }
+    .issue_text .indi_cator>ul>li:last-child{margin-right:0;}
+    .issue_text .indi_cator>ul>li.active>a{background-color:#a30;}
+    .issue_text .indi_cator>ul>li>a{border-radius:50%; background-color:#fff}
 
+    .issue_text .indi_cator > .move_btn{float:right; width:85px; height:100%;}
+    .issue_text .indi_cator > .move_btn>button{float:left; width:40px; height:100%; margin-right:5px; background-color:#ff9;}
+    .issue_text .indi_cator > .move_btn>button:last-of-type{margin-right:0;}
+    .issue_text .indi_cator > .move_btn>button.active{background-color:#a30;}
+    
   .issue_text .news_text {position:relative; z-index:300; margin:auto; 
     width: 80%; height: 520px; background-color: #fa0;}
+    
   .issue_text .news_text>dl{
+    display: none;
     position:absolute; top: 0; left: 0;
     padding:3rem 2rem; box-sizing:border-box;
     width:70%; height:100%;
   }
+  .issue_text .news_text>dl.active{display: block;}
+
   .issue_text .news_text>dl>dt{margin-bottom:0.5rem; width:100%; height:3rem; font-size:1.3rem; text-decoration:underline;}
   .issue_text .news_text>dl>dd{width:100%; height:auto; max-height:380px; font-size:1rem;}
 
