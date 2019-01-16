@@ -35,4 +35,7 @@ adBanner.load(mainUrl + 'adBanner.html');
   // $('.news').load( link('news', mainUrl) );
   $('.news').load( mainUrl + 'news.html' );
 
+  bestNews.children('.news').after('<div class="issue_text"></div>');
+  $('.issue_text').load(mainUrl + 'issueText.html');
+
 })(jQuery);

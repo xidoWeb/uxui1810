@@ -1,5 +1,7 @@
 /*  main.css */
-.container{margin:auto; width: 60rem; height: 100%; background-color:rgba(0,0,0,0.2); }
+.container{margin:auto; width: 60rem; height: 100%; 
+  /* background-color:rgba(0,0,0,0.2);  */
+}
 .con_plus{width:80%; max-width:80%;}
 *:focus{outline:5px solid #fa0;}
 
@@ -102,44 +104,42 @@ h1>a{background-image: url("../../../img/monfee/monfee_big_logo.png");
 #adBanner > .view_outer li.ban_4{background-image:url("../../../img/monfee/adBanner/slide_04.png")}
 #adBanner > .view_outer li.ban_5{background-image:url("../../../img/monfee/adBanner/slide_05.png")}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* #bestNews ===============================================================================  */
 
 #bestNews {margin-top: 120px;width: 100%;height: 3200px;background-color: #bbb;}
 
   .news{padding-top:2rem; padding-bottom:2rem; width: 100%; height:auto; min-height:3rem; background-color:#fff;}
   .news h3{margin-bottom:1rem; width: 100%; height:auto; font-size: 1.4rem; text-decoration:underline;}
-  .news_list{float:left; margin-right:1.333333%; margin-bottom:1rem; width:24%; height:400px; background-color: #5cc;}
+  .news_list{float:left; margin-right:1.333333%; margin-bottom:1rem; width:24%; height:400px;}
   .news_list:nth-of-type(4n){margin-right:0;}
   .news_list>a{display: block; width: 100%; height: 100%;}
 
+  .news_list>a .img_list:before{content:" "; display:block; position:absolute; width:100%; height:100%; background-color:rgba(170,51,0,0.7);
+  background-image: url("../../../img/monfee/new_menu/menu_on.png"); background-repeat: no-repeat; background-position: 50% 50%; opacity:0; transition:all 500ms ease;}
+
   .news_list>a:hover .img_list:before,
-  .news_list>a:focus .img_list:before{content:" "; display:block; position:absolute; width:100%; height:100%; background-color:rgba(170,51,0,0.7);}
+  .news_list>a:focus .img_list:before{opacity:1;background-position-y:100%;}
 
+  .news_list>a:hover .img_list,
+  .news_list>a:focus .img_list{background-size:140%;}
 
-  .news_list .img_list{position:relative; width: 100%; height:220px; border-radius:0.3rem; background-repeat: no-repeat; background-position: 50% 50%; overflow:hidden;  background-size: cover; background-color: #fff;}
+  .news_list .img_list{position:relative; width: 100%; height:220px; border-radius:0.3rem; background-repeat: no-repeat; background-position: 50% 50%; overflow:hidden;  background-size:120%; transition:all 500ms ease; }
   .news_list dl{padding:0.3rem; box-sizing:border-box; width: 100%; height:150px; }
   .news_list dl>dt{margin-bottom:5px; width: 100%; height:20px; font-size:1.15rem; font-weight:bold;}
   .news_list dl>dd{width: 100%; height:125px; font-size:0.875rem; color:#555;}
 
-
+/*  .issue_text --------------------------------------------------------------------- */
   .issue_text{width: 100%; height:860px; background-color: #2fb;}
+  .issue_text .indi_cator {}
+  .issue_text .news_text {}
+  .issue_text .news_img {}
+
+
+/*  .issue_icon --------------------------------------------------------------------- */
   .issue_icon{width: 100%; height:480px; background-color: #f3c;}
+/*  .content_text --------------------------------------------------------------------- */
   .content_text{width: 100%; height:600px; background-color: #4dd;}
+/*  .material_icon --------------------------------------------------------------------- */
   .material_icon{width: 100%; height:196px; background-color: #fef;}
 
 
