@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- append_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <style>
+    .box{float:left;margin: 1rem; width: 100px; height: 100px; background-color: #acc;}
+    .box:hover{background-color: #555;}
+    img{width: 100%; height: 100%;}
+  </style>
+  <title>filename</title>
+</head>
+<body>
+  <!-- layout -->
+ 
+
+  <div class="af"> 
+    <!-- <ul class="be"> -->
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  <!-- </ul> -->
+</div>
+
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  <script>
+    (function($) {
+        // wrap, append, appendTo, prepend, prependTo, after, before
+
+        var af = $('.af');
+        var ulLi = af.find('li');
+
+        af.append('<ol>');
+        $('ol').append( $('.af').find('li') );
+
+    })(jQuery);
+  </script>
+</body>
+</html>

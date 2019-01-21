@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <style>
+    h1{padding: 0.3rem; background-color: #0af; margin-bottom: 2rem;}
+    .min_banner{position: relative; margin: auto; width:900px; height: 300px; border:3px solid #333; }
+    .btn{position: absolute; top: 110%; left: 0; width: 100%;}
+    .btn>button{width: 100px; height: 50px; background-color: #caa; border: 0; font-size: 1.5rem; cursor: pointer;}
+    .btn>button{float:left;}
+    .btn>button:first-of-type{float: right;}
+
+    .product{width: 100%; height: 100%;}
+    .product>ul{width:calc(100% / 3 * 5); height: 100%;}
+    .product>ul>li{float:left; width:calc(100% / 5); height: 100%;
+        text-align: center; line-height: 300px; font-size:2rem;
+        transform:scale(0.7); transition:transform 500ms ease;}
+    .product>ul>li:nth-child(3){transform:scale(1);}
+    .pr_01{background-color: #ac1;}
+    .pr_02{background-color: #fc2;}
+    .pr_03{background-color: #acf;}
+    .pr_04{background-color: #fc4;}
+    .pr_05{background-color: #af5;}
+  
+  </style>
+</head>
+<body>
+  <!-- layout -->
+  <h1>banner</h1>
+  <div class="min_banner">
+    <div class="btn">
+      <button type="button">rBtn</button>
+      <button type="button">lBtn</button>
+    </div>
+    <div class="product">
+      <ul>
+        <li class="pr_01">pr_01</li>
+        <li class="pr_02">pr_02</li>
+        <li class="pr_03">pr_03</li>
+        <li class="pr_04">pr_04</li>
+        <li class="pr_05">pr_05</li>
+      </ul>
+    </div>
+
+  </div>
+    
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  <script>
+    (function($) {
+      var pr = $('.product').children('ul');
+      var prLi = pr.children('li');
+      prLi.eq(-3).nextAll().prependTo(pr);
+      var liW = prLi.first().width();
+      pr.css({marginLeft:-liW,
+             position:'relative', left:0});
+      prLi = pr.children('li');
+
+      var lbtn = $('.btn').children().eq(-1);
+      var rbtn = $('.btn').children().eq(0);
+
+      lbtn.on('click', function(e){
+        e.preventDefault();
+
+        pr.animate({left:liW},function(){
+          prLi.eq(-1).prependTo(pr);
+          pr.css({left:0});
+          prLi = pr.children('li');
+        });
+      });
+    })(jQuery);
+  </script>
+</body>
+</html>
