@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <title>Document</title>
+  <style>
+    #wrap{position: relative; width:100%; height:100%; background-color:#1fa;}
+
+    #headBox{position: absolute; top: 2rem; left: 10%; width:80%; min-width:60rem; height:auto; min-height:5rem; background-color:#2cb;}
+    #headBox.active{position: fixed; top:0; left:0; width:100%;}
+    #headBox>.container{margin: auto; width:60rem; height:auto; min-height:5rem; background-color: #fa0;}
+
+    #viewBox{width:100%; height:100%; background-image: url("../img/scrollTest.jpg");
+            background-repeat: no-repeat; 
+            background-position:50% 0; background-size:120% auto;}
+    #contBox{width:100%; height:100%; background-color:#4fd;}
+    #footBox{width:100%; height:100%; background-color:#52e;}
+  </style>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <header id="headBox">
+      <div class="container">Lorem ipsum dolor.</div>
+    </header>
+    <section id="viewBox"></section>
+    <article id="contBox"></article>
+    <footer id="footBox"></footer>
+  </div>
+  <!-- script -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  <script>
+    (function($) {
+      var headBox = $('#headBox');
+      var headOffset = headBox.offset().top;
+      var nowScroll;
+
+      var scrollFn = function(){
+        nowScroll = $(window).scrollTop();
+        // (headOffset <= nowScroll) ? headBox.addClass('active')  :  headBox.removeClass('active');
+
+        if(headOffset <= nowScroll){
+          headBox.addClass('active');
+        }else{
+          headBox.removeClass('active');
+        }
+      };
+      scrollFn();
+
+      $(window).on('scroll',function(e){  
+        e.preventDefault();
+        scrollFn();
+      });
+//  -----------------------------------
+    var viewBox = $('#viewBox');
+    var viewImagePosition = parseInt( viewBox.css('backgroundPositionY') );
+    console.log(viewImagePosition);
+//  크기 / 기준 * 100
+//  스크롤의 크기( scrollTop() ) / 브라우저의 높이 ( $(window).height() ) * 100
+    var winH = $(window).outerHeight();
+
+    $(window).on('scroll',function(){
+      var thisScroll = $(this).scrollTop();
+      // console.log('thisScroll: ', thisScroll);
+      var per = thisScroll / winH * 100;
+      viewBox.css({backgroundPositionY: per + '%' });
+    });
+
+    /*
+      ?.height();           // 높이값
+      ?.innerHeight();      // padding포함 높이
+      ?.outerHeight();      // padding+border포함한 높이
+      ?.outerHeight(true);  // padding+border+margin 포함한 높이
+    */
+
+
+
+    })(jQuery);
+  </script>
+</body>
+</html>
