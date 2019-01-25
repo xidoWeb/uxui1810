@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+
+  <!--[if IE]>
+    <script src="../../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../../ie/css3pie/PIE_IE9.js"></script>
+    <script src="../../ie/ie9.min.js"></script>
+  <![endif]-->
+  <style>
+    #wrap{padding-top:1rem; box-sizing:border-box; 
+          width: 100%; height: 100%; background-color: #ccc;}
+    .device{
+      margin:auto; padding:1rem; box-sizing: border-box;
+      width: 80%; height: 100px; background-color: #fff; border-radius:0.3rem;
+      box-shadow:0.2rem 0.2rem 0.2rem #171717;
+      font-size: 1.3rem;
+    }
+    .view_size{padding: 0.5rem; background-color: #fff; border-redius:1rem;}
+
+    @media screen and (max-width:480px) {
+      #wrap{background-color: #0af;}
+    }
+    @media screen and (min-width:481px) and (max-width:768px) {
+      #wrap{background-color: #fa0;}
+    }
+    @media screen and (min-width:769px) and (max-width:1366px) {
+      #wrap{background-color: #caf;}
+    }
+    @media screen and (min-width:1367px) {
+      #wrap{background-color: #afa;}
+    }
+
+  </style>
+  <title>filename</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <button type="button" class="view_size">화면내용 확인하기</button>
+
+
+    
+    <div class="device">
+      <strong>화면크기</strong>
+      <p>
+        <span class="size">크기값</span>px <br />
+       <strong>기기환경: </strong>
+       <span class="product">제품종류</span>
+       </p>
+    </div>
+  </div>
+
+  <!-- script -->
+  <script src="../../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../../js/base/jquery-ui.min.js"></script>
+  <script src="../../js/src/jquery/rwd_page.js"></script>
+  <script src="../../js/src/jquery/device_code.js"></script>
+ 
+</body>
+</html>
