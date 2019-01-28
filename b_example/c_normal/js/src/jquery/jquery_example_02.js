@@ -33,9 +33,9 @@
     }
 
     if(st >= sideMLocation){
-      sideMove.slideUp();
+      scrollMove.slideUp();
     }else{
-      sideMove.slideDown();
+      scrollMove.slideDown();
 
     }
   };
