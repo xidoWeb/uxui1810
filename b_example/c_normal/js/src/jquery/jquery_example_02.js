@@ -1,5 +1,38 @@
 // jquery_example_02.js
 (function($) {
+  // --------------------------------------
+  var navBox = $('#navBox');
+  var firstNav = navBox.find('.first_nav').children('li');
+  var secondNav = firstNav.find('.second_nav');
+  var deepNav = secondNav.find('ul');
+
+
+  firstNav.on('click',function(e){
+    e.preventDefault();
+    secondNav.hide();
+
+    // $(this) -> firstNav.on('click'...
+    $(this).find('.second_nav').show(0,function(){
+      // $(this) -> $(this).find('.second_nav')
+      var sn = $(this);
+      sn.animate({left:0});
+      sn.siblings().removeAttr('style');
+
+      $(this).children('li').on('click',function(e) {
+        e.preventDefault();
+        deepNav.hide();
+
+        $(this).find('ul').show(0, function(){
+          var lastUl = $(this);
+          lastUl.animate({left:0});
+          lastUl.siblings().removeAttr('style');
+        });
+      });
+
+    });
+  });
+
+  // --------------------------------------
 
   var conBox = $('#contBox');
   var scrollMove = conBox.find('.scroll_move_box');
