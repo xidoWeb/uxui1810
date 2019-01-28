@@ -1,11 +1,40 @@
 /* jquery_example_02.css */
 
+/* loading ========================================== */
+.loading{position: fixed; width: 100%; height: 100%; z-index: 5000; background-color: rgba(0,0,0,0.7);}
+.loadng_img{position: absolute; top: 50%; left: 50%; width: 5rem; height: 5rem; border-radius:50%; background-color:rgba(0,0,0,0);
+  transform:translate(-50%, -50%);
+}
+.loadng_img:before, .loadng_img:after{content:" "; display: block; 
+  position: absolute; top: 0; left: 0; box-sizing:border-box;
+  width: 100%; height: 100%; border-radius:50%;
+  border:0.2rem solid #fff;}
+
+  .ani_1:before{ animation: move 3s infinite ease normal; }
+  .ani_2:before{ animation: move 3s infinite ease normal 0.5s; }
+  .ani_1:after{ animation: move 3s infinite ease normal 1s; }
+  .ani_2:after{ animation: move 3s infinite ease normal 1.5s; }
+
+@keyframes move {
+  0%{transform:scale(0); opacity:1;}
+  100%{transform:scale(5); opacity:0;}
+}
+
+.loading>p{position: absolute; top: 50%; left: 50%; 
+  margin-top: 5rem; color:#fff; text-align: center;
+  transform:translateX(-50%); text-transform:capitalize;}
+
+
+
+
+/* wrap ========================================== */
 #wrap{width: auto; min-width:60rem; background-color: #dfdfdf;}
 
 #headBox{width: 100%; height: 150px; background-color: #a7f; }
 
 #navBox{position: relative; z-index: 500; margin: auto; width:200px; height:auto; background-color: #acf;}
-#navBox .first_nav{width: 100%; height:auto;}
+#navBox .first_nav{width: 100%; height:auto;
+  overflow-x: hidden;}
 #navBox .first_nav>li{padding:0.2rem 0.3rem; box-sizing:border-box; 
   width:100%; height:auto; text-align: center;}
 #navBox .first_nav>li>a{display: block; width: 100%; height: 2.5rem; background-color: #fff;

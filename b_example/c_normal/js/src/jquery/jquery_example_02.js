@@ -1,5 +1,13 @@
 // jquery_example_02.js
 (function($) {
+
+  $(window).on('load', function() {
+    setTimeout(function(){
+      $('.loading').remove();
+      // window.location = '//naver.com';
+    },5000)
+  });
+
   // --------------------------------------
   var navBox = $('#navBox');
   var firstNav = navBox.find('.first_nav').children('li');
@@ -9,7 +17,7 @@
 
   firstNav.on('click',function(e){
     e.preventDefault();
-    secondNav.hide();
+    secondNav.hide();   
 
     // $(this) -> firstNav.on('click'...
     $(this).find('.second_nav').show(0,function(){
@@ -28,9 +36,27 @@
           lastUl.siblings().removeAttr('style');
         });
       });
-
     });
+
+
+  navBox.append('<div class="close hidden_wrap"><button type="button"><span>메뉴닫기</span></button></div>');
+  var closeBtn = navBox.find('.close');
+  closeBtn.css({position:'absolute', top:'-1rem', right:'-1rem', zIndex:'2000', width:'2rem', height:'2rem', backgroundColor:'#111', borderRadius:'50%'});
+
+  closeBtn.on('click', function(e){
+    e.preventDefault();
+    secondNav.fadeOut(function(){
+      $(this).removeAttr('style');
+    });
+    deepNav.fadeOut(function(){
+      $(this).removeAttr('style');
+    });
+    closeBtn.remove();
   });
+
+  });  // firstNav.on('click',
+
+ 
 
   // --------------------------------------
 
