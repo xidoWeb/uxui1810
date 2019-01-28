@@ -43,6 +43,36 @@
 
   $(window).on('scroll',ScrollCheck);
 
+//  ----------------------------------------------
+
+  // var sideMove = $('.side_move');
+  var sideMoveChildren = sideMove.children('div');
+  // var sideMOffset = sideMove.offset().top;
+  // var winH = $(window).height();
+  var mySideOffset = sideMOffset - (winH / 3 * 2);
+
+  // 스크롤의 위치가 sideMove에서 화면의 크기 2/3 지점에서 순차적으로 내용이 나타나게 만들기
+  var SideMoveScroll = function(){
+    st = $(window).scrollTop();
+    if(st >= mySideOffset){
+      sideMoveChildren.addClass('active');
+
+/*
+      for(var i=0; i<sideMoveChildren.length; i++){
+        setTimeout(function(){
+          sideMoveChildren.eq(i).addClass('active');
+        },800); // setTimeout
+      }// for
+*/
+
+
+    }else{
+      sideMoveChildren.removeClass('active');
+    }
+  };
+  SideMoveScroll();
+
+  $(window).on({'scroll': SideMoveScroll});
 
 
 })(jQuery);
