@@ -1,0 +1,37 @@
+/* horizontal_scroll.css */
+
+#wrap{width: 100%; height: 100%;}
+#headBox{position: fixed; top: 0; left: 0; z-index: 1000; 
+  padding:0.5rem; box-sizing:border-box; width: 100%; height:5rem; 
+  background-color: rgba(0,0,0,0.7); color:#fff;}
+#headBox a{color:inherit;}
+
+#viewBox{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+  width: 90%; height: 70%; min-width:60rem; min-height:30rem;
+  background-color: #ccc; box-shadow:0.2rem 0.2rem 0.7rem rgba(0,0,0,0.7); border-radius:0.7rem; border:1rem solid #fff;}
+#viewBox>.close{width: 3rem; height: 3rem; background-color: #333; border-radius:50%; 
+  position:absolute; top: -1.5rem; right:-1.5rem;}
+#viewBox>.close>button{width: 100%; height: 100%; color:#fff; font-weight: bold;}
+
+
+.sambtn{position: absolute; bottom: -3rem; left: 50%; z-index: 2000; padding: 0.5rem; background-color: #0af; color:#fff; cursor:help; border-radius:0.5rem; font-weight: bold;}
+
+.view_outer{width: 100%; height: 100%; overflow-x:auto;}
+
+.view_outer ul{width: 600%; height: 100%;}
+.view_outer ul>li{float:left; width:calc(100% / 6); height: 100%;
+  text-align: center; line-height:50rem; font-size:10rem;}
+.col_01{background-color: #afa;}
+.col_02{background-color: #faa;}
+.col_03{background-color: #c7a;}
+.col_04{background-color: #aa7;}
+.col_05{background-color: #ffa;}
+.col_06{background-color: #fa6;}
+
+
+
+#contBox{display: none;}
+
+#footBox{position: fixed; bottom: 0; left: 0; z-index:1000;
+  width: 100%; height: 2rem; background-color: #333; color:#fff;
+  font-size: 1rem; font-weight: normal;}
