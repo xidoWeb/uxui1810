@@ -28,28 +28,32 @@
   viewLi = viewUl.children('li');
   var viewLiW = viewUl.children('li').eq(0).outerWidth();
 
-
-viewUl.css({marginLeft:0});
+viewLi.eq(2).addClass('active');
+// viewUl.css({marginLeft:0});
 
 prev.on('click',function(){
   // viewLi.eq(-1).prependTo(viewUl);
   // viewLi = viewUl.children('li');
+  viewLi.removeClass('active');
   viewUl.animate({marginLeft:viewLiW},1000,function(){ 
     viewUl.css({marginLeft:0});
     viewLi.eq(-1).prependTo(viewUl);
     viewLi = viewUl.children('li');
+    viewLi.eq(2).addClass('active');
   });
 });
 next.on('click',function(){
   // viewLi.eq(0).appendTo(viewUl);
   // viewLi = viewUl.children('li');
+  viewLi.removeClass('active');
   viewUl.animate({marginLeft:-viewLiW},1000,function(){
     viewUl.css({marginLeft:0});
     viewLi.eq(0).appendTo(viewUl);
     viewLi = viewUl.children('li');
+    viewLi.eq(2).addClass('active');
   });
 
-  
+
 });
 
 
