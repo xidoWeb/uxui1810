@@ -1,0 +1,38 @@
+/* multiSlide.css */
+
+/* #wrap ======================== */
+#wrap{width: 100%; height: 100%;}
+
+/* #headBox ======================== */
+#headBox{display: none;}
+
+/* #viewBox ======================== */
+#viewBox{position:relative; margin:auto; margin-top:3rem; border:1px solid #333;
+        width: 500px; height: 300px; background-color: #caa;}
+
+#viewBox>.btn{position: absolute; bottom: -5.5rem; right: 0.5rem; width: 9.375rem; height: 1.5rem;}
+#viewBox>.btn>button{width: 4.375rem; height: 100%; background-color: #0af; color:#fff; border-radius:0.3rem;
+font-weight: bold;}
+.next{float: right;}
+.prev{float: left;}
+
+.view_outer{padding-top: 1rem; width: 100%; height: 100%;}
+.view_outer>ul{width: 200%; height: 100%; background-color: #ccc;}
+.view_outer>ul>li{position: relative; float: left; border:2px solid #0af;
+                  box-sizing: border-box; overflow: hidden;
+                  width: 20%; height: 100%; font-size: 3rem;}
+
+.view_outer>ul>li>iframe{position: absolute; top: 50%; left: 50%; width: auto; height: auto; min-width: 100%; min-height: 100%;
+        transform:translate(-50%, -50%);}
+
+
+
+.view_outer>ul{position: relative; left: 50%; transform:translateX(-50%);}
+
+
+
+/* #contBox ======================== */
+#contBox{display: none;}
+
+/* #footBox ======================== */
+#footBox{display: none;}
