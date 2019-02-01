@@ -1,10 +1,5 @@
 /* multiSlide.css */
 
-/* #wrap ======================== */
-#wrap{width: 100%; height: 100%;}
-
-/* #headBox ======================== */
-#headBox{display: none;}
 
 /* #viewBox ======================== */
 #viewBox{position:relative; margin:auto; margin-top:3rem; /*border:1px solid #333;*/
@@ -18,22 +13,17 @@ font-weight: bold;}
 
 .view_outer{padding-top: 1.7rem; padding-bottom: 1.7rem; width: 100%; height: 100%;}
 .view_outer>ul{padding-bottom: 3rem; width: 200%; height: 100%; /*background-color: #ccc;*/}
-.view_outer>ul>li{position: relative; float: left; border:2px solid #0af;
+.view_outer>ul>li{position: relative; float: left; background-color: #fff;/* border:2px solid #0af; */
                   box-sizing: border-box; overflow: hidden;
-                  width: 20%; height: 100%; font-size: 3rem;}
+                  width: 20%; height: 100%; font-size: 3rem;
+                  border-radius:30rem; overflow: hidden;}
 
 .view_outer>ul>li>iframe{position: absolute; top: 50%; left: 50%; width: auto; height: auto; min-width: 100%; min-height: 100%;
         transform:translate(-50%, -50%);}
 
 
-.view_outer{overflow: hidden;}
+/*.view_outer{overflow: hidden;}*/
 .view_outer>ul{position: relative; left: 50%; transform:translateX(-50%);}
-.view_outer>ul>li{transform:scale(0.9); transition:all 800ms ease;}
-.view_outer>ul>li.active{position:relative; z-index: 100; transform:scale(1.5); box-shadow:0.3rem 0.3rem 0.3rem rgba(0,0,0,0.5);}
+.view_outer>ul>li{transform:rotate(0) scale(0.9); transition:all 800ms ease;}
+.view_outer>ul>li.active{position:relative; z-index: 100; transform:rotate(720deg) scale(1.5); box-shadow:0.3rem 0.3rem 0.3rem rgba(0,0,0,0.5);}
 
-
-/* #contBox ======================== */
-#contBox{display: none;}
-
-/* #footBox ======================== */
-#footBox{display: none;}

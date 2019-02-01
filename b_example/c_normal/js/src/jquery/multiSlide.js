@@ -5,6 +5,23 @@
   var view = $('.view_outer');
   var viewUl = view.children('ul');
   var viewLi;
+/*
+  var viewArr = [
+    '<iframe src="https://www.youtube.com/embed/0QmxP64UJuk"  allow="accelerometer; encrypted-media; gyroscope;"></iframe>',
+
+    '<iframe src="https://www.youtube.com/embed/sNumqwM8_yE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"></iframe>',
+
+    '<iframe src="https://www.youtube.com/embed/CUfHJe3rxSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;"></iframe>',
+
+    '<iframe src="https://www.youtube.com/embed/HGJLc8sW3KE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;"></iframe>',
+
+    '<iframe src="https://www.youtube.com/embed/oUYIQOTzJsc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;"></iframe>',
+
+    '<iframe src="https://www.youtube.com/embed/1Jd0RhvheGE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+  ];
+*/
+
+
 
   var viewArr = [
     '<iframe src="https://www.youtube.com/embed/0QmxP64UJuk"  allow="accelerometer; encrypted-media; gyroscope;"></iframe>',
