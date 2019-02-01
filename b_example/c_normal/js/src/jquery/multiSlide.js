@@ -16,7 +16,7 @@
     '<iframe src="https://www.youtube.com/embed/HGJLc8sW3KE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;"></iframe>',
 
     '<iframe src="https://www.youtube.com/embed/oUYIQOTzJsc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;"></iframe>',
-    
+
     '<iframe src="https://www.youtube.com/embed/1Jd0RhvheGE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
   ];
 
@@ -48,6 +48,8 @@ next.on('click',function(){
     viewLi.eq(0).appendTo(viewUl);
     viewLi = viewUl.children('li');
   });
+
+  
 });
 
 
