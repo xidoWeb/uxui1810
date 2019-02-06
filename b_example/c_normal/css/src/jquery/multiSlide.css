@@ -25,5 +25,5 @@ font-weight: bold;}
 /*.view_outer{overflow: hidden;}*/
 .view_outer>ul{position: relative; left: 50%; transform:translateX(-50%);}
 .view_outer>ul>li{transform:rotate(0) scale(0.9); transition:all 800ms ease;}
-.view_outer>ul>li.active{position:relative; z-index: 100; transform:rotate(720deg) scale(1.5); box-shadow:0.3rem 0.3rem 0.3rem rgba(0,0,0,0.5);}
-
+/*.view_outer>ul>li.acive{position:relative; z-index: 100; transform:rotate(720deg) scale(1.5); box-shadow:0.3rem 0.3rem 0.3rem rgba(0,0,0,0.5);}
+*/
